@@ -22,6 +22,11 @@ Frontend do projeto
 
 	**-> components**
 	* Pasta em que ficarão os components da aplicação frontend, ou seja, tudo aquilo que a gente definiu como conteúdos das nossas páginas que de alguma forma possam ser reaproveitadas e consigam nos ajudar quanto à produtividade e organização. Exemplo de componentes são botões e caixas de texto que são usadas em mais de uma página, ajudando-nos assim a gerar um padrão.
+    **-> features**
+    * Pasta que ficam os componentes mais específicos e complexos como o footer e o header.
+
+    **-> common**
+    * Pasta que ficam os componentes mais comuns como inputs, botões e selects que usaremos muitas vezes em muitas páginas.
 	
 	**-> hooks**
 	* Pasta em que ficam funções simples que podemos reutilizar várias vezes.
@@ -29,12 +34,16 @@ Frontend do projeto
     * Pasta em que guardamos funções de comunicação com o backend
 
   **-> pages**
-  * Pasta onde ficam todas as páginas do nossos sistema, sendo que cada pasta corresponde a uma página. Normalmente, dentro de cada pasta desta, encontram-se o código JavaScript da página, o arquivo de estilização específico deste primeiro e o arquivo **index.js** de exportação desta página para uso em outras partes do código.  
+  * Pasta onde ficam todas as páginas do nossos sistema, sendo que cada pasta corresponde a uma página. Normalmente, dentro de cada pasta desta, encontram-se o código JavaScript da página e o arquivo de estilização específico deste primeiro.
   
 	**-> services**
-  * Pasta em que intermediam a conversa do backend e do frontend, deixando tal de forma mais organizada. Tal processo é realizado com o auxílio das seguintes pastas:
+  * Pasta em contém arquivos de interação com serviços externos:
     **-> api**
-    * Pasta que possui a última etapa da requisição do backend.
+    * funções que utilizam o axios para requisitar os dados do backend, os endpoints.
+      **-> privateEndpoints**
+      * contém os endpoints que necessitam de autenticação, ou seja, que o usuário esteja logado. Essa pasta contém um arquivo contendo os endpoints e um arquivo de instância do Axios.
+      **-> publicEndpoints**
+      * contém os endpoints que não necessitam de autenticação, ou seja, não precisa que o usuário esteja logado.Essa pasta contém um arquivo contendo os endpoints e um arquivo de instância do Axios.
 
 	**-> Utils**
 	* Pasta onde ficam arquivos utilitários dentro do sistema, como por exemplo códigos que contém de forma componentizada.
@@ -49,3 +58,14 @@ Frontend do projeto
 * [Prettier](https://prettier.io/docs/en/index.html "Prettier") -> O prettier é um formatador de código que ajuda a padronizar o jeito que escrevemos o código.
 
 * [Husky](https://typicode.github.io/husky/#/ "Husky") -> O husky serve para o usuário poder configurar hooks. Os hooks são scripts automatizados que executam comando quando é chamado algum comando no git.
+
+* [Zod](https://zod.dev/ "Zod") -> Zod é uma biblioteca de validação e declaração de esquema TypeScript-first. O zod é usado para criar validações dos dados passados pelo usuário.
+
+* [TanStack Query](https://tanstack.com/query/latest/docs/react/overview "TanStack Query") -> O TanStack Query (FKA React Query) facilita a busca, o armazenamento em cache, a sincronização e a atualização do estado do servidor em seus aplicativos Web.
+
+* [React Hook Form](https://react-hook-form.com/ "React Hook Form") ->  React Hook Form é uma biblioteca que auxilia na criação e validação dos formulários além de reduzir a quantidade de código desenvolvido, fazendo com que a captura de ações do formulário também seja mais objetiva.
+
+* [React-toastify](https://fkhadra.github.io/react-toastify/introduction "React-toastify") -> React Toastify é uma biblioteca open-source desenvolvida e mantida pela comunidade Javascript! Ela serve para padronizar as mensagens de sucesso ou de erro que chegará ao usuário
+
+* [Axios](https://axios-http.com/ "Axios") -> O Axios é um cliente HTTP simples baseado em promessas para o navegador e node.js nó. Axios fornece uma biblioteca simples de usar em um pequeno pacote com um muito interface extensível.
+
