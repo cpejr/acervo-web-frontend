@@ -38,10 +38,13 @@ Frontend do projeto
   
 	**-> services**
   * Pasta em contém arquivos de interação com serviços externos:
+  
     **-> api**
     * funções que utilizam o axios para requisitar os dados do backend, os endpoints.
+
       **-> privateEndpoints**
       * contém os endpoints que necessitam de autenticação, ou seja, que o usuário esteja logado. Essa pasta contém um arquivo contendo os endpoints e um arquivo de instância do Axios.
+      
       **-> publicEndpoints**
       * contém os endpoints que não necessitam de autenticação, ou seja, não precisa que o usuário esteja logado.Essa pasta contém um arquivo contendo os endpoints e um arquivo de instância do Axios.
 
