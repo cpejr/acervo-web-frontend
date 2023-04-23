@@ -6,6 +6,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import ReactDOM from 'react-dom/client';
 
 import Routes from './routes';
+import GlobalStyles from './styles/GlobalStyles';
 import Theme from './styles/Theme';
 
 if (process.env.NODE_ENV === 'production') {
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes />
       </Theme>
       <ReactQueryDevtools />
+      <GlobalStyles />
     </QueryClientProvider>
   </React.StrictMode>
 );
