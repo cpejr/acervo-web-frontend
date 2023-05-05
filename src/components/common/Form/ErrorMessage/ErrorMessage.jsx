@@ -17,7 +17,7 @@ function get(obj, path) {
   return result;
 }
 
-export default function ErrorMessage({ field }) {
+export default function ErrorMessage({ field, ...props }) {
   const {
     formState: { errors },
   } = useFormContext();
@@ -25,11 +25,7 @@ export default function ErrorMessage({ field }) {
   const fieldError = get(errors, field);
   if (!fieldError) return null;
 
-  return (
-    <Container className="text-xs text-red-500 mt-1">
-      {fieldError.message?.toString()}
-    </Container>
-  );
+  return <Container {...props}>{fieldError.message?.toString()}</Container>;
 }
 
 ErrorMessage.propTypes = {
