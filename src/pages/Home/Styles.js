@@ -1,41 +1,61 @@
 import styled from 'styled-components';
 
-import { Form } from '../../components/common';
-
-export const StyledForm = styled(Form)`
+export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+
   align-items: center;
-  gap: 1.5rem;
+  justify-content: center;
 
-  height: 100vh;
+  width: 100%;
+  height: auto;
+  gap: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: beige;
 `;
-StyledForm.Field = styled(Form.Field)`
+
+export const CarouselOne = styled.div`
   display: flex;
-  gap: 1rem;
-`;
-StyledForm.Label = styled(Form.Label)`
-  color: red;
-`;
-StyledForm.Input = styled(Form.Input)`
-  width: 20rem;
-  padding: 0.5rem;
-`;
-StyledForm.ErrorMessage = styled(Form.ErrorMessage)`
-  color: orange;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+
+  .slick-list {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 80rem;
+    height: auto;
+
+    @media (max-width: 700px) {
+      width: 30rem;
+    }
+  }
 `;
 
-export const Button = styled.button`
-  color: white;
-  background-color: blue;
-  padding: 1rem;
+export const CarouselTwo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 176.5rem;
+  height: auto;
 
-  cursor: pointer;
+  .slick-list {
+    position: relative;
 
-  font-size: 2rem;
-  transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: block;
+    overflow: hidden;
 
-  &:hover {
-    opacity: 0.8;
+    margin: 0;
+    padding: 0;
+    width: 170rem;
+    height: auto;
+
+    @media (max-width: 700px) {
+      width: 30rem;
+    }
   }
 `;

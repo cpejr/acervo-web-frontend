@@ -22,7 +22,9 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-router-dom": "^6.9.0",
-    "styled-components": "^5.3.9",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.11",
     "zod": "^3.21.4"
   },
   "devDependencies": {
