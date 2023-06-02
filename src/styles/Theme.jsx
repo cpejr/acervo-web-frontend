@@ -2,10 +2,19 @@ import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
-  colors: {},
+  colors: {
+    header: '#7F260F',
+    dialogBG: 'rgba(255, 255, 255, 0.66)',
+    fontHeader: 'white',
+    fontDialog: 'black',
+  },
   fonts: {
-    family: {},
-    size: {},
+    primary: {
+      family: 'Cabin, sans-serif',
+    },
+    primaryCondensed: {
+      family: 'Cabin Condensed, sans-serif',
+    },
   },
 };
 
