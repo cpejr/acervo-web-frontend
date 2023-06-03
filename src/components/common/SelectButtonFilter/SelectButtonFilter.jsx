@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { SelectButton } from './Syles';
+import { SelectButton } from './Styles';
 
 export default function SelectButtonFilter() {
   const [active, setActive] = useState(false);
