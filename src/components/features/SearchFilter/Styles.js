@@ -11,14 +11,14 @@ const fadeIn = keyframes`
   }
 `;
 
-const fadeOut = keyframes`
+const fadeInDocument = keyframes`
   from {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 0;
+    transform: translateX(-1.5rem);
   }
   to {
-    opacity: 0;
-    transform: translateY(-1.5rem);
+    opacity: 1;
+    transform: translateX(0);
   }
 `;
 
@@ -27,11 +27,20 @@ export const Container = styled.div`
   flex-direction: column;
 
   width: auto;
-  height: auto;
-
-  align-items: end;
+  height: fit-content;
 
   font-family: ${(props) => props.theme.fonts.cabin};
+`;
+
+export const DivFilter = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  gap: 2.2rem;
+
+  align-items: center;
+  justify-content: baseline;
 `;
 
 export const Filter = styled.div`
@@ -74,6 +83,19 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
+export const DivDropdown = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  align-items: end;
+  justify-content: baseline;
+  margin-left: 5rem;
+
+  width: auto;
+  height: auto;
+  gap: 2rem;
+`;
+
 export const Dropdown = styled.div`
   display: flex;
   flex-direction: column;
@@ -83,20 +105,55 @@ export const Dropdown = styled.div`
 
   width: 20rem;
   height: 0;
+  margin-top: 2rem;
   padding-left: 3rem;
-  gap: 1.3rem;
+  gap: 0.5rem;
 
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
+
   overflow: hidden;
   transition: height 2s ease-out;
   animation: ${fadeIn} 1s ease-out;
 
   &.show {
-    height: 22.6rem;
+    height: 18rem;
   }
+`;
 
-  &.hide {
-    animation: ${fadeOut} 1s ease-out;
+export const DocumentDropdown = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 28rem;
+  height: 0;
+  padding-left: 2rem;
+  gap: 0.5rem;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 21px;
+
+  overflow: hidden;
+  transition: height 2s ease-out;
+  animation: ${fadeInDocument} 1s ease-out;
+
+  &.show {
+    height: 15rem;
   }
+`;
+
+export const DropdownRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  align-items: center;
+  gap: 1rem;
+`;
+
+export const TextDropdown = styled.p`
+  font-size: 2.2rem;
+  color: rgba(30, 30, 30, 0.74);
 `;
