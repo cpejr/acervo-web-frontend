@@ -18,6 +18,8 @@ export const Container = styled.div`
 
   .slick-prev {
     left: -31rem;
+    width: fit-content;
+    height: fit-content;
   }
 
   .slick-next:before {
@@ -25,7 +27,9 @@ export const Container = styled.div`
   }
 
   .slick-next {
-    right: -22rem;
+    right: -31rem;
+    width: fit-content;
+    height: fit-content;
   }
 `;
 
