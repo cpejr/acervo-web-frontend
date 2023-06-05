@@ -5,11 +5,22 @@ export const Container = styled.div`
   justify-content: space-around;
   background-color: white;
   padding: 1rem;
+  width: 100%;
 `;
 
-export const Laaakak = styled.div`
-  background-color: white;
+export const Contact = styled.div`
   padding: 1rem;
+  h1 {
+    font-size: 5.1rem;
+    color: ${(props) => props.theme.fonts.color.bordeaux};
+  }
+`;
 
-  font-size: 2rem;
+export const SocialMedias = styled.div`
+  display: flex;
+  color: ${(props) => props.theme.color.bordeaux};
+`;
+
+export const Logo = styled.div`
+  color: ${(props) => props.theme.color.bordeaux};
 `;

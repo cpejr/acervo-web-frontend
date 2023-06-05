@@ -6,10 +6,12 @@ const theme = {
   colors: {
     primary: 'red',
     background: 'black',
+    bordeaux: '#7F260F',
   },
   fonts: {
     color: {
       primary: 'white',
+      bordeaux: '#7F260F',
     },
     family: {
       primary: 'Arial, Helvetica, sans-serif',
