@@ -15,6 +15,7 @@ const theme = {
     },
     family: {
       primary: 'Arial, Helvetica, sans-serif',
+      cabin: 'Cabin, sans-serif',
     },
     size: {
       small: '1.4rem',

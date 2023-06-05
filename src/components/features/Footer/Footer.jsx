@@ -4,7 +4,9 @@ import {
   WhatsAppOutlined,
   FacebookFilled,
   YoutubeFilled,
-} from './@ant-design/icons';
+} from '@ant-design/icons';
+
+import LogoAcervo from '../../../assets/AcervoLogo.png';
 import { Contact, Container, Logo, SocialMedias } from './Styles';
 
 export default function Footer() {
@@ -12,16 +14,16 @@ export default function Footer() {
     <Container>
       <Contact>
         <h1>contato@nossahistória.com.br</h1>
-        <h1>(31)940028922</h1>
+        <h1>(31) 9 40028922</h1>
       </Contact>
       <SocialMedias>
-        <InstagramOutlined />
-        <FacebookFilled />
-        <TwitterOutlined />
-        <WhatsAppOutlined />
-        <YoutubeFilled />
+        <InstagramOutlined style={{ fontSize: '5rem' }} />
+        <FacebookFilled style={{ fontSize: '5rem' }} />
+        <TwitterOutlined style={{ fontSize: '5rem' }} />
+        <WhatsAppOutlined style={{ fontSize: '5rem' }} />
+        <YoutubeFilled style={{ fontSize: '5rem' }} />
       </SocialMedias>
-      <Logo />
+      <Logo src={LogoAcervo} alt="Logo Acervo" />
     </Container>
   );
 }
