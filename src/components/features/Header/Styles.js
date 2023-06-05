@@ -21,6 +21,9 @@ export const MenuItem = styled.div`
   font-family: ${(props) => props.theme.fonts.primary.family};
   color: ${(props) => props.theme.colors.fontHeader};
   font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   :hover {
     cursor: pointer;
@@ -29,15 +32,19 @@ export const MenuItem = styled.div`
 
 export const Dialog = styled.dialog`
   position: absolute;
-  display: ${(props) => (props.open ? 'flex' : 'none')};
+  z-index: 10;
+  width: 18rem;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
   border: none;
   border-radius: 1rem;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  margin-top: 3rem;
   background-color: ${(props) => props.theme.colors.dialogBG};
+  overflow-y: hidden;
+  padding: ${(props) => (props.open ? '0.5rem 1rem' : '0rem')};
+  max-height: ${(props) => (props.open ? 'auto' : '0rem')};
 `;
 
 export const DialogItem = styled(Link)`
@@ -45,4 +52,26 @@ export const DialogItem = styled(Link)`
   color: ${(props) => props.theme.colors.fontDialog};
   font-family: ${(props) => props.theme.fonts.primary.family};
   font-size: 1.8rem;
+`;
+
+export const DialogProfile = styled.dialog`
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-y: hidden;
+  padding: ${(props) => (props.open ? '1rem 1rem' : '0rem')};
+  max-height: ${(props) => (props.open ? 'auto' : '0rem')};
+  align-items: center;
+`;
+
+export const DivideLine = styled.div`
+  border: 0.1rem solid black;
+  width: 100%;
 `;
