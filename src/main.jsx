@@ -29,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Routes />
       </Theme>
       <ReactQueryDevtools />
+      <GlobalStyles />
     </QueryClientProvider>
   </React.StrictMode>
 );
