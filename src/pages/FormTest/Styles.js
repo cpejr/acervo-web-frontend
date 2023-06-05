@@ -15,7 +15,7 @@ StyledForm.Field = styled(Form.Field)`
   gap: 1rem;
 `;
 StyledForm.Label = styled(Form.Label)`
-  color: red;
+  color: blue;
 `;
 StyledForm.Input = styled(Form.Input)`
   width: 20rem;

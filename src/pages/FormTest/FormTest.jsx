@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { Button, StyledForm } from './Styles';
 import { createUserSchema } from './utils';
 
-export default function Home() {
+export default function FormTest() {
   const createUserForm = useForm({
     resolver: zodResolver(createUserSchema),
   });
