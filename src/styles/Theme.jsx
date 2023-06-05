@@ -10,12 +10,8 @@ const theme = {
     fontDialog: 'black',
   },
   fonts: {
-    primary: {
-      family: 'Cabin, sans-serif',
-    },
-    primaryCondensed: {
-      family: 'Cabin Condensed, sans-serif',
-    },
+    primary: 'Cabin, sans-serif',
+    primaryCondensed: 'Cabin Condensed, sans-serif',
   },
 };
 // More options in https://ant.design/docs/react/customize-theme

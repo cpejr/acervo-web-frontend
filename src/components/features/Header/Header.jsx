@@ -32,6 +32,7 @@ export default function Header() {
       [dialogName]: false,
     }));
   };
+
   return (
     <Container>
       <Menu>

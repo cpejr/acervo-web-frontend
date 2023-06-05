@@ -18,7 +18,7 @@ export const MenuItem = styled.div`
   position: relative;
   border: none;
   background-color: transparent;
-  font-family: ${(props) => props.theme.fonts.primary.family};
+  font-family: ${(props) => props.theme.fonts.primary};
   color: ${(props) => props.theme.colors.fontHeader};
   font-size: 2rem;
   display: flex;
@@ -50,7 +50,7 @@ export const Dialog = styled.dialog`
 export const DialogItem = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.fontDialog};
-  font-family: ${(props) => props.theme.fonts.primary.family};
+  font-family: ${(props) => props.theme.fonts.primary};
   font-size: 1.8rem;
 `;
 
