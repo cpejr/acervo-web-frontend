@@ -14,6 +14,7 @@ const theme = {
     primaryCondensed: 'Cabin Condensed, sans-serif',
   },
 };
+
 // More options in https://ant.design/docs/react/customize-theme
 const antdTheme = {
   token: {

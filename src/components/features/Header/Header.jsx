@@ -47,9 +47,9 @@ export default function Header() {
             open={dialogs.history}
             onBlur={() => closeDialog('history')}
           >
-            <DialogItem>Apresentação</DialogItem>
-            <DialogItem>Quem Somos</DialogItem>
-            <DialogItem>Politica e privacidade</DialogItem>
+            <DialogItem to="/">Apresentação</DialogItem>
+            <DialogItem to="/">Quem Somos</DialogItem>
+            <DialogItem to="/">Politica e privacidade</DialogItem>
           </Dialog>
         </MenuItem>
         <MenuItem
@@ -63,10 +63,10 @@ export default function Header() {
             open={dialogs.acervo}
             onBlur={() => closeDialog('acervo')}
           >
-            <DialogItem>Videos</DialogItem>
-            <DialogItem>Fotografias</DialogItem>
-            <DialogItem>Depoimentos</DialogItem>
-            <DialogItem>Documentos Escritos</DialogItem>
+            <DialogItem to="/">Videos</DialogItem>
+            <DialogItem to="/">Fotografias</DialogItem>
+            <DialogItem to="/">Depoimentos</DialogItem>
+            <DialogItem to="/">Documentos Escritos</DialogItem>
           </Dialog>
         </MenuItem>
         <MenuItem>Patrimônio e Eventos Culturais</MenuItem>
@@ -97,9 +97,9 @@ export default function Header() {
             open={dialogs.profile}
             onBlur={() => closeDialog('profile')}
           >
-            <DialogItem>Login</DialogItem>
+            <DialogItem to="/">Login</DialogItem>
             <DivideLine />
-            <DialogItem>Cadastrar</DialogItem>
+            <DialogItem to="/">Cadastrar</DialogItem>
           </DialogProfile>
         </MenuItem>
       </Menu>
