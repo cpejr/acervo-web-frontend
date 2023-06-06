@@ -17,11 +17,11 @@ export default function Footer() {
         <h1>(31) 9 40028922</h1>
       </Contact>
       <SocialMedias>
-        <InstagramOutlined style={{ fontSize: '5rem' }} />
-        <FacebookFilled style={{ fontSize: '5rem' }} />
-        <TwitterOutlined style={{ fontSize: '5rem' }} />
-        <WhatsAppOutlined style={{ fontSize: '5rem' }} />
-        <YoutubeFilled style={{ fontSize: '5rem' }} />
+        <InstagramOutlined />
+        <FacebookFilled />
+        <TwitterOutlined />
+        <WhatsAppOutlined />
+        <YoutubeFilled />
       </SocialMedias>
       <Logo src={LogoAcervo} alt="Logo Acervo" />
     </Container>
