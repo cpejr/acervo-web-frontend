@@ -18,6 +18,12 @@ import {
 } from './Styles';
 
 export default function CarouselEvents() {
+  const documentDropDownOptions = [
+    'Vídeos',
+    'Fotografias',
+    'Depoimentos',
+    'Documentos escritos',
+  ];
   const [dropdownVisible, setDropdownVisible] = useState(false);
   const [documentDropdownVisible, setDocumentDropdownVisible] = useState(false);
   const [selectedFilter, setSelectedFilter] = useState(null);
@@ -54,7 +60,7 @@ export default function CarouselEvents() {
 
       <DivDropdown>
         {dropdownVisible && (
-          <Dropdown className={dropdownVisible ? 'show' : ''}>
+          <Dropdown show={dropdownVisible}>
             <Button onClick={closeDropdown}>Nome</Button>
             <Button onClick={closeDropdown}>Data</Button>
             <Button onClick={closeDropdown}>Lugar</Button>
@@ -67,37 +73,16 @@ export default function CarouselEvents() {
         )}
 
         {dropdownVisible && documentDropdownVisible && (
-          <DocumentDropdown className={documentDropdownVisible ? 'show' : ''}>
-            <DropdownRow>
-              <SelectButtonFilter
-                active={selectedFilter === 'Vídeos'}
-                onClick={() => handleFilterClick('Vídeos')}
-              />
-              <TextDropdown>Vídeos</TextDropdown>
-            </DropdownRow>
-
-            <DropdownRow>
-              <SelectButtonFilter
-                active={selectedFilter === 'Fotografias'}
-                onClick={() => handleFilterClick('Fotografias')}
-              />
-              <TextDropdown>Fotografias</TextDropdown>
-            </DropdownRow>
-
-            <DropdownRow>
-              <SelectButtonFilter />
-              <TextDropdown
-                active={selectedFilter === 'Depoimentos'}
-                onClick={() => handleFilterClick('Depoimentos')}
-              >
-                Depoimentos
-              </TextDropdown>
-            </DropdownRow>
-
-            <DropdownRow>
-              <SelectButtonFilter />
-              <TextDropdown>Documentos escritos</TextDropdown>
-            </DropdownRow>
+          <DocumentDropdown show={documentDropdownVisible}>
+            {documentDropDownOptions.map((option) => (
+              <DropdownRow key={option}>
+                <SelectButtonFilter
+                  active={selectedFilter === option}
+                  onClick={() => handleFilterClick(option)}
+                />
+                <TextDropdown>{option}</TextDropdown>
+              </DropdownRow>
+            ))}
           </DocumentDropdown>
         )}
       </DivDropdown>

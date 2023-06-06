@@ -25,10 +25,7 @@ const fadeInDocument = keyframes`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
-  width: auto;
   height: fit-content;
-
   font-family: ${(props) => props.theme.fonts.cabin};
 `;
 
@@ -99,26 +96,23 @@ export const DivDropdown = styled.div`
 export const Dropdown = styled.div`
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: baseline;
+  gap: 0.5rem;
 
   width: 20rem;
-  height: 0;
+
   margin-top: 2rem;
   padding-left: 3rem;
-  gap: 0.5rem;
 
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
 
   overflow: hidden;
   transition: height 2s ease-out;
-  animation: ${fadeIn} 1s ease-out;
+  animation: ${fadeIn} 500ms ease-out;
 
-  &.show {
-    height: 18rem;
-  }
+  height: ${(props) => (props.show ? '18rem' : '0')};
 `;
 
 export const DocumentDropdown = styled.div`
@@ -126,22 +120,19 @@ export const DocumentDropdown = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
 
   width: 28rem;
-  height: 0;
   padding-left: 2rem;
-  gap: 0.5rem;
 
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
 
   overflow: hidden;
   transition: height 2s ease-out;
-  animation: ${fadeInDocument} 1s ease-out;
+  animation: ${fadeInDocument} 500ms ease-out;
 
-  &.show {
-    height: 15rem;
-  }
+  height: ${(props) => (props.show ? '15rem' : '0')};
 `;
 
 export const DropdownRow = styled.div`
