@@ -1,10 +1,10 @@
 import Slider from 'react-slick';
 
 import {
-  CarouselEvents1,
-  CarouselEvents2,
-  CarouselEvents3,
-} from '../../../assets/Home';
+  carouselEvents1,
+  carouselEvents2,
+  carouselEvents3,
+} from '../../../assets/home';
 import { Container, ImageCarousel } from './Styles';
 
 export default function CarouselEvents() {
@@ -18,9 +18,9 @@ export default function CarouselEvents() {
   return (
     <Container>
       <Slider {...settings}>
-        <ImageCarousel src={CarouselEvents1} />
-        <ImageCarousel src={CarouselEvents2} />
-        <ImageCarousel src={CarouselEvents3} />
+        <ImageCarousel src={carouselEvents1} />
+        <ImageCarousel src={carouselEvents2} />
+        <ImageCarousel src={carouselEvents3} />
       </Slider>
     </Container>
   );

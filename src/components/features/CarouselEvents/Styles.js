@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ArrowRightCarousel, ArrowLeftCarousel } from '../../../assets/Home';
+import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/home';
 
 export const Container = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   align-items: center;
 
   .slick-prev:before {
-    content: url(${ArrowRightCarousel});
+    content: url(${arrowRightCarousel});
   }
 
   .slick-prev {
@@ -23,7 +23,7 @@ export const Container = styled.div`
   }
 
   .slick-next:before {
-    content: url(${ArrowLeftCarousel});
+    content: url(${arrowLeftCarousel});
   }
 
   .slick-next {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ArrowLeft, ArrowRight } from '../../../assets/Home';
+import { arrowLeft, arrowRight } from '../../../assets/home';
 
 export const Container = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const Container = styled.div`
   align-items: center;
 
   .slick-prev:before {
-    content: url(${ArrowLeft});
+    content: url(${arrowLeft});
   }
 
   .slick-prev {
@@ -24,7 +24,7 @@ export const Container = styled.div`
   }
 
   .slick-next:before {
-    content: url(${ArrowRight});
+    content: url(${arrowRight});
   }
 
   .slick-next {
