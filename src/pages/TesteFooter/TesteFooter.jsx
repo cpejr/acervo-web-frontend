@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Footer } from '../../components/features';
 import { Container } from './Styles';
 
