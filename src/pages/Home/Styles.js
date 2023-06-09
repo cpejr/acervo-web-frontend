@@ -23,6 +23,8 @@ export const CarouselOne = styled.div`
   height: auto;
 
   .slick-list {
+    border: 3rem solid white;
+    border-bottom: 12.5rem solid white;
     position: relative;
 
     display: block;
@@ -31,8 +33,17 @@ export const CarouselOne = styled.div`
     width: 80rem;
     height: auto;
 
-    @media (max-width: 700px) {
-      width: 30rem;
+    @media (max-width: 1200px) {
+      width: 65rem;
+      border: 2.5rem solid white;
+      border-bottom: 10rem solid white;
+    }
+    @media (max-width: 1000px) {
+      border: 2rem solid white;
+      border-bottom: 8rem solid white;
+    }
+    @media (max-width: 950px) {
+      width: 45rem;
     }
   }
 `;
@@ -48,17 +59,23 @@ export const CarouselTwo = styled.div`
 
   .slick-list {
     position: relative;
+    border-radius: 20px;
 
     display: block;
     overflow: hidden;
 
-    margin: 0;
-    padding: 0;
     width: 170rem;
     height: auto;
 
-    @media (max-width: 700px) {
-      width: 30rem;
+    @media (max-width: 1400px) {
+      width: 100rem;
+    }
+    @media (max-width: 1000px) {
+      width: 80rem;
+    }
+    @media (max-width: 900px) {
+      width: 70rem;
+      height: 50rem;
     }
   }
 `;

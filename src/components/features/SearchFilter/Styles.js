@@ -94,11 +94,14 @@ export const DivDropdown = styled.div`
 `;
 
 export const Dropdown = styled.div`
+  position: absolute;
+  top: 11rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: baseline;
   gap: 0.5rem;
+  z-index: 10;
 
   width: 20rem;
 
@@ -109,13 +112,17 @@ export const Dropdown = styled.div`
   border-radius: 21px;
 
   overflow: hidden;
-  transition: height 2s ease-out;
-  animation: ${fadeIn} 500ms ease-out;
+  transition: height 1s ease-out;
+  animation: ${fadeIn} 300ms ease-out;
 
   height: ${(props) => (props.show ? '18rem' : '0')};
 `;
 
 export const DocumentDropdown = styled.div`
+  position: absolute;
+  left: 26rem;
+  top: 16rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,8 +136,8 @@ export const DocumentDropdown = styled.div`
   border-radius: 21px;
 
   overflow: hidden;
-  transition: height 2s ease-out;
-  animation: ${fadeInDocument} 500ms ease-out;
+  transition: height 1s ease-out;
+  animation: ${fadeInDocument} 300ms ease-out;
 
   height: ${(props) => (props.show ? '15rem' : '0')};
 `;

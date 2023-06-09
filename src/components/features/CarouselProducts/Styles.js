@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { arrowLeft, arrowRight } from '../../../assets/home';
+import { arrowLeft, arrowRight } from '../../../assets/Home';
 
 export const Container = styled.div`
   display: flex;
@@ -36,10 +36,8 @@ export const Container = styled.div`
 
 export const ImageCarousel = styled.img`
   height: 62.8rem;
-  border-radius: 20px;
 
-  @media (max-width: 700px) {
-    width: auto;
-    height: 30rem;
+  @media (max-width: 900px) {
+    height: 50rem;
   }
 `;
