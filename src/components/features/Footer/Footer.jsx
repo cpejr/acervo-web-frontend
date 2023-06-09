@@ -6,7 +6,7 @@ import {
   YoutubeFilled,
 } from '@ant-design/icons';
 
-import LogoAcervo from '../../../assets/AcervoLogo.png';
+import logoAcervo from '../../../assets/acervoLogo.png';
 import { Contact, Container, Logo, SocialMedias } from './Styles';
 
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
         <WhatsAppOutlined />
         <YoutubeFilled />
       </SocialMedias>
-      <Logo src={LogoAcervo} alt="Logo Acervo" />
+      <Logo src={logoAcervo} alt="Logo Acervo" />
     </Container>
   );
 }
