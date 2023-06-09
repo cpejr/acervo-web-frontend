@@ -1,2 +1,2 @@
-export { default as Home } from './Home/Home';
+export { default as FormTest } from './FormTest/FormTest';
 export { default as TesteFooter } from './TesteFooter/TesteFooter';
