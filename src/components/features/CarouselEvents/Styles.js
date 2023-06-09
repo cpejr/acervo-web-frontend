@@ -14,7 +14,18 @@ export const Container = styled.div`
 
   .slick-prev:before {
     display: flex;
-    content: url(${arrowRightCarousel});
+    content: ' ';
+
+    background-image: url(${arrowRightCarousel});
+    background-size: 100% 100%;
+
+    width: 13.1rem;
+    height: 19.7rem;
+
+    @media (max-width: 1000px) {
+      width: 10rem;
+      height: 15rem;
+    }
   }
 
   .slick-prev {
@@ -32,11 +43,25 @@ export const Container = styled.div`
     @media (max-width: 1000px) {
       left: -15rem;
     }
+    @media (max-width: 820px) {
+      left: -12rem;
+    }
   }
 
   .slick-next:before {
     display: flex;
-    content: url(${arrowLeftCarousel});
+    content: ' ';
+
+    background-image: url(${arrowLeftCarousel});
+    background-size: 100% 100%;
+
+    width: 13.1rem;
+    height: 19.7rem;
+
+    @media (max-width: 1000px) {
+      width: 10rem;
+      height: 15rem;
+    }
   }
 
   .slick-next {
@@ -54,14 +79,24 @@ export const Container = styled.div`
     @media (max-width: 1000px) {
       right: -15rem;
     }
+    @media (max-width: 820px) {
+      right: -12rem;
+    }
   }
 `;
 
 export const ImageCarousel = styled.img`
-  width: 100%;
+  display: flex;
   height: 62.8rem;
+  width: 1rem;
 
+  @media (max-width: 1200px) {
+    height: 43rem;
+  }
   @media (max-width: 1000px) {
     height: 50rem;
+  }
+  @media (max-width: 950px) {
+    height: 30rem;
   }
 `;

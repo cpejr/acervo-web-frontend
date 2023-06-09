@@ -35,15 +35,18 @@ export const CarouselOne = styled.div`
 
     @media (max-width: 1200px) {
       width: 65rem;
+      height: 55rem;
       border: 2.5rem solid white;
       border-bottom: 10rem solid white;
     }
     @media (max-width: 1000px) {
+      height: 50rem;
       border: 2rem solid white;
       border-bottom: 8rem solid white;
     }
     @media (max-width: 950px) {
       width: 45rem;
+      height: 40rem;
     }
   }
 `;
@@ -71,11 +74,11 @@ export const CarouselTwo = styled.div`
       width: 100rem;
     }
     @media (max-width: 1000px) {
+      height: 50rem;
       width: 80rem;
     }
-    @media (max-width: 900px) {
-      width: 70rem;
-      height: 50rem;
+    @media (max-width: 800px) {
+      width: 65rem;
     }
   }
 `;

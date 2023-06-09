@@ -108,7 +108,7 @@ export const Dropdown = styled.div`
   margin-top: 2rem;
   padding-left: 3rem;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 1);
   border-radius: 21px;
 
   overflow: hidden;
@@ -122,6 +122,7 @@ export const DocumentDropdown = styled.div`
   position: absolute;
   left: 26rem;
   top: 16rem;
+  z-index: 10;
 
   display: flex;
   flex-direction: column;
@@ -132,7 +133,7 @@ export const DocumentDropdown = styled.div`
   width: 28rem;
   padding-left: 2rem;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 1);
   border-radius: 21px;
 
   overflow: hidden;

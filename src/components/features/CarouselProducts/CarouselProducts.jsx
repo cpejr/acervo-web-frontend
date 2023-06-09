@@ -4,7 +4,7 @@ import {
   carouselEvents1,
   carouselEvents2,
   carouselEvents3,
-} from '../../../assets/home';
+} from '../../../assets/Home';
 import { Container, ImageCarousel } from './Styles';
 
 export default function CarouselProducts() {

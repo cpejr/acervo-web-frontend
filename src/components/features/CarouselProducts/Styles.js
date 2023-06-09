@@ -13,7 +13,19 @@ export const Container = styled.div`
   align-items: center;
 
   .slick-prev:before {
-    content: url(${arrowLeft});
+    display: flex;
+    content: ' ';
+
+    background-image: url(${arrowLeft});
+    background-size: 100% 100%;
+
+    width: 8rem;
+    height: 8rem;
+
+    @media (max-width: 1000px) {
+      width: 6rem;
+      height: 6rem;
+    }
   }
 
   .slick-prev {
@@ -24,7 +36,19 @@ export const Container = styled.div`
   }
 
   .slick-next:before {
-    content: url(${arrowRight});
+    display: flex;
+    content: ' ';
+
+    background-image: url(${arrowRight});
+    background-size: 100% 100%;
+
+    width: 8rem;
+    height: 8rem;
+
+    @media (max-width: 1000px) {
+      width: 6rem;
+      height: 6rem;
+    }
   }
 
   .slick-next {
@@ -37,7 +61,14 @@ export const Container = styled.div`
 export const ImageCarousel = styled.img`
   height: 62.8rem;
 
-  @media (max-width: 900px) {
+  @media (max-width: 1400px) {
+    width: 100rem;
+  }
+  @media (max-width: 1000px) {
     height: 50rem;
+    width: 80rem;
+  }
+  @media (max-width: 800px) {
+    width: 65rem;
   }
 `;
