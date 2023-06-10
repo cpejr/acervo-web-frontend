@@ -8,7 +8,7 @@ export const StyledForm = styled(Form)`
   align-items: center;
   gap: 1.5rem;
 
-  height: 100vh;
+  height: 100%;
 `;
 StyledForm.Field = styled(Form.Field)`
   display: flex;

@@ -4,21 +4,17 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
   colors: {
-    primary: 'red',
-    background: 'black',
+    header: '#7F260F',
+    dialogBG: 'rgba(255, 255, 255, 0.66)',
+    fontHeader: 'white',
+    fontDialog: 'black',
   },
   fonts: {
-    color: {
-      primary: 'white',
-    },
-    family: {
-      primary: 'Arial, Helvetica, sans-serif',
-    },
-    size: {
-      small: '1.4rem',
-    },
+    primary: 'Cabin, sans-serif',
+    primaryCondensed: 'Cabin Condensed, sans-serif',
   },
 };
+
 // More options in https://ant.design/docs/react/customize-theme
 const antdTheme = {
   token: {
