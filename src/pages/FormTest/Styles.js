@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+/* import styled from 'styled-components';
 
 import { Form } from '../../components/common';
 
@@ -38,4 +38,4 @@ export const Button = styled.button`
   &:hover {
     opacity: 0.8;
   }
-`;
+`; */
