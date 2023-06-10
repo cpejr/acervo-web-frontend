@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { Outlet, useLocation } from 'react-router-dom';
 
-import { Header, SystemLoading } from '../../components/features';
+import { Footer, Header, SystemLoading } from '../../components/features';
 import { useRefreshToken } from '../../hooks/query/sessions';
 import { Container } from './Styles';
 
@@ -31,7 +31,7 @@ export default function AppLayout() {
     <Container>
       <Header />
       <Outlet />
-      <h1>FOOTER</h1>
+      <Footer />
     </Container>
   );
 }
