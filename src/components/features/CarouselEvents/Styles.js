@@ -4,13 +4,31 @@ import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/home';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-
-  width: 100%;
-  height: auto;
-
   justify-content: center;
   align-items: center;
+
+  width: 100%;
+
+  .slick-slider {
+    border: 3rem solid white;
+    border-bottom: 12.5rem solid white;
+  }
+
+  .slick-list {
+    width: 100rem;
+
+    @media (max-width: 1200px) {
+      width: 65rem;
+      height: 55rem;
+    }
+    @media (max-width: 1000px) {
+      height: 50rem;
+    }
+    @media (max-width: 950px) {
+      width: 45rem;
+      height: 40rem;
+    }
+  }
 
   .slick-prev:before {
     display: flex;
@@ -86,12 +104,13 @@ export const Container = styled.div`
 `;
 
 export const ImageCarousel = styled.img`
-  display: flex;
+  width: 100%;
+
   height: 62.8rem;
-  width: 1rem;
+  object-fit: cover;
 
   @media (max-width: 1200px) {
-    height: 43rem;
+    height: 53rem;
   }
   @media (max-width: 1000px) {
     height: 50rem;
