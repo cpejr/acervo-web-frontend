@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+/* import styled from 'styled-components';
 
 import { Form } from '../../components/common';
 
@@ -8,7 +8,7 @@ export const StyledForm = styled(Form)`
   align-items: center;
   gap: 1.5rem;
 
-  height: 100vh;
+  height: 100%;
 `;
 StyledForm.Field = styled(Form.Field)`
   display: flex;
@@ -38,4 +38,4 @@ export const Button = styled.button`
   &:hover {
     opacity: 0.8;
   }
-`;
+`; */
