@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/Home';
+import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/home';
 
 export const Container = styled.div`
   display: flex;
