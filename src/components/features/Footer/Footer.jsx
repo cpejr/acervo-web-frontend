@@ -6,7 +6,7 @@ import {
   YoutubeFilled,
 } from '@ant-design/icons';
 
-import logoAcervo from '../../../assets/acervoLogo.png';
+import logoAcervo from '../../../assets/logos/acervoLogo1.png';
 import { Contact, Container, Logo, SocialMedias } from './Styles';
 
 export default function Footer() {

@@ -1,4 +1,4 @@
-/* import { zodResolver } from '@hookform/resolvers/zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 
@@ -38,4 +38,4 @@ function FormField({ name, label }) {
 FormField.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-}; */
+};

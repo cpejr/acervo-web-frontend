@@ -1,4 +1,4 @@
-/* import { z } from 'zod';
+import { z } from 'zod';
 
 // eslint-disable-next-line import/prefer-default-export
 export const createUserSchema = z.object({
@@ -8,4 +8,4 @@ export const createUserSchema = z.object({
     .nonempty('O email é obrigatório')
     .email('Email inválido')
     .trim(),
-}); */
+});
