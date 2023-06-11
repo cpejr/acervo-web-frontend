@@ -30,6 +30,11 @@ import {
   SupportButtom,
   SupportText,
   Logos,
+  LogosandSocial,
+  LastEvents,
+  LastEventsLine,
+  ProductLine,
+  Products,
 } from './Styles';
 
 export default function Home() {
@@ -40,7 +45,7 @@ export default function Home() {
         <Content>
           <Logo src="src/assets/Home/Logo.png" />
           <Title> Escrita, Imagem e Som</Title>
-          <Text src="src/assets/Home/LogoBomDespacho.png" />
+          <Text src="src/assets/Home/BomDespacho.png" />
         </Content>
       </FirstSection>
       <FilterSection>
@@ -59,26 +64,41 @@ export default function Home() {
             </Search>
           </FilterAndSearch>
         </SearchBar>
-        <SocialMedia>
-          <AiOutlineInstagram size={60} color="#7F260F" />
-          <AiFillFacebook size={60} color="#7F260F" />
-          <AiOutlineTwitter size={60} color="#7F260F" />
-          <AiOutlineWhatsApp size={60} color="#7F260F" />
-          <AiFillYoutube size={60} color="#7F260F" />
-        </SocialMedia>
-        <Logos>
-          <img src="src/assets/Home/Cultura.png" alt="Incentivo Cultura Logo" />
-          <img
-            src="src/assets/Home/LogoBomDespacho.png"
-            alt="Logo Bom Despacho"
-          />
-          <img
-            src="src/assets/Home/Secretaria.png"
-            alt="SecretariaMinisterio"
-          />
-          <img src="src/assets/Home/Brasil.png" alt="Brasil" />
-        </Logos>
+        <LogosandSocial>
+          <SocialMedia>
+            <AiOutlineInstagram size={60} color="#7F260F" />
+            <AiFillFacebook size={60} color="#7F260F" />
+            <AiOutlineTwitter size={60} color="#7F260F" />
+            <AiOutlineWhatsApp size={60} color="#7F260F" />
+            <AiFillYoutube size={60} color="#7F260F" />
+          </SocialMedia>
+          <Logos>
+            <img
+              src="src/assets/Home/Cultura.png"
+              alt="Incentivo Cultura Logo"
+            />
+            <img
+              src="src/assets/Home/LogoBomDespacho.png"
+              alt="Logo Bom Despacho"
+            />
+            <img
+              src="src/assets/Home/Secretaria.png"
+              alt="SecretariaMinisterio"
+            />
+            <img src="src/assets/Home/Brasil.png" alt="Brasil" />
+          </Logos>
+        </LogosandSocial>
       </FilterSection>
+      <LastEvents>
+        <LastEventsLine>
+          <h1>ÚLTIMOS EVENTOS</h1>
+        </LastEventsLine>
+      </LastEvents>
+      <Products>
+        <ProductLine>
+          <h1>PRODUTOS</h1>
+        </ProductLine>
+      </Products>
       <Support>
         <SupportLine>
           <h1>Você pode nos apoiar! </h1>
