@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   AiOutlineInstagram,
@@ -8,7 +8,10 @@ import {
   AiOutlineWhatsApp,
   AiOutlineMenu,
   AiFillYoutube,
+  AiOutlineClose,
 } from 'react-icons/ai';
+import { RiArrowRightSLine } from 'react-icons/ri';
+import { BsSquare } from 'react-icons/bs';
 
 import {
   Container,
@@ -35,9 +38,30 @@ import {
   LastEventsLine,
   ProductLine,
   Products,
+  Dialog,
+  DialogItem,
+  DocumentDialog,
 } from './Styles';
 
 export default function Home() {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [documentDialogOpen, setDocumentDialogOpen] = useState(false);
+
+  const openDialog = () => {
+    setDialogOpen(true);
+  };
+
+  const closeDialog = () => {
+    setDialogOpen(false);
+  };
+
+  const openDocumentDialog = () => {
+    setDocumentDialogOpen(true);
+  };
+
+  const closeDocumentDialog = () => {
+    setDocumentDialogOpen(false);
+  };
   return (
     <Container>
       <FirstSection>
@@ -54,10 +78,39 @@ export default function Home() {
             <h1>Pesquisar no site...</h1>
           </SearchonSite>
           <FilterAndSearch>
-            <Filter>
+            <Filter onClick={openDialog}>
               <h1>FILTROS</h1>
               <AiOutlineMenu size={36} />
             </Filter>
+            <Dialog open={dialogOpen}>
+              <button type="button" onClick={closeDialog}>
+                <AiOutlineClose size={15} />
+              </button>
+              <DialogItem>Nome</DialogItem>
+              <DialogItem>Data</DialogItem>
+              <DialogItem>Lugar</DialogItem>
+              <DialogItem>Evento</DialogItem>
+              <DialogItem onClick={openDocumentDialog}>
+                Documentos <RiArrowRightSLine size={20} />
+              </DialogItem>
+              <DocumentDialog open={documentDialogOpen}>
+                <button type="button" onClick={closeDocumentDialog}>
+                  <AiOutlineClose size={15} />
+                </button>
+                <DialogItem>
+                  <BsSquare size={18} /> Videos
+                </DialogItem>
+                <DialogItem>
+                  <BsSquare size={18} /> Fotografias
+                </DialogItem>
+                <DialogItem>
+                  <BsSquare size={18} /> Depoimentos
+                </DialogItem>
+                <DialogItem>
+                  <BsSquare size={18} /> Documentos Escritos
+                </DialogItem>
+              </DocumentDialog>
+            </Dialog>
             <Search>
               <h1>BUSCAR</h1>
               <AiOutlineSearch size={60} color="#7F260F" />
