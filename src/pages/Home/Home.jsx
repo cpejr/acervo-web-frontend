@@ -10,8 +10,8 @@ import {
   AiFillYoutube,
   AiOutlineClose,
 } from 'react-icons/ai';
-import { RiArrowRightSLine } from 'react-icons/ri';
 import { BsSquare } from 'react-icons/bs';
+import { RiArrowRightSLine } from 'react-icons/ri';
 
 import {
   Container,

@@ -85,6 +85,9 @@ export const Dialog = styled.div`
   &:hover .document-dialog {
     display: flex;
   }
+  @media (max-width: 1060px) {
+    width: 15rem;
+  }
 `;
 
 export const DialogItem = styled.a`
@@ -93,6 +96,9 @@ export const DialogItem = styled.a`
   font-weight: 400;
   font-size: 2rem;
   color: rgba(30, 30, 30, 0.74);
+  @media (max-width: 1060px) {
+    font-size: 1.5;
+  }
 `;
 
 export const DocumentDialog = styled.div`
@@ -110,7 +116,6 @@ export const DocumentDialog = styled.div`
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
-  padding: 1re;
 `;
 export const SearchBar = styled.div`
   display: flex;
@@ -128,6 +133,12 @@ export const SearchBar = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 4.6rem;
+  }
+
+  @media (max-width: 1060px) {
+    display: flex;
+    max-width: 70rem;
+    height: 10rem;
   }
 `;
 export const FilterAndSearch = styled.div`
@@ -149,6 +160,11 @@ export const SearchonSite = styled.div`
     line-height: 7rem;
 
     color: rgba(30, 30, 30, 0.74);
+  }
+  @media (max-width: 1060px) {
+    h1 {
+      font-size: 4rem;
+    }
   }
 `;
 export const Filter = styled.div`
@@ -186,11 +202,20 @@ export const Search = styled.div`
 
     color: rgba(30, 30, 30, 0.74);
   }
+  @media (max-width: 1060px) {
+    display: flex;
+    max-width: 15rem;
+    height: 10rem;
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
 `;
 
 export const LogosandSocial = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
   height: auto;
@@ -204,12 +229,18 @@ export const Logos = styled.div`
   background: #ffffff;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 0 2rem;
-  gap: 9rem;
 
   img {
     height: 15rem;
     width: auto;
+  }
+  @media (max-width: 1060px) {
+    width: 100%;
+    height: 15rem;
+    img {
+      height: 10rem;
+      width: auto;
+    }
   }
 `;
 export const SocialMedia = styled.div`
@@ -222,6 +253,10 @@ export const SocialMedia = styled.div`
   width: 100%;
   height: 16rem;
   gap: 16rem;
+  @media (max-width: 1060px) {
+    width: 100%;
+    height: 13rem;
+  }
 `;
 export const LastEvents = styled.div`
   display: flex;
@@ -320,6 +355,14 @@ export const SupportText = styled.div`
 
     color: #7f260f;
   }
+  @media (max-width: 1060px) {
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 2.4rem;
+    }
+  }
 `;
 export const SupportButtom = styled.div`
   width: 100rem;
@@ -340,5 +383,12 @@ export const SupportButtom = styled.div`
     text-align: center;
 
     color: #7f260f;
+  }
+  @media (max-width: 1060px) {
+    width: 60rem;
+    height: 13rem;
+    h1 {
+      font-size: 5rem;
+    }
   }
 `;
