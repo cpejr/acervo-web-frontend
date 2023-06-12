@@ -26,7 +26,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: fit-content;
-  font-family: ${(props) => props.theme.fonts.cabin};
+  font-family: ${(props) => props.theme.fonts.primary};
 `;
 
 export const DivFilter = styled.div`
