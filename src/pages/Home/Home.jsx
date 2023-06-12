@@ -8,13 +8,13 @@ import { Container, CarouselTwo } from './Styles';
 export default function Home() {
   return (
     <Container>
-      <SearchFilter />
+      {/* <SearchFilter /> */}
 
       <CarouselEvents />
 
-      <CarouselTwo>
+      {/* <CarouselTwo>
         <CarouselProducts />
-      </CarouselTwo>
+      </CarouselTwo> */}
     </Container>
   );
 }

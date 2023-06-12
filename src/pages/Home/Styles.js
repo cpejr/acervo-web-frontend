@@ -2,16 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
-
-  align-items: baseline;
-  justify-content: baseline;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
   width: 100%;
-  height: auto;
-  gap: 100px;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  height: 100%;
 
   background: black;
 `;

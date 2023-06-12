@@ -15,6 +15,7 @@ export default function CarouselEvents() {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <Container>
       <Slider {...settings}>
