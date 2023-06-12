@@ -28,6 +28,10 @@ export const Container = styled.div`
       width: 45rem;
       height: 40rem;
     }
+    @media (max-width: 820px) {
+      width: 40rem;
+      height: 35rem;
+    }
   }
 
   .slick-prev:before {
@@ -55,14 +59,8 @@ export const Container = styled.div`
     @media (max-width: 1450px) {
       left: -20rem;
     }
-    @media (max-width: 1200px) {
-      left: -15rem;
-    }
     @media (max-width: 1000px) {
       left: -15rem;
-    }
-    @media (max-width: 820px) {
-      left: -12rem;
     }
   }
 
@@ -91,14 +89,8 @@ export const Container = styled.div`
     @media (max-width: 1450px) {
       right: -20rem;
     }
-    @media (max-width: 1200px) {
-      right: -15rem;
-    }
     @media (max-width: 1000px) {
       right: -15rem;
-    }
-    @media (max-width: 820px) {
-      right: -12rem;
     }
   }
 `;
@@ -110,12 +102,12 @@ export const ImageCarousel = styled.img`
   object-fit: cover;
 
   @media (max-width: 1200px) {
-    height: 53rem;
+    height: 55rem;
   }
   @media (max-width: 1000px) {
     height: 50rem;
   }
   @media (max-width: 950px) {
-    height: 30rem;
+    height: 40rem;
   }
 `;

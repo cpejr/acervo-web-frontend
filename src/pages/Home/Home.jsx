@@ -3,7 +3,7 @@ import {
   CarouselProducts,
   SearchFilter,
 } from '../../components/features';
-import { Container, CarouselTwo } from './Styles';
+import { Container } from './Styles';
 
 export default function Home() {
   return (
@@ -12,9 +12,7 @@ export default function Home() {
 
       <CarouselEvents />
 
-      <CarouselTwo>
-        <CarouselProducts />
-      </CarouselTwo>
+      <CarouselProducts />
     </Container>
   );
 }

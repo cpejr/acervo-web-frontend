@@ -4,13 +4,36 @@ import { arrowLeft, arrowRight } from '../../../assets/home';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
-
-  width: auto;
-  height: 100%;
-
   justify-content: center;
   align-items: center;
+
+  height: 100%;
+  width: 100%;
+  max-width: 176.5rem;
+
+  margin: 0 auto;
+
+  .slick-list {
+    position: relative;
+    border-radius: 20px;
+
+    display: block;
+    overflow: hidden;
+
+    width: 170rem;
+    height: auto;
+
+    @media (max-width: 1400px) {
+      width: 100rem;
+    }
+    @media (max-width: 1000px) {
+      height: 50rem;
+      width: 80rem;
+    }
+    @media (max-width: 800px) {
+      width: 65rem;
+    }
+  }
 
   .slick-prev:before {
     display: flex;
