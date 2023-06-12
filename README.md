@@ -28,8 +28,11 @@ Frontend do projeto
 
   - Pasta em que ficarão os components da aplicação frontend, ou seja, tudo aquilo que a gente definiu como conteúdos das nossas páginas que de alguma forma possam ser reaproveitadas e consigam nos ajudar quanto à produtividade e organização. Exemplo de componentes são botões e caixas de texto que são usadas em mais de uma página, ajudando-nos assim a gerar um padrão.
     **-> features**
+
     - Pasta que ficam os componentes mais específicos e complexos como o footer e o header.
+
     **-> common**
+
     - Pasta que ficam os componentes mais comuns como inputs, botões e selects que usaremos muitas vezes em muitas páginas.
 
   **-> hooks**

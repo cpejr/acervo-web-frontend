@@ -25,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <Theme>
+        <GlobalStyles />
         <Routes />
       </Theme>
       <ReactQueryDevtools />
