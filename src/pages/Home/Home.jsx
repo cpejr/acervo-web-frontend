@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 
-import {
-  AiOutlineInstagram,
-  AiOutlineSearch,
-  AiOutlineTwitter,
-  AiFillFacebook,
-  AiOutlineWhatsApp,
-  AiOutlineMenu,
-  AiFillYoutube,
-  AiOutlineClose,
-} from 'react-icons/ai';
+import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { BsSquare } from 'react-icons/bs';
-import { RiArrowRightSLine } from 'react-icons/ri';
 
 import {
   Container,
@@ -41,6 +31,13 @@ import {
   Dialog,
   DialogItem,
   DocumentDialog,
+  ColorOverlay,
+  ArrowIcon,
+  YoutubeIcon,
+  InstagramIcon,
+  FacebookIcon,
+  TwitterIcon,
+  WhatsAppIcon,
 } from './Styles';
 
 export default function Home() {
@@ -66,6 +63,7 @@ export default function Home() {
     <Container>
       <FirstSection>
         <BackgroundImage />
+        <ColorOverlay />
         <Content>
           <Logo src="src/assets/Home/Logo.png" />
           <Title> Escrita, Imagem e Som</Title>
@@ -91,7 +89,7 @@ export default function Home() {
               <DialogItem>Lugar</DialogItem>
               <DialogItem>Evento</DialogItem>
               <DialogItem onClick={openDocumentDialog}>
-                Documentos <RiArrowRightSLine size={20} />
+                Documentos <ArrowIcon size={20} />
               </DialogItem>
               <DocumentDialog open={documentDialogOpen}>
                 <button type="button" onClick={closeDocumentDialog}>
@@ -119,11 +117,11 @@ export default function Home() {
         </SearchBar>
         <LogosandSocial>
           <SocialMedia>
-            <AiOutlineInstagram size={60} color="#7F260F" />
-            <AiFillFacebook size={60} color="#7F260F" />
-            <AiOutlineTwitter size={60} color="#7F260F" />
-            <AiOutlineWhatsApp size={60} color="#7F260F" />
-            <AiFillYoutube size={60} color="#7F260F" />
+            <InstagramIcon />
+            <FacebookIcon />
+            <TwitterIcon />
+            <WhatsAppIcon />
+            <YoutubeIcon />
           </SocialMedia>
           <Logos>
             <img

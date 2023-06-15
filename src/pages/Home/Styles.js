@@ -1,3 +1,11 @@
+import {
+  AiOutlineInstagram,
+  AiFillFacebook,
+  AiOutlineTwitter,
+  AiOutlineWhatsApp,
+  AiFillYoutube,
+} from 'react-icons/ai';
+import { RiArrowRightSLine } from 'react-icons/ri';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -28,9 +36,17 @@ export const BackgroundImage = styled.div`
   background-repeat: no-repeat;
   filter: blur(1rem);
 `;
+export const ColorOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(241, 194, 101, 0.75);
+`;
 export const Content = styled.div`
   position: relative;
-  //z-index: 1;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,11 +88,12 @@ export const Dialog = styled.div`
   height: 20rem;
   flex-direction: column;
   margin-top: 35rem;
-  gap: 1rem;
+  gap: 0.6rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
   padding-left: 1rem;
+  padding-top: 0.6rem;
   button {
     border: none;
     background: none;
@@ -85,20 +102,26 @@ export const Dialog = styled.div`
   &:hover .document-dialog {
     display: flex;
   }
-  @media (max-width: 1060px) {
+  @media (max-width: 1080px) {
     width: 15rem;
   }
 `;
 
-export const DialogItem = styled.a`
+export const DialogItem = styled.div`
+  display: flex;
   font-family: 'Cabin';
   font-style: normal;
   font-weight: 400;
   font-size: 2rem;
   color: rgba(30, 30, 30, 0.74);
+  flex-direction: row;
+  gap: 0.5rem;
   @media (max-width: 1060px) {
     font-size: 1.5;
   }
+`;
+export const ArrowIcon = styled(RiArrowRightSLine)`
+  margin-top: 0.5rem;
 `;
 
 export const DocumentDialog = styled.div`
@@ -111,11 +134,12 @@ export const DocumentDialog = styled.div`
   margin-left: 10px;
   width: calc(100% + 1rem);
   height: 100%;
-  gap: 1rem;
+  gap: 0.6rem;
   padding-left: 1rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
+  padding-top: 0.6rem;
 `;
 export const SearchBar = styled.div`
   display: flex;
@@ -136,6 +160,16 @@ export const SearchBar = styled.div`
   }
 
   @media (max-width: 1060px) {
+    display: flex;
+    max-width: 70rem;
+    height: 10rem;
+  }
+  @media (max-width: 1080px) {
+    display: flex;
+    max-width: 90rem;
+    height: 10rem;
+  }
+  @media (max-width: 950px) {
     display: flex;
     max-width: 70rem;
     height: 10rem;
@@ -161,7 +195,7 @@ export const SearchonSite = styled.div`
 
     color: rgba(30, 30, 30, 0.74);
   }
-  @media (max-width: 1060px) {
+  @media (max-width: 1080px) {
     h1 {
       font-size: 4rem;
     }
@@ -202,7 +236,7 @@ export const Search = styled.div`
 
     color: rgba(30, 30, 30, 0.74);
   }
-  @media (max-width: 1060px) {
+  @media (max-width: 1080px) {
     display: flex;
     max-width: 15rem;
     height: 10rem;
@@ -229,6 +263,7 @@ export const Logos = styled.div`
   background: #ffffff;
   align-items: flex-end;
   justify-content: space-between;
+  padding: 2rem;
 
   img {
     height: 15rem;
@@ -253,9 +288,60 @@ export const SocialMedia = styled.div`
   width: 100%;
   height: 16rem;
   gap: 16rem;
+  padding: 2rem;
   @media (max-width: 1060px) {
-    width: 100%;
+    width: auto;
     height: 13rem;
+  }
+  @media (max-width: 980px) {
+    width: auto;
+    height: 10rem;
+    padding: 4rem;
+    gap: 10rem;
+  }
+`;
+export const InstagramIcon = styled(AiOutlineInstagram)`
+  font-size: 6rem;
+  color: #7f260f;
+
+  @media (max-width: 980px) {
+    font-size: 4rem;
+  }
+`;
+
+export const FacebookIcon = styled(AiFillFacebook)`
+  font-size: 6rem;
+  color: #7f260f;
+
+  @media (max-width: 980px) {
+    font-size: 4rem;
+  }
+`;
+
+export const TwitterIcon = styled(AiOutlineTwitter)`
+  font-size: 6rem;
+  color: #7f260f;
+
+  @media (max-width: 980px) {
+    font-size: 4rem;
+  }
+`;
+
+export const WhatsAppIcon = styled(AiOutlineWhatsApp)`
+  font-size: 6rem;
+  color: #7f260f;
+
+  @media (max-width: 980px) {
+    font-size: 4rem;
+  }
+`;
+
+export const YoutubeIcon = styled(AiFillYoutube)`
+  font-size: 6rem;
+  color: #7f260f;
+
+  @media (max-width: 980px) {
+    font-size: 4rem;
   }
 `;
 export const LastEvents = styled.div`
@@ -312,6 +398,7 @@ export const Support = styled.div`
   flex-direction: column;
   gap: 6rem;
   width: 100%;
+  padding-bottom: 2rem;
 `;
 
 export const SupportLine = styled.div`
@@ -335,7 +422,9 @@ export const SupportLine = styled.div`
 export const SupportText = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: justify;
   gap: 2rem;
+  padding: 2rem;
 
   h2 {
     font-family: 'Cabin Condensed';
@@ -375,6 +464,7 @@ export const SupportButtom = styled.div`
   background: #f19709;
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.25);
   border-radius: 6.5rem;
+
   h1 {
     font-family: 'Cabin';
     font-style: normal;

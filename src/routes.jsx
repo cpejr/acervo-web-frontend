@@ -11,7 +11,7 @@ import { Home } from './pages';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<FormTest />} />
+      <Route path="/" element={<Home />} />
     </Route>
   )
 );
