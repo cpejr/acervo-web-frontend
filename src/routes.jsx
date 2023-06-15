@@ -5,8 +5,12 @@ import {
   Route,
 } from 'react-router-dom';
 
-import { AppLayout } from './layouts';
 import { Home } from './pages';
+import { AppLayout } from './layouts';
+import { FormTest } from './pages';
+=========
+import { Home } from './pages';
+>>>>>>>>> Temporary merge branch 2
 
 const router = createBrowserRouter(
   createRoutesFromElements(
