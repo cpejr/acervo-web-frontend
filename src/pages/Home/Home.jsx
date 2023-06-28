@@ -78,7 +78,7 @@ export default function Home() {
           <FilterAndSearch>
             <Filter onClick={openDialog}>
               <h1>FILTROS</h1>
-              <AiOutlineMenu size={36} />
+              <AiOutlineMenu size={34} />
             </Filter>
             <Dialog open={dialogOpen}>
               <button type="button" onClick={closeDialog}>
@@ -111,7 +111,7 @@ export default function Home() {
             </Dialog>
             <Search>
               <h1>BUSCAR</h1>
-              <AiOutlineSearch size={60} color="#7F260F" />
+              <AiOutlineSearch size={60} color="#030303" />
             </Search>
           </FilterAndSearch>
         </SearchBar>

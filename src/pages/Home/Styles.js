@@ -203,13 +203,15 @@ export const SearchonSite = styled.div`
 `;
 export const Filter = styled.div`
   display: flex;
-  max-width: 25rem;
+  max-width: 26rem;
   height: 7rem;
   background: rgba(217, 217, 217, 0.35);
   border-radius: 1.6rem;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  gap: 0.5rem;
+  padding: 0.5rem;
 
   h1 {
     font-family: 'Cabin';
@@ -224,10 +226,12 @@ export const Search = styled.div`
   display: flex;
   width: 30rem;
   height: 13rem;
-  background: #f19709;
+  background: #0762f2;
   align-items: center;
   justify-content: center;
   border-radius: 0rem 1.5rem 1.5rem 0rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
   h1 {
     font-family: 'Cabin';
     font-style: normal;
@@ -270,6 +274,14 @@ export const Logos = styled.div`
     width: auto;
   }
   @media (max-width: 1060px) {
+    width: 100%;
+    height: 15rem;
+    img {
+      height: 12rem;
+      width: auto;
+    }
+  }
+  @media (max-width: 1030px) {
     width: 100%;
     height: 15rem;
     img {
@@ -424,7 +436,8 @@ export const SupportText = styled.div`
   flex-direction: column;
   text-align: justify;
   gap: 2rem;
-  padding: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 
   h2 {
     font-family: 'Cabin Condensed';
@@ -461,7 +474,7 @@ export const SupportButtom = styled.div`
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background: #f19709;
+  background: #0762f2;
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.25);
   border-radius: 6.5rem;
 
