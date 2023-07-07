@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 
-import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/Home';
+import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/home';
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+`;
+
+export const CarouselDiv = styled.div`
   display: flex;
   flex-direction: row;
 
@@ -11,6 +18,34 @@ export const Container = styled.div`
 
   justify-content: center;
   align-items: center;
+
+  .slick-list {
+    border: 3rem solid white;
+    border-bottom: 12.5rem solid white;
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    width: 80rem;
+    height: auto;
+
+    @media (max-width: 1200px) {
+      width: 65rem;
+      height: 55rem;
+      border: 2.5rem solid white;
+      border-bottom: 10rem solid white;
+    }
+    @media (max-width: 1000px) {
+      height: 50rem;
+      border: 2rem solid white;
+      border-bottom: 8rem solid white;
+    }
+    @media (max-width: 950px) {
+      width: 45rem;
+      height: 40rem;
+    }
+  }
 
   .slick-prev:before {
     display: flex;
@@ -86,12 +121,12 @@ export const Container = styled.div`
 `;
 
 export const ImageCarousel = styled.img`
-  display: flex;
   height: 62.8rem;
-  width: 1rem;
+  width: 100%;
+  object-fit: cover;
 
   @media (max-width: 1200px) {
-    height: 43rem;
+    height: 53rem;
   }
   @media (max-width: 1000px) {
     height: 50rem;
