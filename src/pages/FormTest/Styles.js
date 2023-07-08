@@ -1,41 +1,18 @@
 import styled from 'styled-components';
 
-import { Form } from '../../components/common';
-
-export const StyledForm = styled(Form)`
+// eslint-disable-next-line import/prefer-default-export
+export const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
+  flex-direction: column;
 
-  height: 100%;
-`;
-StyledForm.Field = styled(Form.Field)`
-  display: flex;
-  gap: 1rem;
-`;
-StyledForm.Label = styled(Form.Label)`
-  color: blue;
-`;
-StyledForm.Input = styled(Form.Input)`
-  width: 20rem;
-  padding: 0.5rem;
-`;
-StyledForm.ErrorMessage = styled(Form.ErrorMessage)`
-  color: orange;
-`;
+  align-items: baseline;
+  justify-content: baseline;
 
-export const Button = styled.button`
-  color: white;
-  background-color: blue;
-  padding: 1rem;
+  width: 100%;
+  height: auto;
+  gap: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
-  cursor: pointer;
-
-  font-size: 2rem;
-  transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1);
-
-  &:hover {
-    opacity: 0.8;
-  }
+  background-color: beige;
 `;
