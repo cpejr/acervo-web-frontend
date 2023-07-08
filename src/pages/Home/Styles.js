@@ -15,6 +15,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   background-color: #ffddad;
+  padding-bottom: 7rem;
 `;
 export const FirstSection = styled.div`
   position: relative;
