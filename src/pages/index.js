@@ -1,2 +1,2 @@
 // eslint-disable-next-line import/prefer-default-export
-export { default as FormTest } from './FormTest/FormTest';
+export { default as Home } from './Home/Home';
