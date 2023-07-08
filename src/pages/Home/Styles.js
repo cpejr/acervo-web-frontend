@@ -19,7 +19,7 @@ export const Container = styled.div`
 export const FirstSection = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -222,7 +222,7 @@ export const Filter = styled.div`
     color: rgba(30, 30, 30, 0.74);
   }
 `;
-export const Search = styled.div`
+export const Search = styled.button`
   display: flex;
   width: 30rem;
   height: 13rem;
@@ -232,6 +232,8 @@ export const Search = styled.div`
   border-radius: 0rem 1.5rem 1.5rem 0rem;
   gap: 0.5rem;
   padding: 0.5rem;
+  cursor: pointer;
+  border: none;
   h1 {
     font-family: 'Cabin';
     font-style: normal;
@@ -296,7 +298,7 @@ export const SocialMedia = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: auto;
-  background: #ffd59966;
+  background: rgb(255, 218, 165, 1);
   width: 100%;
   height: 16rem;
   gap: 16rem;
@@ -466,7 +468,7 @@ export const SupportText = styled.div`
     }
   }
 `;
-export const SupportButtom = styled.div`
+export const SupportButtom = styled.button`
   width: 100rem;
   height: 15rem;
   display: flex;
@@ -477,6 +479,8 @@ export const SupportButtom = styled.div`
   background: #0762f2;
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.25);
   border-radius: 6.5rem;
+  border: none;
+  cursor: pointer;
 
   h1 {
     font-family: 'Cabin';
