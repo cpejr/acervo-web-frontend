@@ -5,7 +5,7 @@ import {
   carouselEvents2,
   carouselEvents3,
 } from '../../../assets/home';
-import { Container, ImageCarousel } from './Styles';
+import { Container, CarouselDiv, ImageCarousel } from './Styles';
 
 export default function CarouselEvents() {
   const settings = {
@@ -17,11 +17,13 @@ export default function CarouselEvents() {
   };
   return (
     <Container>
-      <Slider {...settings}>
-        <ImageCarousel src={carouselEvents1} />
-        <ImageCarousel src={carouselEvents2} />
-        <ImageCarousel src={carouselEvents3} />
-      </Slider>
+      <CarouselDiv>
+        <Slider {...settings}>
+          <ImageCarousel src={carouselEvents1} />
+          <ImageCarousel src={carouselEvents2} />
+          <ImageCarousel src={carouselEvents3} />
+        </Slider>
+      </CarouselDiv>
     </Container>
   );
 }

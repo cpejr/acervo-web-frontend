@@ -4,14 +4,40 @@ import { arrowLeft, arrowRight } from '../../../assets/home';
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  width: 176.5rem;
+  height: auto;
+
+  justify-self: center;
+  align-self: center;
+`;
+
+export const CarouselDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+
+  width: auto;
+  height: 100%;
+
   justify-content: center;
   align-items: center;
 
-  height: 100%;
-  width: 100%;
-  max-width: 176.5rem;
+  .slick-slider {
+    display: flex;
+    flex-direction: row;
 
-  margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slick-arrow.slick-prev,
+  .slick-arrow.slick-next {
+    border: none;
+    background: none;
+
+    cursor: pointer;
+    color: transparent;
+  }
 
   .slick-list {
     position: relative;
@@ -21,7 +47,7 @@ export const Container = styled.div`
     overflow: hidden;
 
     width: 170rem;
-    height: auto;
+    height: 68rem;
 
     @media (max-width: 1400px) {
       width: 100rem;
@@ -35,34 +61,11 @@ export const Container = styled.div`
     }
   }
 
-  .slick-prev:before {
-    display: flex;
-    content: ' ';
-
-    background-image: url(${arrowLeft});
-    background-size: 100% 100%;
-
-    width: 8rem;
-    height: 8rem;
-
-    @media (max-width: 1000px) {
-      width: 6rem;
-      height: 6rem;
-    }
-  }
-
-  .slick-prev {
-    left: 4rem;
-    z-index: 10;
-    width: fit-content;
-    height: fit-content;
-  }
-
+  .slick-prev:before,
   .slick-next:before {
     display: flex;
     content: ' ';
 
-    background-image: url(${arrowRight});
     background-size: 100% 100%;
 
     width: 8rem;
@@ -74,15 +77,36 @@ export const Container = styled.div`
     }
   }
 
+  .slick-prev:before {
+    background-image: url(${arrowLeft});
+  }
+
+  .slick-next:before {
+    background-image: url(${arrowRight});
+  }
+
+  .slick-prev,
   .slick-next {
-    right: 4rem;
+    position: relative;
+    z-index: 10;
+
     width: fit-content;
     height: fit-content;
+  }
+
+  .slick-prev {
+    left: 17rem;
+  }
+
+  .slick-next {
+    right: 17rem;
   }
 `;
 
 export const ImageCarousel = styled.img`
   height: 62.8rem;
+  width: 100%;
+  object-fit: cover;
 
   @media (max-width: 1400px) {
     width: 100rem;

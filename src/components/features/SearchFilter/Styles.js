@@ -95,7 +95,7 @@ export const DivDropdown = styled.div`
 
 export const Dropdown = styled.div`
   position: absolute;
-  top: 11rem;
+  top: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,7 +121,7 @@ export const Dropdown = styled.div`
 export const DocumentDropdown = styled.div`
   position: absolute;
   left: 26rem;
-  top: 16rem;
+  top: 23rem;
   z-index: 10;
 
   display: flex;
