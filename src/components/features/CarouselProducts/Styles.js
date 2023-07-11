@@ -22,6 +22,10 @@ export const CarouselDiv = styled.div`
   justify-content: center;
   align-items: center;
 
+  .slick-track {
+    display: flex;
+  }
+
   .slick-slider {
     display: flex;
     flex-direction: row;

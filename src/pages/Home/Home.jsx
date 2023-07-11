@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { BsSquare } from 'react-icons/bs';
 
+import { CarouselEvents, CarouselProducts } from '../../components/features';
 import {
   Container,
   FirstSection,
@@ -144,11 +145,13 @@ export default function Home() {
         <LastEventsLine>
           <h1>ÚLTIMOS EVENTOS</h1>
         </LastEventsLine>
+        <CarouselEvents />
       </LastEvents>
       <Products>
         <ProductLine>
           <h1>PRODUTOS</h1>
         </ProductLine>
+        <CarouselProducts />
       </Products>
       <Support>
         <SupportLine>
