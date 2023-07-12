@@ -97,16 +97,16 @@ export default function Home() {
                   <AiOutlineClose size={15} />
                 </button>
                 <DialogItem>
-                  <BsSquare size={18} /> Videos
+                  <BsSquare size={18} strokeWidth={3} /> Videos
                 </DialogItem>
                 <DialogItem>
-                  <BsSquare size={18} /> Fotografias
+                  <BsSquare size={18} strokeWidth={3} /> Fotografias
                 </DialogItem>
                 <DialogItem>
-                  <BsSquare size={18} /> Depoimentos
+                  <BsSquare size={18} strokeWidth={3} /> Depoimentos
                 </DialogItem>
                 <DialogItem>
-                  <BsSquare size={18} /> Documentos Escritos
+                  <BsSquare size={18} strokeWidth={3} /> Documentos escritos
                 </DialogItem>
               </DocumentDialog>
             </Dialog>

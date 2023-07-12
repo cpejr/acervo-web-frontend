@@ -86,14 +86,14 @@ export const Dialog = styled.div`
   display: ${(props) => (props.open ? 'flex' : 'none')};
   position: absolute;
   width: 18rem;
-  height: 20rem;
   flex-direction: column;
-  margin-top: 35rem;
+  top: 370px;
   gap: 0.6rem;
+  padding-bottom: 1rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
-  padding-left: 1rem;
+  padding-left: 2rem;
   padding-top: 0.6rem;
   button {
     border: none;
@@ -103,6 +103,7 @@ export const Dialog = styled.div`
   &:hover .document-dialog {
     display: flex;
   }
+
   @media (max-width: 1080px) {
     width: 15rem;
   }
@@ -129,14 +130,14 @@ export const DocumentDialog = styled.div`
   display: ${(props) => (props.open ? 'flex' : 'none')};
   position: absolute;
   flex-direction: column;
-  top: 0;
+  top: 31px;
   left: 100%;
   gap: 1rem;
   margin-left: 10px;
-  width: calc(100% + 1rem);
-  height: 100%;
+  width: 24rem;
+  padding-bottom: 1rem;
   gap: 0.6rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
@@ -186,7 +187,7 @@ export const SearchonSite = styled.div`
   display: flex;
   width: 61rem;
   height: 6rem;
-  padding-left: 1rem;
+  padding-left: 5rem;
   h1 {
     font-family: 'Cabin';
     font-style: normal;
@@ -211,8 +212,8 @@ export const Filter = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  gap: 1rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
 
   h1 {
     font-family: 'Cabin';
@@ -227,7 +228,7 @@ export const Search = styled.button`
   display: flex;
   width: 30rem;
   height: 13rem;
-  background: #0762f2;
+  background: rgba(241, 151, 9, 1);
   align-items: center;
   justify-content: center;
   border-radius: 0rem 1.5rem 1.5rem 0rem;
@@ -371,13 +372,13 @@ export const LastEventsLine = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 11.4rem;
+  height: 15rem;
   background: #7f260f;
   h1 {
     font-family: 'Cabin Condensed';
     font-style: normal;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 6rem;
     text-align: center;
 
     color: #ffffff;
@@ -394,15 +395,17 @@ export const ProductLine = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
+
   width: 100%;
   height: 15rem;
+  margin-top: 6rem;
   background: #7f260f;
 
   h1 {
     font-family: 'Cabin Condensed';
     font-style: normal;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 6rem;
     text-align: center;
 
     color: #ffffff;
@@ -411,8 +414,11 @@ export const ProductLine = styled.div`
 export const Support = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 6rem;
   width: 100%;
+  margin-top: 6rem;
   padding-bottom: 2rem;
 `;
 
@@ -428,7 +434,7 @@ export const SupportLine = styled.div`
     font-family: 'Cabin Condensed';
     font-style: normal;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 6rem;
     text-align: center;
 
     color: #ffffff;
@@ -438,9 +444,8 @@ export const SupportText = styled.div`
   display: flex;
   flex-direction: column;
   text-align: justify;
+  width: 80%;
   gap: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
 
   h2 {
     font-family: 'Cabin Condensed';
@@ -477,7 +482,7 @@ export const SupportButtom = styled.button`
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background: #0762f2;
+  background: rgba(241, 151, 9, 1);
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.25);
   border-radius: 6.5rem;
   border: none;
