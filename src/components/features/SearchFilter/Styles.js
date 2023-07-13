@@ -40,6 +40,14 @@ export const DivFilter = styled.div`
   justify-content: baseline;
 `;
 
+export const DivContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  height: fit-content;
+  border: 5px black solid;
+`;
+
 export const Filter = styled.div`
   display: flex;
   flex-direction: row;
@@ -84,10 +92,14 @@ export const DivDropdown = styled.div`
   display: flex;
   flex-direction: row;
 
+  width: fit-content;
+  height: auto;
+
   align-items: end;
   justify-content: baseline;
   margin-left: 5rem;
 
+  border: 5px solid black;
   width: auto;
   height: auto;
   gap: 2rem;
@@ -95,7 +107,7 @@ export const DivDropdown = styled.div`
 
 export const Dropdown = styled.div`
   position: absolute;
-  top: 18rem;
+  top: 35rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -120,8 +132,8 @@ export const Dropdown = styled.div`
 
 export const DocumentDropdown = styled.div`
   position: absolute;
-  left: 26rem;
-  top: 23rem;
+  left: 124rem;
+  top: 40rem;
   z-index: 10;
 
   display: flex;

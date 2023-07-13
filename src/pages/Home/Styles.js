@@ -94,7 +94,7 @@ export const Dialog = styled.div`
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
   padding-left: 2rem;
-  padding-top: 0.6rem;
+  padding-top: 1rem;
   button {
     border: none;
     background: none;
@@ -141,7 +141,7 @@ export const DocumentDialog = styled.div`
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
-  padding-top: 0.6rem;
+  padding-top: 1rem;
 `;
 export const SearchBar = styled.div`
   display: flex;
