@@ -40,14 +40,6 @@ export const DivFilter = styled.div`
   justify-content: baseline;
 `;
 
-export const DivContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  height: fit-content;
-  border: 5px black solid;
-`;
-
 export const Filter = styled.div`
   display: flex;
   flex-direction: row;
