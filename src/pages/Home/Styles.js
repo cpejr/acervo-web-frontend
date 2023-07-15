@@ -86,15 +86,15 @@ export const Dialog = styled.div`
   display: ${(props) => (props.open ? 'flex' : 'none')};
   position: absolute;
   width: 18rem;
+  height: 17rem;
   flex-direction: column;
-  top: 370px;
+  margin-top: 35rem;
   gap: 0.6rem;
-  padding-bottom: 1rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
-  padding-left: 2rem;
-  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.6rem;
   button {
     border: none;
     background: none;
@@ -103,7 +103,6 @@ export const Dialog = styled.div`
   &:hover .document-dialog {
     display: flex;
   }
-
   @media (max-width: 1080px) {
     width: 15rem;
   }
@@ -134,14 +133,14 @@ export const DocumentDialog = styled.div`
   left: 100%;
   gap: 1rem;
   margin-left: 10px;
-  width: 24rem;
-  padding-bottom: 1rem;
+  width: 225px;
+  height: 140px;
   gap: 0.6rem;
-  padding-left: 1.5rem;
+  padding-left: 1rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 21px;
   border-color: rgba(255, 255, 255, 0.95);
-  padding-top: 1rem;
+  padding-top: 0.6rem;
 `;
 export const SearchBar = styled.div`
   display: flex;
@@ -187,7 +186,7 @@ export const SearchonSite = styled.div`
   display: flex;
   width: 61rem;
   height: 6rem;
-  padding-left: 5rem;
+  padding-left: 1rem;
   h1 {
     font-family: 'Cabin';
     font-style: normal;
@@ -212,8 +211,8 @@ export const Filter = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  gap: 1rem;
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  gap: 0.5rem;
+  padding: 0.5rem;
 
   h1 {
     font-family: 'Cabin';
@@ -318,7 +317,7 @@ export const SocialMedia = styled.div`
 `;
 export const InstagramIcon = styled(AiOutlineInstagram)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -327,7 +326,7 @@ export const InstagramIcon = styled(AiOutlineInstagram)`
 
 export const FacebookIcon = styled(AiFillFacebook)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -336,7 +335,7 @@ export const FacebookIcon = styled(AiFillFacebook)`
 
 export const TwitterIcon = styled(AiOutlineTwitter)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -345,7 +344,7 @@ export const TwitterIcon = styled(AiOutlineTwitter)`
 
 export const WhatsAppIcon = styled(AiOutlineWhatsApp)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -354,7 +353,7 @@ export const WhatsAppIcon = styled(AiOutlineWhatsApp)`
 
 export const YoutubeIcon = styled(AiFillYoutube)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -372,13 +371,13 @@ export const LastEventsLine = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 15rem;
+  height: 11.4rem;
   background: #7f260f;
   h1 {
     font-family: 'Cabin Condensed';
     font-style: normal;
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: center;
 
     color: #ffffff;
@@ -395,7 +394,6 @@ export const ProductLine = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
-
   width: 100%;
   height: 15rem;
   margin-top: 6rem;
@@ -405,7 +403,7 @@ export const ProductLine = styled.div`
     font-family: 'Cabin Condensed';
     font-style: normal;
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: center;
 
     color: #ffffff;
@@ -414,11 +412,8 @@ export const ProductLine = styled.div`
 export const Support = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 6rem;
   width: 100%;
-  margin-top: 6rem;
   padding-bottom: 2rem;
 `;
 
@@ -429,12 +424,14 @@ export const SupportLine = styled.div`
   justify-content: center;
   width: 100%;
   height: 15rem;
+  margin-top: 6rem;
+
   background: #7f260f;
   h1 {
     font-family: 'Cabin Condensed';
     font-style: normal;
     font-weight: 700;
-    font-size: 6rem;
+    font-size: 4rem;
     text-align: center;
 
     color: #ffffff;
@@ -444,8 +441,9 @@ export const SupportText = styled.div`
   display: flex;
   flex-direction: column;
   text-align: justify;
-  width: 80%;
   gap: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 
   h2 {
     font-family: 'Cabin Condensed';
@@ -482,7 +480,7 @@ export const SupportButtom = styled.button`
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background: rgba(241, 151, 9, 1);
+  background-color: ${(props) => props.theme.colors.orangeButton};
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.25);
   border-radius: 6.5rem;
   border: none;
