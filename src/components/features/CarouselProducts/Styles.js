@@ -51,7 +51,7 @@ export const CarouselDiv = styled.div`
     overflow: hidden;
 
     width: 170rem;
-    height: 68rem;
+    height: 62.8rem;
 
     @media (max-width: 1400px) {
       width: 100rem;
@@ -99,11 +99,11 @@ export const CarouselDiv = styled.div`
   }
 
   .slick-prev {
-    left: 17rem;
+    left: 13rem;
   }
 
   .slick-next {
-    right: 17rem;
+    right: 13rem;
   }
 `;
 

@@ -45,21 +45,23 @@ export default function Home() {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [documentDialogOpen, setDocumentDialogOpen] = useState(false);
 
-  const openDialog = () => {
-    setDialogOpen(true);
-  };
-
-  const closeDialog = () => {
-    setDialogOpen(false);
+  const toggleDialog = () => {
+    if (dialogOpen) {
+      setDialogOpen(false);
+      setDocumentDialogOpen(false);
+    } else {
+      setDialogOpen(true);
+    }
   };
 
   const openDocumentDialog = () => {
-    setDocumentDialogOpen(true);
+    if (documentDialogOpen) {
+      setDocumentDialogOpen(false);
+    } else {
+      setDocumentDialogOpen(true);
+    }
   };
 
-  const closeDocumentDialog = () => {
-    setDocumentDialogOpen(false);
-  };
   return (
     <Container>
       <FirstSection>
@@ -77,14 +79,12 @@ export default function Home() {
             <h1>Pesquisar no site...</h1>
           </SearchonSite>
           <FilterAndSearch>
-            <Filter onClick={openDialog}>
+            <Filter onClick={toggleDialog}>
               <h1>FILTROS</h1>
               <AiOutlineMenu size={34} />
             </Filter>
+
             <Dialog open={dialogOpen}>
-              <button type="button" onClick={closeDialog}>
-                <AiOutlineClose size={15} />
-              </button>
               <DialogItem>Nome</DialogItem>
               <DialogItem>Data</DialogItem>
               <DialogItem>Lugar</DialogItem>
@@ -92,24 +92,23 @@ export default function Home() {
               <DialogItem onClick={openDocumentDialog}>
                 Documentos <ArrowIcon size={20} />
               </DialogItem>
+
               <DocumentDialog open={documentDialogOpen}>
-                <button type="button" onClick={closeDocumentDialog}>
-                  <AiOutlineClose size={15} />
-                </button>
                 <DialogItem>
-                  <BsSquare size={18} /> Videos
+                  <BsSquare size={18} strokeWidth={3} /> Videos
                 </DialogItem>
                 <DialogItem>
-                  <BsSquare size={18} /> Fotografias
+                  <BsSquare size={18} strokeWidth={3} /> Fotografias
                 </DialogItem>
                 <DialogItem>
-                  <BsSquare size={18} /> Depoimentos
+                  <BsSquare size={18} strokeWidth={3} /> Depoimentos
                 </DialogItem>
                 <DialogItem>
-                  <BsSquare size={18} /> Documentos Escritos
+                  <BsSquare size={18} strokeWidth={3} /> Documentos escritos
                 </DialogItem>
               </DocumentDialog>
             </Dialog>
+
             <Search>
               <h1>BUSCAR</h1>
               <AiOutlineSearch size={60} color="#030303" />

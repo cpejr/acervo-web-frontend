@@ -86,7 +86,7 @@ export const Dialog = styled.div`
   display: ${(props) => (props.open ? 'flex' : 'none')};
   position: absolute;
   width: 18rem;
-  height: 20rem;
+  height: 17rem;
   flex-direction: column;
   margin-top: 35rem;
   gap: 0.6rem;
@@ -129,12 +129,12 @@ export const DocumentDialog = styled.div`
   display: ${(props) => (props.open ? 'flex' : 'none')};
   position: absolute;
   flex-direction: column;
-  top: 0;
+  top: 31px;
   left: 100%;
   gap: 1rem;
   margin-left: 10px;
-  width: calc(100% + 1rem);
-  height: 100%;
+  width: 225px;
+  height: 140px;
   gap: 0.6rem;
   padding-left: 1rem;
   background: rgba(255, 255, 255, 0.95);
@@ -227,7 +227,7 @@ export const Search = styled.button`
   display: flex;
   width: 30rem;
   height: 13rem;
-  background: #0762f2;
+  background: rgba(241, 151, 9, 1);
   align-items: center;
   justify-content: center;
   border-radius: 0rem 1.5rem 1.5rem 0rem;
@@ -317,7 +317,7 @@ export const SocialMedia = styled.div`
 `;
 export const InstagramIcon = styled(AiOutlineInstagram)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -326,7 +326,7 @@ export const InstagramIcon = styled(AiOutlineInstagram)`
 
 export const FacebookIcon = styled(AiFillFacebook)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -335,7 +335,7 @@ export const FacebookIcon = styled(AiFillFacebook)`
 
 export const TwitterIcon = styled(AiOutlineTwitter)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -344,7 +344,7 @@ export const TwitterIcon = styled(AiOutlineTwitter)`
 
 export const WhatsAppIcon = styled(AiOutlineWhatsApp)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -353,7 +353,7 @@ export const WhatsAppIcon = styled(AiOutlineWhatsApp)`
 
 export const YoutubeIcon = styled(AiFillYoutube)`
   font-size: 6rem;
-  color: #7f260f;
+  color: ${(props) => props.theme.colors.primary};
 
   @media (max-width: 980px) {
     font-size: 4rem;
@@ -396,6 +396,7 @@ export const ProductLine = styled.div`
   justify-content: center;
   width: 100%;
   height: 15rem;
+  margin-top: 6rem;
   background: #7f260f;
 
   h1 {
@@ -423,6 +424,8 @@ export const SupportLine = styled.div`
   justify-content: center;
   width: 100%;
   height: 15rem;
+  margin-top: 6rem;
+
   background: #7f260f;
   h1 {
     font-family: 'Cabin Condensed';
@@ -477,7 +480,7 @@ export const SupportButtom = styled.button`
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background: #0762f2;
+  background-color: ${(props) => props.theme.colors.orangeButton};
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.25);
   border-radius: 6.5rem;
   border: none;

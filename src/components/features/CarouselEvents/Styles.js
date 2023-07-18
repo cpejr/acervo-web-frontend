@@ -41,8 +41,8 @@ export const CarouselDiv = styled.div`
   }
 
   .slick-list {
-    border: 3rem solid white;
-    border-bottom: 12.5rem solid white;
+    border: 2rem solid white;
+    border-bottom: 9rem solid white;
     position: relative;
 
     margin-left: 10rem;
@@ -51,7 +51,7 @@ export const CarouselDiv = styled.div`
     display: block;
     overflow: hidden;
 
-    width: 80rem;
+    width: 100rem;
     height: 60rem;
 
     @media (max-width: 1200px) {
@@ -60,7 +60,7 @@ export const CarouselDiv = styled.div`
       margin-left: 7rem;
       margin-right: 7rem;
       border: 2.5rem solid white;
-      border-bottom: 10rem solid white;
+      border-bottom: 12rem solid white;
     }
     @media (max-width: 1000px) {
       height: 50rem;
@@ -102,8 +102,7 @@ export const CarouselDiv = styled.div`
 `;
 
 export const ImageCarousel = styled.img`
-  height: 62.8rem;
-  width: 100%;
+  height: 50rem;
   object-fit: cover;
 
   @media (max-width: 1200px) {
