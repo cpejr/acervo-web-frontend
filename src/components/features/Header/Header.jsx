@@ -36,44 +36,21 @@ export default function Header() {
   return (
     <Container>
       <Menu>
-        <MenuItem onClick={() => openDialog('history')}>
-          NOSSA HISTÓRIA
-          <Dialog
-            id="history"
-            open={dialogs.history}
-            onBlur={() => closeDialog('history')}
+      <MenuItem>E-commerce</MenuItem>
+      <MenuItem>Acervo</MenuItem>
+      <MenuItem>Eventos Culturais</MenuItem>
+      <MenuItem>Área Escolar</MenuItem>
+      <MenuItem onClick={() => openDialog('info')} >Sobre o projeto
+      <Dialog
+            id="info"
+            open={dialogs.info}
+            onBlur={() => closeDialog('info')}
           >
-            <DialogItem to="/">Apresentação</DialogItem>
-            <DialogItem to="/">Quem Somos</DialogItem>
-            <DialogItem to="/">Politica e privacidade</DialogItem>
+            <DialogItem to="/">Informações</DialogItem>
+            <DialogItem to="/">Conheça o Blog</DialogItem>
+            <DialogItem to="/">Seja apoiador</DialogItem>
           </Dialog>
-        </MenuItem>
-        <MenuItem onClick={() => openDialog('acervo')}>
-          Acervo
-          <Dialog
-            id="acervo"
-            open={dialogs.acervo}
-            onBlur={() => closeDialog('acervo')}
-          >
-            <DialogItem to="/">Videos</DialogItem>
-            <DialogItem to="/">Fotografias</DialogItem>
-            <DialogItem to="/">Depoimentos</DialogItem>
-            <DialogItem to="/">Documentos Escritos</DialogItem>
-          </Dialog>
-        </MenuItem>
-        <MenuItem>Patrimônio e Eventos Culturais</MenuItem>
-        <MenuItem onClick={() => openDialog('school')}>
-          Área escolar
-          <Dialog
-            id="school"
-            open={dialogs.school}
-            onBlur={() => closeDialog('school')}
-          >
-            <DialogItem>Acesso do estudante</DialogItem>
-          </Dialog>
-        </MenuItem>
-        <MenuItem>E-commerce</MenuItem>
-        <MenuItem>Seja Apoiador</MenuItem>
+      </MenuItem>
         <MenuItem onClick={() => openDialog('profile')}>
           PERFIL
           <DialogProfile

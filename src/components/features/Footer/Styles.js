@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  background-color: white;
+  background-color: black;
 
   padding: 1rem;
 
@@ -16,12 +16,13 @@ export const Container = styled.div`
 
 export const Contact = styled.div`
   padding: 1rem;
+  margin-right: 10rem;
 
   h1 {
     font-size: 3.7rem;
     font-weight: 500;
     font-family: ${(props) => props.theme.fonts.primary};
-    color: ${(props) => props.theme.colors.primary};
+    color: white;
 
     @media (max-width: 1100px) {
       font-size: 3rem;
@@ -33,31 +34,13 @@ export const Contact = styled.div`
   }
 `;
 
-export const SocialMedias = styled.div`
-  display: flex;
-  justify-content: center;
-  color: ${(props) => props.theme.colors.primary};
-  max-width: 25rem;
-  width: 100%;
-  height: 100%;
-  gap: 0.3rem;
-  font-size: 5rem;
-
-  @media (max-width: 1100px) {
-    font-size: 4rem;
-  }
-
-  @media (max-width: 930px) {
-    font-size: 3rem;
-  }
-`;
-
 export const Logo = styled.img`
   display: flex;
   justify-content: center;
   align-items: center;
   object-fit: fill;
   max-height: 17rem;
+  color: white;
 
   @media (max-width: 1100px) {
     max-height: 13.6rem;
