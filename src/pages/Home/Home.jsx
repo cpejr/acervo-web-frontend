@@ -13,7 +13,6 @@ import {
   Text,
   BackgroundImage,
   Title,
-  SocialMedia,
   Search,
   SearchBar,
   SearchonSite,
@@ -34,11 +33,6 @@ import {
   DocumentDialog,
   ColorOverlay,
   ArrowIcon,
-  YoutubeIcon,
-  InstagramIcon,
-  FacebookIcon,
-  TwitterIcon,
-  WhatsAppIcon,
 } from './Styles';
 
 export default function Home() {
@@ -69,8 +63,11 @@ export default function Home() {
         <ColorOverlay />
         <Content>
           <Logo src="src/assets/Home/Logo.png" />
-          <Title> Escrita, Imagem e Som</Title>
-          <Text src="src/assets/Home/BomDespacho.png" />
+          <Title> 
+            <h1>BOM</h1>
+            <h1>DESPACHO</h1>
+          </Title>
+
         </Content>
       </FirstSection>
       <FilterSection>
@@ -116,13 +113,6 @@ export default function Home() {
           </FilterAndSearch>
         </SearchBar>
         <LogosandSocial>
-          <SocialMedia>
-            <InstagramIcon />
-            <FacebookIcon />
-            <TwitterIcon />
-            <WhatsAppIcon />
-            <YoutubeIcon />
-          </SocialMedia>
           <Logos>
             <img
               src="src/assets/Home/Cultura.png"
@@ -158,21 +148,25 @@ export default function Home() {
         </SupportLine>
         <SupportText>
           <p>
-            O projeto Nossa História Bom Despacho conta com várias formas de
-            agregar na nossa comunidade, desde uma lojinha dos produtos locais
-            até uma área escolar digital para auxiliar os estudante, não só de
-            Bom Despacho mas todos que precisarem e tiverem interesse. Por isso,
-            quando você apoia o projeto você está ajudando toda a comunidade
-            mineira.{' '}
+          A principal forma de nos apoiar é participando do projeto, ajudando na pesquisa histórica, enviando vídeos, fotografias, documentos que contam a nossa história. Contribua, compartilhe, divulgue.
           </p>
-          <h2>Como posso fazer isso? </h2>
+          
           <p>
-            De forma avulsa ou mensal, por meio de boleto ou pix, você pode
-            contribuir com a gente. Clique no botão abaixo para saber mais.
+          Contribua também para o Nossa História adquirindo nossos produtos, lembre-se que você estará comprando uma ideia.
           </p>
+          <p>
+          Você pode ajudar a manter vivo esse trabalho de preservação da memória de Bom Despacho fazendo uma contribuição avulsa ou pode se tornar membro oficial do Nossa História aderindo à contribuição mensal, seja por Pix ou cartão.
+          </p>
+          <p>
+          Como membro oficial do projeto você será reconhecido como um Cuete Avura e terá direito a descontos nos produtos, preferência na compra de ingressos e convites especiais para eventos.
+          </p>
+          <h3>
+          Seja um Cuete Avura, veja como:
+          </h3>
+          
         </SupportText>
         <SupportButtom>
-          <h1>APOIAR-NOS</h1>
+          <h1>APOIAR</h1>
         </SupportButtom>
       </Support>
     </Container>

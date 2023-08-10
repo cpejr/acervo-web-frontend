@@ -14,7 +14,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffddad;
+  background-color: #7f260f;
   padding-bottom: 7rem;
 `;
 export const FirstSection = styled.div`
@@ -24,14 +24,16 @@ export const FirstSection = styled.div`
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 `;
+
 export const BackgroundImage = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  background-image: url('src/assets/Home/image 1.png');
+  /* background-image: ; */
+  background-color: black;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -49,21 +51,25 @@ export const Content = styled.div`
   position: relative;
   z-index: 1;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
+  gap: 15rem;
+
+  margin-left: 17rem;
 `;
 export const Logo = styled.img`
   width: 30rem;
   height: auto;
 `;
 export const Title = styled.h1`
-  font-family: 'Cabin Condensed';
+  font-family: 'Caramella';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 532;
+  f
   font-size: 5rem;
 
-  color: #b34a36;
+  color: white;
 `;
 export const Text = styled.img`
   width: 60rem;
@@ -78,7 +84,7 @@ export const FilterSection = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('src/assets/Home/Prancheta.png');
+  background-color: #f19709;
   background-repeat: repeat-x;
   background-size: contain;
 `;
@@ -293,28 +299,7 @@ export const Logos = styled.div`
     }
   }
 `;
-export const SocialMedia = styled.div`
-  display: flex;
-  gap: 6rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto;
-  background: rgb(255, 218, 165, 1);
-  width: 100%;
-  height: 16rem;
-  gap: 16rem;
-  padding: 2rem;
-  @media (max-width: 1060px) {
-    width: auto;
-    height: 13rem;
-  }
-  @media (max-width: 980px) {
-    width: auto;
-    height: 10rem;
-    padding: 4rem;
-    gap: 10rem;
-  }
-`;
+
 export const InstagramIcon = styled(AiOutlineInstagram)`
   font-size: 6rem;
   color: ${(props) => props.theme.colors.primary};
@@ -364,6 +349,8 @@ export const LastEvents = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 6rem;
+
+  background-color: #7f260f;
 `;
 export const LastEventsLine = styled.div`
   display: flex;
@@ -372,7 +359,7 @@ export const LastEventsLine = styled.div`
   justify-content: center;
   width: 100%;
   height: 11.4rem;
-  background: #7f260f;
+  background: black;
   h1 {
     font-family: 'Cabin Condensed';
     font-style: normal;
@@ -388,6 +375,8 @@ export const Products = styled.div`
   flex-direction: column;
   gap: 6rem;
   width: 100%;
+
+  background-color: #7f260f;
 `;
 export const ProductLine = styled.div`
   display: flex;
@@ -397,7 +386,7 @@ export const ProductLine = styled.div`
   width: 100%;
   height: 15rem;
   margin-top: 6rem;
-  background: #7f260f;
+  background: black;
 
   h1 {
     font-family: 'Cabin Condensed';
@@ -415,6 +404,7 @@ export const Support = styled.div`
   gap: 6rem;
   width: 100%;
   padding-bottom: 2rem;
+  background-color: #7f260f;
 `;
 
 export const SupportLine = styled.div`
@@ -453,7 +443,7 @@ export const SupportText = styled.div`
 
     text-align: flex-start;
 
-    color: #7f260f;
+    color: white;
   }
   p {
     font-family: 'Cabin';
@@ -461,8 +451,14 @@ export const SupportText = styled.div`
     font-weight: 400;
     font-size: 3.5rem;
 
-    color: #7f260f;
+    color: white;
   }
+
+  h3 {
+    font-size: 3.5;
+    color: #f19709;
+  }
+
   @media (max-width: 1060px) {
     h2 {
       font-size: 3rem;
@@ -470,8 +466,12 @@ export const SupportText = styled.div`
     p {
       font-size: 2.4rem;
     }
+    h3 {
+      font-size: 2.4rem;
+    }
   }
 `;
+
 export const SupportButtom = styled.button`
   width: 100rem;
   height: 15rem;

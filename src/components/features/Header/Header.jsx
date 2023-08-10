@@ -47,7 +47,9 @@ export default function Header() {
             onBlur={() => closeDialog('info')}
           >
             <DialogItem to="/">Informações</DialogItem>
+            <DivideLine />
             <DialogItem to="/">Conheça o Blog</DialogItem>
+            <DivideLine />
             <DialogItem to="/">Seja apoiador</DialogItem>
           </Dialog>
       </MenuItem>

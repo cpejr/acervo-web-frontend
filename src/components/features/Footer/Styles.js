@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   background-color: black;
@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const Contact = styled.div`
   padding: 1rem;
-  margin-right: 10rem;
+  margin-right: 2rem;
 
   h1 {
     font-size: 3.7rem;
@@ -40,7 +40,11 @@ export const Logo = styled.img`
   align-items: center;
   object-fit: fill;
   max-height: 17rem;
-  color: white;
+  margin-left: 2rem;
+
+  svg {
+    color: white;
+  }
 
   @media (max-width: 1100px) {
     max-height: 13.6rem;
