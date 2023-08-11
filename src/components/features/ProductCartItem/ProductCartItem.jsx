@@ -2,6 +2,14 @@ import React, { useState } from 'react';
 
 import PropTypes from 'prop-types';
 
+import {
+  Container,
+  ProductItem,
+  ProductImage,
+  ProductDescription,
+  ProductCount,
+} from './styles';
+
 function ProductCartItem({ product }) {
   const [count, setCount] = useState(0);
 
@@ -16,24 +24,30 @@ function ProductCartItem({ product }) {
   };
 
   return (
-    <div className="product-item">
-      <div className="product-image">
-        <img src={product.image} alt={product.title} />
-      </div>
-      <div className="product-description">
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
-      </div>
-      <div className="product-count">
-        <button type="button" onClick={increment}>
-          +
-        </button>
-        <p>{count}</p>
+    <Container>
+      <ProductItem>
+        <ProductImage>
+          <img
+            src={product.image}
+            alt={product.title} // MUST BE UNIQUE
+            style={{ maxWidth: '150px', maxHeight: '150px' }}
+          />
+        </ProductImage>
+        <ProductDescription>
+          <h2>{product.title}</h2>
+          <p>{product.description}</p>
+        </ProductDescription>
+      </ProductItem>
+      <ProductCount>
         <button type="button" onClick={decrement}>
           -
         </button>
-      </div>
-    </div>
+        <p>{count}</p>
+        <button type="button" onClick={increment}>
+          +
+        </button>
+      </ProductCount>
+    </Container>
   );
 }
 
