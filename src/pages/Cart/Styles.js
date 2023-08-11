@@ -10,6 +10,9 @@ export const Container = styled.div`
   font-family: 'Cabin Condensed', sans-serif;
   background-color: #ffddad;
   width: 100%;
+  &:hover {
+    cursor: default;
+  }
 `;
 
 export const FirstSection = styled.div`

@@ -30,7 +30,6 @@ function ProductCartItem({ product }) {
           <img
             src={product.image}
             alt={product.title} // MUST BE UNIQUE
-            style={{ maxWidth: '150px', maxHeight: '150px' }}
           />
         </ProductImage>
         <ProductDescription>
