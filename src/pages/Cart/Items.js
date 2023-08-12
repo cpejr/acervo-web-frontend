@@ -28,6 +28,12 @@ const items = [
     title: 'Adricu',
     description: "It's hard.",
   },
+  {
+    image: ' https://encurtador.com.br/EGIY0',
+    title: 'Corgi',
+    description:
+      '  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed malesuada elit. Nullam id lacus nec odio interdum ultricies. Sed sit amet erat libero. Sed ullamcorper eleifend tellus, ac ullamcorper elit pulvinar a. Fusce vehicula felis quis urna ullamcorper ultrices. Curabitur eget vehicula ipsum.  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed malesuada elit. Nullam id lacus nec odio interdum ultricies. Sed sit amet erat libero. Sed ullamcorper eleifend tellus, ac ullamcorper elit pulvinar a. Fusce vehicula felis quis urna ullamcorper ultrices. Curabitur eget vehicula ipsum.',
+  },
 ];
 
 export default items;

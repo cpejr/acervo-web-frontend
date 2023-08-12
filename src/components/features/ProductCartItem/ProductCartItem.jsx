@@ -39,11 +39,13 @@ function ProductCartItem({ product }) {
       </ProductItem>
       <ProductCount>
         <button type="button" onClick={decrement}>
-          -
+          <b>-</b>
         </button>
-        <p>{count}</p>
+        <p>
+          <b>{count}</b>
+        </p>
         <button type="button" onClick={increment}>
-          +
+          <b>+</b>
         </button>
       </ProductCount>
     </Container>

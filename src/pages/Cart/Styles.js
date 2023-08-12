@@ -65,6 +65,7 @@ export const TextSection = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
+  text-align: center;
   font-size: 20px;
   padding: 8px;
   color: white;
@@ -101,5 +102,8 @@ export const PriceSection = styled.div`
     &:hover {
       cursor: pointer;
     }
+  }
+  @media (max-width: 350px) {
+    font-size: 22px;
   }
 `;
