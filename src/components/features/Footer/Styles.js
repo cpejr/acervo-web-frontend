@@ -12,6 +12,20 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   max-height: 20.3rem;
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: ${(props) => props.theme.fonts.primaryCondensed};
+    color: white;
+    padding-left: 54px;
+    padding-top: 5px;
+
+    @media (max-width: 1100px) {
+      font-size: 1.3rem;
+      padding-left: 48px;
+      padding-top: 1px;
+    }
+  }
 `;
 
 export const Contact = styled.div`
