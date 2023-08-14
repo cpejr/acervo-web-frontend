@@ -65,11 +65,17 @@ export const Logo = styled.img`
 export const Title = styled.h1`
   font-family: 'Caramella';
   font-style: normal;
-  font-weight: 532;
-  f
+  font-weight: 100;
   font-size: 5rem;
+  text-align: start;
 
   color: white;
+
+  h1 {
+    font-family: 'Caramella';
+    font-style: normal;
+    font-weight: 100;
+  }
 `;
 export const Text = styled.img`
   width: 60rem;
@@ -411,17 +417,18 @@ export const SupportLine = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   width: 100%;
   height: 15rem;
   margin-top: 6rem;
+  padding-left: 3rem;
 
   background: #7f260f;
   h1 {
-    font-family: 'Cabin Condensed';
+    font-family: 'Caramella';
     font-style: normal;
-    font-weight: 700;
-    font-size: 4rem;
+    font-weight: 50;
+    font-size: 6rem;
     text-align: center;
 
     color: #ffffff;
@@ -455,7 +462,10 @@ export const SupportText = styled.div`
   }
 
   h3 {
-    font-size: 3.5;
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5rem;
     color: #f19709;
   }
 

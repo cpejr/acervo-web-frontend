@@ -19,7 +19,7 @@ export const MenuItem = styled.div`
   border: none;
   background-color: transparent;
   font-family: ${(props) => props.theme.fonts.primary};
-  color: orange;
+  color: #f19709;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
@@ -72,6 +72,6 @@ export const DialogProfile = styled.dialog`
 `;
 
 export const DivideLine = styled.div`
-  border: 0.1rem solid black;
+  border: 0.1rem solid #f19709;
   width: 100%;
 `;
