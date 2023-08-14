@@ -42,7 +42,7 @@ export default function OurHistory() {
         <Info>
           <Containerone>
             <Text>
-              O site
+              O site {``}
               <i>
                 Nossa História – Escrita, Imagem e som
                 <br />
@@ -53,20 +53,12 @@ export default function OurHistory() {
               públicos ou privados.
             </Text>
             <Image>
-              <img
-                src={Padres}
-                style={{ width: '90%', height: '85%', marginBottom: '3rem' }}
-                alt="Padres"
-              />
+              <img src={Padres} alt="Padres" />
             </Image>
           </Containerone>
           <Containertwo>
             <Image>
-              <img
-                src={vila}
-                style={{ width: '90%', height: '85%', marginBottom: '3rem' }}
-                alt="vila"
-              />
+              <img src={vila} alt="vila" />
             </Image>
 
             <Text3>
@@ -140,67 +132,74 @@ export default function OurHistory() {
         <Line2 />
         <Whoare>
           <Text>
-            O Site Nossa História – Escrita, Imagem e Som é a parte de uma rede
+            O Site <i>Nossa História – Escrita, Imagem e Som </i>é a parte de
+            uma rede
+            <br />
             de mídias criada e gerenciada pela CASA TUÉ-TIMBUÁ.
           </Text>
+          <br />
           <Text>
-            A CASA TUÉ-TIMBUÁ é uma Organização Não Governamental (ONG),
+            A CASA TUÉ-TIMBUÁ é uma Organização Não Governamental (ONG), <br />
             portanto sem fins lucrativos, criada para atuar na cidade de Bom
-            Despacho no desenvolvimento de projetos nas áreas da educação,
-            cultura, ensino e meio-ambiente, a qual tem como Coordenador
-            Herberton Sabino – Pinta.
+            Despacho no <br />
+            desenvolvimento de projetos nas áreas da educação, cultura, ensino e
+            meio- <br />
+            ambiente, a qual tem como Coordenador Herberton Sabino – Pinta.
           </Text>
           <Container>
             <Picture src={Herberton} />
             <Biography>
               <WhoSubTitle> Herberton Pinta </WhoSubTitle>
               <Text>
-                Como muitos nascidos em Bom Despacho, sou mais conhecido por um
-                apelido, que é Pinta. Sou filho de José Raimundo Sabino, o
-                “Major” Sabino e de Martha Maria Sabino, a “Martinha do Sabino”.
-                Nasci na Vila Militar, assim como meus outros 8 irmãos, cresci
-                no Arraial, hoje bairro São José e depois, com o falecimento de
-                meu pai, me mudei para a Praça da Matriz. Sou Professor de
-                História, mestre em Educação e Gestão Social, atuo como
-                consultor na área de educação, ensino e gestão e coordeno a ONG
-                Casa Tué-Timbuá.
+                Como muitos nascidos em Bom Despacho, sou mais
+                <br /> conhecido por um apelido, que é Pinta. Sou filho de José
+                <br />
+                Raimundo Sabino, o “Major” Sabino e de Martha Maria <br />
+                Sabino, a “Martinha do Sabino”. Nasci na Vila Militar, assim
+                <br />
+                como meus outros 8 irmãos, cresci no Arraial, hoje bairro <br />
+                São José e depois, com o falecimento de meu pai, me <br />
+                mudei para a Praça da Matriz. Sou Professor de História,
+                <br /> mestre em Educação e Gestão Social, atuo como
+                <br /> consultor na área de educação, ensino e gestão e<br />{' '}
+                coordeno a ONG Casa Tué-Timbuá.
               </Text>
             </Biography>
           </Container>
           <Text>
             <p>
               O site é parte de uma Rede, que inclui o twitter, Instagram e
-              facebook, criada para o compartilhamento da memória e história de
-              Bom Despacho e para a divulgação dos eventos culturais de nossa
-              cidade.
+              facebook, criada <br />
+              para o compartilhamento da memória e história de Bom Despacho e
+              para a<br /> divulgação dos eventos culturais de nossa cidade.
             </p>
           </Text>
           <Text>
             <p>
               Porém, esse site só existe por ser concebido como uma plataforma
-              interativa e colaborativa, somente existe a partir da contribuição
-              da comunidade de Bom Despacho.
+              interativa <br />e colaborativa, somente existe a partir da
+              contribuição da comunidade de
+              <br /> Bom Despacho.
             </p>
           </Text>
-
-          <Imagetwo>
-            <img
-              style={{ width: '100%', height: '20vh' }}
-              src={acervo}
-              alt="acervoimage"
-            />{' '}
-            <div className="image-overlay">
-              <Text2>
-                <br />
-                Por ser assim, todos, de todas as classes sociais, credos, cores
-                e amores que de alguma forma se sintam pertencentes à Bom
-                Despacho e que contribuam com fotografias, vídeos, escritas ou
-                que apoiem, compartilhem ou divulguem nossa memória histórica
-                são parte desse projeto, portanto, parte do quem somos.
-              </Text2>
-            </div>
-          </Imagetwo>
         </Whoare>
+        <Imagetwo>
+          <img
+            style={{ width: '100%', height: '20vh' }}
+            src={acervo}
+            alt="acervoimage"
+          />{' '}
+          <div className="image-overlay">
+            <Text2>
+              <br />
+              Por ser assim, todos, de todas as classes sociais, credos, cores e
+              amores que de alguma forma se sintam pertencentes à Bom Despacho e
+              que contribuam com fotografias, vídeos, escritas ou que apoiem,
+              compartilhem ou divulguem nossa memória histórica são parte desse
+              projeto, portanto, parte do quem somos.
+            </Text2>
+          </div>
+        </Imagetwo>
       </Who>
     </Body>
   );
