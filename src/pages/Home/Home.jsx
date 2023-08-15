@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 
+// eslint-disable-next-line no-unused-vars
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { BsSquare } from 'react-icons/bs';
 
 import { CarouselEvents, CarouselProducts } from '../../components/features';
 import {
   Container,
-  FirstSection,
   FilterSection,
-  Content,
-  Logo,
-  Text,
-  BackgroundImage,
-  Title,
   Search,
   SearchBar,
   SearchonSite,
@@ -31,7 +26,6 @@ import {
   Dialog,
   DialogItem,
   DocumentDialog,
-  ColorOverlay,
   ArrowIcon,
   StyledSearchIcon,
 } from './Styles';
@@ -59,17 +53,6 @@ export default function Home() {
 
   return (
     <Container>
-      <FirstSection>
-        <BackgroundImage />
-        <ColorOverlay />
-        <Content>
-          <Logo src="src/assets/Home/Logo.png" />
-          <Title>
-            <h1>BOM</h1>
-            <h1>DESPACHO</h1>
-          </Title>
-        </Content>
-      </FirstSection>
       <FilterSection>
         <h2>
           O que você quer descobrir sobre <b>Bom Despacho</b> hoje?

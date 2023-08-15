@@ -8,6 +8,11 @@ import {
   DialogItem,
   DialogProfile,
   DivideLine,
+  FirstSection,
+  Content,
+  Logo,
+  Title,
+  ColorOverlay,
 } from './Styles';
 
 export default function Header() {
@@ -36,12 +41,13 @@ export default function Header() {
   return (
     <Container>
       <Menu>
-      <MenuItem>E-commerce</MenuItem>
-      <MenuItem>Acervo</MenuItem>
-      <MenuItem>Eventos Culturais</MenuItem>
-      <MenuItem>Área Escolar</MenuItem>
-      <MenuItem onClick={() => openDialog('info')} >Sobre o projeto
-      <Dialog
+        <MenuItem>E-commerce</MenuItem>
+        <MenuItem>Acervo</MenuItem>
+        <MenuItem>Eventos Culturais</MenuItem>
+        <MenuItem>Área Escolar</MenuItem>
+        <MenuItem onClick={() => openDialog('info')}>
+          Sobre o projeto
+          <Dialog
             id="info"
             open={dialogs.info}
             onBlur={() => closeDialog('info')}
@@ -52,7 +58,7 @@ export default function Header() {
             <DivideLine />
             <DialogItem to="/">Seja apoiador</DialogItem>
           </Dialog>
-      </MenuItem>
+        </MenuItem>
         <MenuItem onClick={() => openDialog('profile')}>
           PERFIL
           <DialogProfile
@@ -66,6 +72,17 @@ export default function Header() {
           </DialogProfile>
         </MenuItem>
       </Menu>
+      <FirstSection>
+        <ColorOverlay />
+        <Content>
+          <Logo src="src/assets/logos/logoBranca.png" />
+          <Title>
+            <h1>BOM</h1>
+            <h1>DESPACHO</h1>
+            <p>em escrita, imagem e som.</p>
+          </Title>
+        </Content>
+      </FirstSection>
     </Container>
   );
 }
