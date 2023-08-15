@@ -1,5 +1,16 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const dialogItemAppear = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -112,6 +123,11 @@ export const Dialog = styled.dialog`
   overflow-y: hidden;
   padding: ${(props) => (props.open ? '0.5rem 1rem' : '0rem')};
   max-height: ${(props) => (props.open ? 'auto' : '0rem')};
+
+  &.dialogOpen {
+    max-height: 150vh;
+    opacity: 1;
+  }
 `;
 
 export const DialogItem = styled(Link)`
@@ -119,6 +135,11 @@ export const DialogItem = styled(Link)`
   color: ${(props) => props.theme.colors.fontDialog};
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: 1.8rem;
+
+  &.dialogOpen {
+    animation: ${dialogItemAppear} 0.3s ease-in-out forwards;
+    animation-delay: ${(props) => props.index * 0.1}s;
+  }
 `;
 
 export const DialogProfile = styled.dialog`
@@ -136,6 +157,10 @@ export const DialogProfile = styled.dialog`
   padding: ${(props) => (props.open ? '1rem 1rem' : '0rem')};
   max-height: ${(props) => (props.open ? 'auto' : '0rem')};
   align-items: center;
+
+  &.dialogOpen {
+    animation: ${dialogItemAppear} 0.3s ease-in-out forwards;
+  }
 `;
 
 export const DivideLine = styled.div`

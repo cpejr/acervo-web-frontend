@@ -51,24 +51,64 @@ export default function Header() {
             id="info"
             open={dialogs.info}
             onBlur={() => closeDialog('info')}
+            className={dialogs.info ? 'dialogOpen' : ''}
           >
-            <DialogItem to="/">Informações</DialogItem>
+            <DialogItem
+              to="/"
+              index={0}
+              className={dialogs.info ? 'dialogOpen' : ''}
+            >
+              Informações
+            </DialogItem>
             <DivideLine />
-            <DialogItem to="/">Conheça o Blog</DialogItem>
+            <DialogItem
+              to="/"
+              index={1}
+              className={dialogs.info ? 'dialogOpen' : ''}
+            >
+              Conheça o Blog
+            </DialogItem>
             <DivideLine />
-            <DialogItem to="/">Seja apoiador</DialogItem>
+            <DialogItem
+              to="/"
+              index={2}
+              className={dialogs.info ? 'dialogOpen' : ''}
+            >
+              Seja apoiador
+            </DialogItem>
           </Dialog>
         </MenuItem>
-        <MenuItem onClick={() => openDialog('profile')}>
+        <MenuItem
+          onClick={() => {
+            if (!dialogs.profile) {
+              openDialog('profile');
+            } else {
+              closeDialog('profile');
+            }
+          }}
+        >
           PERFIL
           <DialogProfile
             id="profile"
             open={dialogs.profile}
             onBlur={() => closeDialog('profile')}
+            className={dialogs.profile ? 'dialogOpen' : ''}
           >
-            <DialogItem to="/">Login</DialogItem>
+            <DialogItem
+              to="/"
+              index={0}
+              className={dialogs.profile ? 'dialogOpen' : ''}
+            >
+              Login
+            </DialogItem>
             <DivideLine />
-            <DialogItem to="/">Cadastrar</DialogItem>
+            <DialogItem
+              to="/"
+              index={1}
+              className={dialogs.profile ? 'dialogOpen' : ''}
+            >
+              Cadastrar
+            </DialogItem>
           </DialogProfile>
         </MenuItem>
       </Menu>
