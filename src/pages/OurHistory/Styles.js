@@ -1,17 +1,52 @@
+// styles.js
 import styled from 'styled-components';
 
 export const Body = styled.div``;
 export const Apresentation = styled.div`
-  width: 100%;
-  margin-top: 15rem;
+  margin-top: 5rem;
 `;
+
 export const Title = styled.div`
   font-family: ${(props) => props.theme.fonts.title};
-  color: #ffff;
+  color: #ffffff;
   font-size: 10.5rem;
   margin-left: 5rem;
-  position: absolute;
-  z-index: 10;
+  margin-bottom: 10rem;
+  display: flex;
+  position: relative;
+  /* /border-radius: 50%; */
+  border-bottom: 100%;
+  width: 100%;
+  height: 2px;
+  border-radius: 1rem;
+  background-color: #ffd599;
+
+  z-index: -1;
+
+  @media (max-width: 1900px) {
+    font-size: 9.3rem;
+  }
+`;
+
+export const Title2 = styled.div`
+  font-family: ${(props) => props.theme.fonts.title};
+  color: #ffffff;
+  font-size: 10.5rem;
+  margin-left: 5rem;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 11rem;
+    right: 110rem;
+    width: 48%;
+    height: 2px;
+    border-radius: 1rem;
+    background-color: #ffd599;
+    border-radius: 50%;
+    z-index: -1;
+  }
 
   @media (max-width: 1900px) {
     font-size: 10.3rem;
@@ -30,53 +65,67 @@ export const Title = styled.div`
     font-size: 8.7rem;
   }
 `;
+
 export const Info = styled.div`
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  padding-bottom: 7rem;
-`;
-export const Containerone = styled.div`
-  width: 50%;
-  height: 70rem;
-  position: relative;
-
+  height: 90rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  align-items: center;
-  text-align: justify;
-  margin-left: 10rem;
-  gap: 3rem;
+  padding-bottom: 7rem;
 
-  @media (max-width: 1560px) {
+  @media (max-width: 1900px) {
+    bottom: 5rem;
+    padding-bottom: 4rem;
+  }
+  @media (max-width: 1790px) {
+    bottom: 6rem;
+  }
+  @media (max-width: 1680px) {
+    bottom: 9rem;
+    padding-bottom: 2rem;
+  }
+  @media (max-width: 1580px) {
+    bottom: 8rem;
+  }
+
+  @media (max-width: 1130px) {
+    bottom: 16rem;
+  }
+
+  @media (max-width: 1130px) {
+    height: 60rem;
     bottom: 10rem;
   }
 `;
-export const Containertwo = styled.div`
-  width: 50%;
+export const Containerone = styled.div`
+  width: 100%;
   height: 70rem;
 
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: top;
+  flex-direction: row;
+
   align-items: center;
   margin-left: 10rem;
-  gap: 3rem;
-  right: 16rem;
+`;
+export const Containertwo = styled.div`
+  width: 100%;
+  height: 70rem;
+  gap: 30rem;
 
-  @media (max-width: 1900px) {
-    right: 20rem;
-  }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  flex-direction: row;
+  background-color: yellow;
 
-  @media (max-width: 1400px) {
-    right: 22rem;
-  }
+  align-items: center;
+  margin-left: 10rem;
 `;
 
 export const Containerthree = styled.div`
@@ -91,15 +140,29 @@ export const Containerthree = styled.div`
   margin-left: 10rem;
   margin-bottom: 5rem;
   gap: 3rem;
+
+  @media (max-width: 1900px) {
+    max-height: 60rem;
+  }
+  @media (max-width: 1790px) {
+    max-height: 55rem;
+  }
+  @media (max-width: 1680px) {
+  }
+  @media (max-width: 1580px) {
+  }
+
+  @media (max-width: 1250px) {
+    max-height: 40rem;
+  }
 `;
 export const Image = styled.div`
   color: ${(props) => props.theme.colors.fontDialog};
-  width: 60rem;
-  //height: 70rem;
+  width: 50%;
+  height: 100%;
+  margin-right: 10rem;
   max-height: 45rem;
-  background-color: black;
   align-items: center;
-  margin-right: 35rem;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -110,11 +173,6 @@ export const Image = styled.div`
     margin-bottom: 3rem;
     max-width: 100%;
     max-height: 100%;
-
-    @media (max-width: 1900px) {
-      width: 85%;
-      height: 80%;
-    }
   }
   @media (max-width: 1600px) {
     width: 50rem;
@@ -122,20 +180,31 @@ export const Image = styled.div`
   }
   @media (max-width: 1400px) {
     width: 45rem;
-    max-height: 25em;
   }
   @media (max-width: 1250px) {
     width: 40rem;
-    max-height: 25rem;
   }
   @media (max-width: 1150px) {
-    width: 40rem;
-    max-height: 20sem;
+    width: 37rem;
+  }
+  @media (max-width: 1250px) {
+    width: 36rem;
+  }
+
+  @media (max-width: 1070px) {
+    width: 32rem;
+  }
+
+  @media (max-width: 970px) {
+    width: 25rem;
+  }
+
+  @media (max-width: 790px) {
+    width: 18rem;
   }
 `;
 export const Imagetwo = styled.div`
   position: relative;
-  height: auto;
 
   img {
     width: 100%;
@@ -159,6 +228,7 @@ export const Text = styled.div`
   width: 100%;
   height: 100%;
   z-index: 5;
+  text-align: justify;
 
   p {
     max-width: 200rem;
@@ -166,12 +236,9 @@ export const Text = styled.div`
 
   @media (max-width: 1900px) {
     font-size: 3.7rem;
-
-    height: 60rem;
   }
   @media (max-width: 1790px) {
     font-size: 3.3rem;
-    height: 20rem;
   }
   @media (max-width: 1680px) {
     font-size: 3rem;
@@ -182,6 +249,14 @@ export const Text = styled.div`
 
   @media (max-width: 1342px) {
     font-size: 2.3rem;
+  }
+
+  @media (max-width: 1250px) {
+    font-size: 2.1rem;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 1.9rem;
   }
 `;
 
@@ -218,31 +293,41 @@ export const Text3 = styled.div`
 export const Text2 = styled.div`
   font-family: 'cabin';
   color: #ffff;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 4rem;
   width: 100%;
-  margin-bottom: 5rem;
+  height: 100%;
+  z-index: 5;
 
-  /* Estilização para o texto em itálico */
-  i {
-    font-style: italic;
-  }
-  strong {
-    font-weight: bold;
-  }
   p {
-    position: relative;
-    top: 2rem;
+    max-width: 200rem;
+  }
+
+  @media (max-width: 1900px) {
+    font-size: 3.7rem;
+  }
+  @media (max-width: 1790px) {
+    font-size: 3.3rem;
+  }
+  @media (max-width: 1680px) {
+    font-size: 3rem;
+  }
+  @media (max-width: 1580px) {
+    font-size: 2.7rem;
+  }
+
+  @media (max-width: 1342px) {
+    font-size: 2.3rem;
   }
 `;
 
 export const History = styled.div`
   width: 60%;
-  height: 60rem;
-  display: grid; /* Usar display grid */
-  gap: 3rem; /* Espaçamento entre as divs filhas */
+  height: 40rem;
+  display: grid;
   z-index: 2;
+  height: 50rem;
 `;
+
 export const Logo = styled.div`
   width: 50%;
   height: 100%;
@@ -257,12 +342,11 @@ export const Image2 = styled.div`
   align-items: center;
   margin-right: 30rem;
 
-  position: relative; /* Certifique-se de que o contêiner seja posicionado */
-  top: 7%; /* Posição vertical no centro */
+  position: relative;
+  top: 7%;
   right: 15rem;
   width: 100%;
-  height: auto; /* Para garantir que a altura da imagem seja ajustada automaticamente */
-
+  height: auto;
   img {
     width: 100%;
     height: auto;
@@ -275,6 +359,38 @@ export const Image2 = styled.div`
     transform: translate(-50%, -50%);
     color: white;
     padding: 10px;
+    @media (max-width: 660px) {
+      left: 65%;
+      width: 70%;
+    }
+  }
+
+  @media (max-width: 1900px) {
+    width: 90%;
+  }
+  @media (max-width: 1790px) {
+    width: 80%;
+  }
+  @media (max-width: 1680px) {
+    width: 90%;
+  }
+  @media (max-width: 1580px) {
+    width: 80%;
+  }
+
+  @media (max-width: 1250px) {
+    width: 70%;
+  }
+
+  @media (max-width: 1000px) {
+    width: 60%;
+  }
+
+  @media (max-width: 860px) {
+    right: 27rem;
+  }
+  @media (max-width: 660px) {
+    right: 35rem;
   }
 `;
 export const Line = styled.div`
@@ -304,7 +420,7 @@ export const Who = styled.div`
   font-family: ${(props) => props.theme.fonts.primary};
   font-weight: 100;
   font-size: 2.75rem;
-  line-height: 3.4rem;
+  text-align: justify;
 
   margin-bottom: 2%;
   margin-right: 5%;
@@ -313,13 +429,8 @@ export const Who = styled.div`
 `;
 
 export const Whoare = styled.div`
-  margin-top: 15rem;
   margin-left: 10rem;
-  height: 100%;
-  margin-top: 15rem;
-  margin-left: 10rem;
-  height: 100%;
-  line-height: 5rem;
+  text-align: justify;
 `;
 
 export const WhoSubTitle = styled.h1`
@@ -365,7 +476,6 @@ export const Container = styled.div`
   align-items: center;
   gap: 5rem;
   margin-top: 5rem;
-
   margin-bottom: 3%;
 `;
 

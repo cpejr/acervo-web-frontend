@@ -22,14 +22,15 @@ import {
   Biography,
   Line2,
   Whoare,
+  Title2,
 } from './Styles';
 
 import acervo from '/src/img/acervo.jpg';
 import Vector from '/src/img/Vector.jpg';
 import Despacho from '/src/img/Despacho.jpg';
 import Bom from '/src/img/Bom.jpg';
-import vila from '/src/img/vila.jpg';
-import Padres from '/src/img/Padres.jpg';
+import Vila from '/src/img/Vila.jpg';
+import Padre from '/src/img/Padre.jpg';
 import Herberton from '/src/img/Herberton.jpg';
 
 export default function OurHistory() {
@@ -37,8 +38,6 @@ export default function OurHistory() {
     <Body>
       <Title>Apresentação</Title>
       <Apresentation>
-        <Line />
-
         <Info>
           <Containerone>
             <Text>
@@ -53,12 +52,12 @@ export default function OurHistory() {
               públicos ou privados.
             </Text>
             <Image>
-              <img src={Padres} alt="Padres" />
+              <img src={Vila} alt="Vila" />
             </Image>
           </Containerone>
           <Containertwo>
             <Image>
-              <img src={vila} alt="vila" />
+              <img src={Padre} alt="Padre" />
             </Image>
 
             <Text3>
@@ -74,7 +73,7 @@ export default function OurHistory() {
       </Apresentation>
       <Imagetwo>
         <img
-          style={{ width: '100%', height: '20vh' }}
+          style={{ width: '100%', height: 'fit-content' }}
           src={acervo}
           alt="acervoimage"
         />{' '}
@@ -128,12 +127,12 @@ export default function OurHistory() {
         </Logo>
       </Containerthree>
       <Who>
-        <Title>Quem somos</Title>
-        <Line2 />
+        <Title2>Quem somos</Title2>
+
         <Whoare>
           <Text>
-            O Site <i>Nossa História – Escrita, Imagem e Som </i>é a parte de
-            uma rede
+            O Site
+            <i>Nossa História – Escrita, Imagem e Som</i>é a parte de uma rede
             <br />
             de mídias criada e gerenciada pela CASA TUÉ-TIMBUÁ.
           </Text>
@@ -185,18 +184,17 @@ export default function OurHistory() {
         </Whoare>
         <Imagetwo>
           <img
-            style={{ width: '100%', height: '20vh' }}
+            style={{ width: '100%', height: 'fit-content' }}
             src={acervo}
             alt="acervoimage"
           />{' '}
           <div className="image-overlay">
             <Text2>
-              <br />
-              Por ser assim, todos, de todas as classes sociais, credos, cores e
-              amores que de alguma forma se sintam pertencentes à Bom Despacho e
-              que contribuam com fotografias, vídeos, escritas ou que apoiem,
-              compartilhem ou divulguem nossa memória histórica são parte desse
-              projeto, portanto, parte do quem somos.
+              <br /> Por ser assim, todos, de todas as classes sociais, credos,
+              cores e amores que de alguma forma se sintam pertencentes à Bom
+              Despacho e que contribuam com fotografias, vídeos, escritas ou que
+              apoiem, compartilhem ou divulguem nossa memória histórica são
+              parte desse projeto, portanto, parte do quem somos.
             </Text2>
           </div>
         </Imagetwo>
