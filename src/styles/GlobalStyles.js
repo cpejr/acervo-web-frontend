@@ -16,7 +16,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.4rem;
-  background: white;
+  background: #7F260F;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
