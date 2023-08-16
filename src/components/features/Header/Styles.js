@@ -20,6 +20,7 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
   justify-content: space-between;
   background-color: black;
   padding: 4rem 5%;
@@ -88,10 +89,12 @@ export const Title = styled.h1`
     color: ${(props) => props.theme.colors.orangeButton};
   }
 `;
+
 export const Text = styled.img`
   width: 60rem;
   height: auto;
 `;
+
 export const MenuItem = styled.div`
   position: relative;
   border: none;
@@ -102,10 +105,7 @@ export const MenuItem = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  :hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 `;
 
 export const Dialog = styled.dialog`
@@ -119,13 +119,12 @@ export const Dialog = styled.dialog`
   border: none;
   border-radius: 1rem;
   margin-top: 3rem;
-  background-color: ${(props) => props.theme.colors.dialogBG};
+  background-color: white;
   overflow-y: hidden;
+  align-items: center;
   padding: ${(props) => (props.open ? '0.5rem 1rem' : '0rem')};
   max-height: ${(props) => (props.open ? 'auto' : '0rem')};
-
   &.dialogOpen {
-    max-height: 150vh;
     opacity: 1;
   }
 `;
@@ -134,7 +133,9 @@ export const DialogItem = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.fontDialog};
   font-family: ${(props) => props.theme.fonts.primary};
-  font-size: 1.8rem;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
 
   &.dialogOpen {
     animation: ${dialogItemAppear} 0.3s ease-in-out forwards;
@@ -152,11 +153,13 @@ export const DialogProfile = styled.dialog`
   border: none;
   border-radius: 1rem;
   margin-top: 3rem;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   overflow-y: hidden;
   padding: ${(props) => (props.open ? '1rem 1rem' : '0rem')};
   max-height: ${(props) => (props.open ? 'auto' : '0rem')};
   align-items: center;
+  width: 9rem;
+  overflow-x: hidden;
 
   &.dialogOpen {
     animation: ${dialogItemAppear} 0.3s ease-in-out forwards;
