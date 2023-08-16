@@ -36,8 +36,8 @@ import Herberton from '/src/img/Herberton.jpg';
 export default function OurHistory() {
   return (
     <Body>
-      <Title>Apresentação</Title>
       <Apresentation>
+      <Title>Apresentação</Title>
         <Info>
           <Containerone>
             <Text>

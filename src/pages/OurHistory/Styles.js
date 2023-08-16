@@ -4,6 +4,11 @@ import styled from 'styled-components';
 export const Body = styled.div``;
 export const Apresentation = styled.div`
   margin-top: 5rem;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  border-bottom
+
 `;
 
 export const Title = styled.div`
@@ -13,15 +18,7 @@ export const Title = styled.div`
   margin-left: 5rem;
   margin-bottom: 10rem;
   display: flex;
-  position: relative;
-  /* /border-radius: 50%; */
-  border-bottom: 100%;
-  width: 100%;
-  height: 2px;
-  border-radius: 1rem;
-  background-color: #ffd599;
-
-  z-index: -1;
+  align-items: flex-start;
 
   @media (max-width: 1900px) {
     font-size: 9.3rem;
