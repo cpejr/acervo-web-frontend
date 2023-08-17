@@ -5,7 +5,8 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
   colors: {
     primary: '#7F260F',
-    orangeButton: '#F19709',
+    strongOrange: '#F19709',
+    softOrange: '#ffddad',
     dialogBG: 'rgba(255, 255, 255, 0.66)',
     fontHeader: 'white',
     fontDialog: 'black',
