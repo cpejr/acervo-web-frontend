@@ -2,6 +2,9 @@ import BomDespacho from '../../img/BomDespacho.png';
 import Herberton from '../../img/Herberton.jpg';
 import Padres from '../../img/Padres.jpg';
 import Vila from '../../img/vila.jpg';
+
+import React, { useState, useEffect } from 'react';
+
 import {
   Apresentation,
   Column,
@@ -12,6 +15,7 @@ import {
   Column6,
   Column7,
   Column8,
+  Conditional,
   Container,
   Image,
   Image2,
@@ -19,6 +23,8 @@ import {
   Image4,
   Image5,
   Image6,
+  Image7,
+  Image8,
   Name,
   Text,
   Text2,
@@ -47,6 +53,14 @@ export default function OurHistory() {
             <img src={Padres} alt="Padres" />
           </Image>
         </Column>
+        <Conditional>
+          <Image8>
+            <img src={Vila} alt="Vila" />
+          </Image8>
+          <Image7>
+            <img src={Padres} alt="Padres" />
+          </Image7>
+        </Conditional>
         <Column2>
           <Image2>
             <img src={Vila} alt="Vila" />
@@ -60,8 +74,10 @@ export default function OurHistory() {
         </Column2>
       </Whole>
       <Image3>
-        O importante é que você, que de alguma forma é parte de Bom Despacho, se
-        encontre e se identifique como personagem da nossa história!
+        <p>
+          O importante é que você, que de alguma forma é parte de Bom Despacho,
+          se encontre e se identifique como personagem da nossa história!
+        </p>
       </Image3>
       <Whole2>
         <Column3>
