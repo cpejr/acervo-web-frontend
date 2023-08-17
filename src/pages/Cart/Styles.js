@@ -1,4 +1,5 @@
 import { BsCart3 } from 'react-icons/bs';
+import { IoPersonCircleOutline } from 'react-icons/io5';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -7,7 +8,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Cabin Condensed', sans-serif;
+  font-family: ${(props) => props.theme.fonts.primary};
   background-color: #ffddad;
   width: 100%;
   &:hover {
@@ -24,25 +25,30 @@ export const FirstSection = styled.div`
   align-items: center;
   flex-direction: row;
   background-color: black;
-  color: #f19709;
+  color: ${(props) => props.theme.colors.softOrange};
+`;
 
-  .cartSymbol {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    p {
-      color: #f19709;
-      font-size: 30px;
-      font-weight: 500;
-      padding: 8px;
-    }
+export const DivCart = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+
+  p {
+    color: ${(props) => props.theme.colors.softOrange};
+    font-size: 30px;
+    font-weight: 500;
+    padding: 8px;
   }
 `;
 
 export const StyledCartIcon = styled(BsCart3)`
+  font-size: 40px;
+`;
+
+export const StyledProfileIcon = styled(IoPersonCircleOutline)`
   font-size: 40px;
 `;
 
@@ -69,8 +75,8 @@ export const TextSection = styled.div`
   font-size: 20px;
   padding: 8px;
   color: white;
-  background-color: #f19709;
-  font-family: 'Cabin', sans-serif;
+  background-color: ${(props) => props.theme.colors.softOrange};
+  font-family: ${(props) => props.theme.fonts.primary};
 `;
 
 export const ComponentSection = styled.div`
@@ -89,7 +95,8 @@ export const PriceSection = styled.div`
   padding: 20px 40px;
   justify-content: space-between;
   padding: 20px 7.5%;
-  background-color: #f19709;
+  background-color: ${(props) => props.theme.colors.softOrange};
+
   button {
     width: 140px;
     font-weight: 500;
