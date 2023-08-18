@@ -19,9 +19,31 @@ export const Apresentation = styled.div`
   height: 15rem;
   text-align: center;
   text-decoration: underline #ffd599;
+  border-radius: 5rem;
   align-items: center;
   color: #ffffff;
   font-size: 7rem;
+
+  @media (max-width: 1375px) {
+    font-size: 6rem;
+  }
+
+  @media (max-width: 1275px) {
+    font-size: 5.5rem;
+  }
+
+  @media (max-width: 720px) {
+  }
+  @media (max-width: 650px) {
+    font-size: 4.5rem;
+  }
+  @media (max-width: 510px) {
+    font-size: 4.5rem;
+  }
+
+  @media (max-width: 490px) {
+    font-size: 4rem;
+  }
 `;
 export const Whole = styled.div`
   display: flex;
@@ -41,6 +63,25 @@ export const Whole = styled.div`
 
   @media (max-width: ${mobileBreakPoint}) {
     flex-direction: column;
+  }
+
+  @media (max-width: 570px) {
+    //ajuste de posição
+    position: relative;
+    right: 5rem;
+  }
+  @media (max-width: 490px) {
+    //ajuste de posição
+    position: relative;
+    right: 7rem;
+  }
+
+  @media (max-width: 490px) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 360px) {
+    gap: 1rem;
   }
 `;
 export const Column = styled.div`
@@ -74,7 +115,25 @@ export const Text = styled.text`
     margin: auto;
   }
   @media (max-width: 720px) {
-    width: 60%;
+    // começar a diminuir
+    max-width: 60%;
+    margin-left: 10rem;
+  }
+  @media (max-width: 650px) {
+    max-width: 50%;
+    margin-left: 12rem;
+  }
+  @media (max-width: 510px) {
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 490px) {
+    max-width: 40%;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1.2rem;
+    max-width: 30%;
   }
 `;
 
@@ -97,6 +156,26 @@ export const Text2 = styled.text`
   }
   @media (max-width: ${mobileBreakPoint}) {
     margin: auto;
+  }
+  @media (max-width: 720px) {
+    // começar a diminuir
+    max-width: 60%;
+    margin-left: 10rem;
+  }
+  @media (max-width: 650px) {
+    max-width: 50%;
+    margin-left: 12rem;
+  }
+  @media (max-width: 510px) {
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 490px) {
+    max-width: 40%;
+  }
+  @media (max-width: 360px) {
+    font-size: 1.2rem;
+    max-width: 30%;
   }
 `;
 
@@ -165,18 +244,45 @@ export const Image3 = styled.div`
   p {
     font-size: 4rem;
     @media (max-width: 1375px) {
-      font-size: 3.6rem;
+      font-size: 2.6rem;
     }
 
     @media (max-width: 1275px) {
-      font-size: 3.4rem;
+      font-size: 2.4rem;
     }
     @media (max-width: 1175px) {
-      font-size: 3.1rem;
+      font-size: 2.1rem;
     }
-    @media (max-width: 975px) {
-      font-size: 2.4rem;
-      width: 80%;
+    @media (max-width: ${mobileBreakPoint}) {
+      margin: auto;
+    }
+    @media (max-width: 720px) {
+      // começar a diminuir
+      max-width: 60%;
+      margin-left: 10rem;
+    }
+    @media (max-width: 650px) {
+      max-width: 50%;
+      margin-left: 12rem;
+    }
+    @media (max-width: 510px) {
+      font-size: 1.7rem;
+    }
+
+    @media (max-width: 570px) {
+      //ajuste de posição
+      position: relative;
+      right: 5rem;
+    }
+    @media (max-width: 490px) {
+      //ajuste de posição
+      position: relative;
+      right: 7rem;
+      max-width: 40%;
+    }
+    @media (max-width: 360px) {
+      font-size: 1.2rem;
+      max-width: 30%;
     }
   }
 `;
@@ -185,6 +291,19 @@ export const Whole2 = styled.div`
   flex-direction: row;
   width: 100%;
   height: auto;
+
+  @media (max-width: 570px) {
+    //ajuste de posição
+    width: 100%;
+    position: relative;
+    right: 5rem;
+  }
+  @media (max-width: 490px) {
+    //ajuste de posição
+    width: 100%;
+    position: relative;
+    right: 7rem;
+  }
 `;
 export const Column3 = styled.div`
   display: flex;
@@ -200,12 +319,10 @@ export const Column3 = styled.div`
   }
   @media (max-width: 1640px) {
     width: 60%;
+    bottom: 7rem;
   }
   @media (max-width: 670px) {
-    width: 50%;
-  }
-  @media (max-width: 510px) {
-    width: 40%;
+    width: 55%;
   }
 `;
 export const Column4 = styled.div`
@@ -225,10 +342,10 @@ export const Column4 = styled.div`
   }
   @media (max-width: 670px) {
     width: 50%;
-    right: 10rem;
+    right: 5rem;
   }
   @media (max-width: 510px) {
-    right: 13rem;
+    right: 1rem;
   }
   @media (max-width: 475px) {
     right: 10rem;
@@ -253,12 +370,29 @@ export const Text3 = styled.text`
   @media (max-width: 1175px) {
     font-size: 2.1rem;
   }
-  @media (max-width: 1640px) {
-    top: 7rem;
+
+  @media (max-width: 720px) {
+    // começar a diminuir
+    margin-left: 10rem;
   }
-  @media (max-width: 990px) {
-    top: 3rem;
+  @media (max-width: 650px) {
+    margin-left: 12rem;
+  }
+  @media (max-width: 510px) {
     font-size: 1.7rem;
+  }
+
+  @media (max-width: 490px) {
+    max-width: 70%;
+  }
+
+  @media (max-width: 490px) {
+    max-width: 60%;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1.2rem;
+    max-width: 50%;
   }
 `;
 export const Image4 = styled.div`
@@ -268,13 +402,15 @@ export const Image4 = styled.div`
     @media (max-width: 1375px) {
       width: 85%;
     }
-    @media (max-width: 1544px) {
+    @media (max-width: 570px) {
+      //ajuste de posição
+      position: relative;
+      right: 5rem;
     }
-    @media (max-width: 1275px) {
-    }
-    @media (max-width: 1175px) {
-    }
-    @media (max-width: 415px) {
+    @media (max-width: 490px) {
+      //ajuste de posição
+      position: relative;
+      right: 7rem;
     }
   }
 `;
@@ -380,6 +516,30 @@ export const Conditional = styled.div`
   @media (max-width: 720px) {
     width: 90%;
   }
+
+  @media (max-width: 720px) {
+    width: 70%;
+    margin-right: 8rem;
+  }
+  @media (max-width: 650px) {
+    max-width: 55%;
+    margin-left: 0rem;
+  }
+
+  @media (max-width: 510px) {
+    max-width: 55%;
+    margin-left: 0rem;
+  }
+
+  @media (max-width: 490px) {
+    max-width: 45%;
+    margin-right: 18rem;
+  }
+
+  @media (max-width: 360px) {
+    max-width: 35%;
+    margin-right: 25rem;
+  }
 `;
 
 export const Image7 = styled.div`
@@ -397,7 +557,10 @@ export const Image7 = styled.div`
       width: 85%;
     }
     @media (max-width: 720px) {
-      width: 70%;
+      width: 90%;
+    }
+    @media (max-width: 650px) {
+      width: 100%;
     }
   }
 `;
@@ -417,7 +580,10 @@ export const Image8 = styled.div`
       width: 85%;
     }
     @media (max-width: 720px) {
-      width: 70%;
+      width: 90%;
+    }
+    @media (max-width: 650px) {
+      width: 100%;
     }
   }
 `;
