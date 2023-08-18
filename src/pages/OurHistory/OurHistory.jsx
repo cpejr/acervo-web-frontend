@@ -92,6 +92,7 @@ export default function OurHistory() {
             único objetivo, manter viva as nossas memórias.
           </Text3>
         </Column3>
+
         <Column4>
           <Image4>
             <img src={BomDespacho} alt="BomDespacho" />
@@ -99,21 +100,26 @@ export default function OurHistory() {
         </Column4>
       </Whole2>
       <Who>&ensp; Quem Somos?</Who>
-      <Column5>
-        <Text4>
-          O Site Nossa História – Escrita, Imagem e Som é a parte de uma rede de
-          mídias criada e gerenciada pela CASA TUÉ-TIMBUÁ.
-        </Text4>
-        <Text4>
-          A CASA TUÉ-TIMBUÁ é uma Organização Não Governamental (ONG), portanto
-          sem fins lucrativos, criada para atuar na cidade de Bom Despacho no
-          desenvolvimento de projetos nas áreas da educação, cultura, ensino e
-          meio-ambiente, a qual tem como Coordenador Herberton Sabino – Pinta.
-        </Text4>
-      </Column5>
-      <Name>Herberton Pinta</Name>
+      <Whole>
+        <Column5>
+          <Text4>
+            O Site Nossa História – Escrita, Imagem e Som é a parte de uma rede
+            de mídias criada e gerenciada pela CASA TUÉ-TIMBUÁ.
+          </Text4>
+          <Text4>
+            A CASA TUÉ-TIMBUÁ é uma Organização Não Governamental (ONG),
+            portanto sem fins lucrativos, criada para atuar na cidade de Bom
+            Despacho no desenvolvimento de projetos nas áreas da educação,
+            cultura, ensino e meio-ambiente, a qual tem como Coordenador
+            Herberton Sabino – Pinta.
+          </Text4>
+        </Column5>
+      </Whole>
+
       <Whole3>
         <Column6>
+          <Name>Herberton Pinta</Name>
+
           <Image5>
             <img src={Herberton} alt="Herberton" />
           </Image5>
@@ -131,24 +137,29 @@ export default function OurHistory() {
           </Text5>
         </Column7>
       </Whole3>
-      <Column8>
-        <Text4>
-          O site é parte de uma Rede, que inclui o twitter, Instagram e
-          facebook, criada para o compartilhamento da memória e história de Bom
-          Despacho e para a divulgação dos eventos culturais de nossa cidade.
-        </Text4>
-        <Text4>
-          Porém, esse site só existe por ser concebido como uma plataforma
-          interativa e colaborativa, somente existe a partir da contribuição da
-          comunidade de Bom Despacho.
-        </Text4>
-      </Column8>
+      <Whole>
+        <Column8>
+          <Text4>
+            O site é parte de uma Rede, que inclui o twitter, Instagram e
+            facebook, criada para o compartilhamento da memória e história de
+            Bom Despacho e para a divulgação dos eventos culturais de nossa
+            cidade.
+          </Text4>
+          <Text4>
+            Porém, esse site só existe por ser concebido como uma plataforma
+            interativa e colaborativa, somente existe a partir da contribuição
+            da comunidade de Bom Despacho.
+          </Text4>
+        </Column8>
+      </Whole>
       <Image6>
-        Por ser assim, todos, de todas as classes sociais, credos, cores e
-        amores que de alguma forma se sintam pertencentes à Bom Despacho e que
-        contribuam com fotografias, vídeos, escritas ou que apoiem, compartilhem
-        ou divulguem nossa memória histórica são parte desse projeto, portanto,
-        parte do quem somos.
+        <p>
+          Por ser assim, todos, de todas as classes sociais, credos, cores e
+          amores que de alguma forma se sintam pertencentes à Bom Despacho e que
+          contribuam com fotografias, vídeos, escritas ou que apoiem,
+          compartilhem ou divulguem nossa memória histórica são parte desse
+          projeto, portanto, parte do quem somos.
+        </p>
       </Image6>
     </Container>
   );
