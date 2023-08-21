@@ -144,11 +144,13 @@ export default function OurHistory() {
         </Text4>
       </Column8>
       <Image6>
-        Por ser assim, todos, de todas as classes sociais, credos, cores e
-        amores que de alguma forma se sintam pertencentes à Bom Despacho e que
-        contribuam com fotografias, vídeos, escritas ou que apoiem, compartilhem
-        ou divulguem nossa memória histórica são parte desse projeto, portanto,
-        parte do quem somos.
+        <p>
+          Por ser assim, todos, de todas as classes sociais, credos, cores e
+          amores que de alguma forma se sintam pertencentes à Bom Despacho e que
+          contribuam com fotografias, vídeos, escritas ou que apoiem,
+          compartilhem ou divulguem nossa memória histórica são parte desse
+          projeto, portanto, parte do quem somos.
+        </p>
       </Image6>
     </Container>
   );
