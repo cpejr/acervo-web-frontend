@@ -15,7 +15,6 @@ import {
   Column6,
   Column7,
   Column8,
-  Conditional,
   Container,
   Image,
   Image2,
@@ -23,8 +22,6 @@ import {
   Image4,
   Image5,
   Image6,
-  Image7,
-  Image8,
   Name,
   Text,
   Text2,
@@ -53,14 +50,6 @@ export default function OurHistory() {
             <img src={Padres} alt="Padres" />
           </Image>
         </Column>
-        <Conditional>
-          <Image8>
-            <img src={Vila} alt="Vila" />
-          </Image8>
-          <Image7>
-            <img src={Padres} alt="Padres" />
-          </Image7>
-        </Conditional>
         <Column2>
           <Image2>
             <img src={Vila} alt="Vila" />
