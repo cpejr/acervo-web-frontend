@@ -531,7 +531,6 @@ export const Whole3 = styled.div`
   margin-left: 3rem;
   @media (max-width: 1190px) {
     flex-direction: column;
-    align-items: center;
   }
   @media (max-width: 1616px) {
     left: 7rem;
@@ -614,10 +613,21 @@ export const Image5 = styled.div`
       right: 3.5rem;
     }
     @media (max-width: 670px) {
-      left: 2rem;
+      left: 19rem;
+    }
+    @media (max-width: 650px) {
+      left: 17rem;
     }
     @media (max-width: 490px) {
-      right: 50rem;
+      left: 11rem;
+    }
+    @media (max-width: 440px) {
+      width: 80%;
+      left: 11rem;
+    }
+    @media (max-width: 370px) {
+      width: 70%;
+      left: 4rem;
     }
   }
 `;
@@ -625,14 +635,25 @@ export const Name = styled.div`
   margin-top: 3rem;
   text-align: center;
   justify-content: center;
-  align-items: center;
   color: #ffffff;
   font-size: 7rem;
+  @media (max-width: 1617px) {
+    margin-left: 40rem;
+  }
   @media (max-width: 1375px) {
     font-size: 6rem;
   }
   @media (max-width: 1275px) {
     font-size: 5.5rem;
+    margin-right: 2.5rem;
+  }
+
+  @media (max-width: 1190px) {
+    font-size: 5.5rem;
+    margin-left: 0rem;
+  }
+  @media (max-width: 820px) {
+    margin-left: 3rem;
   }
   @media (max-width: 650px) {
     font-size: 4.5rem;
@@ -642,6 +663,17 @@ export const Name = styled.div`
   }
   @media (max-width: 490px) {
     font-size: 4rem;
+    width: 80%;
+    margin-left: 3rem;
+  }
+
+  @media (max-width: 440px) {
+    margin-left: 0rem;
+  }
+  @media (max-width: 370px) {
+    font-size: 3.5rem;
+    position: relative;
+    right: 9rem;
   }
 `;
 export const Text5 = styled.text`
@@ -754,7 +786,7 @@ export const Image6 = styled.div`
     }
     @media (max-width: 370px) {
       font-size: 1.2rem;
-      max-width: 30%;
+      max-width: 35%;
       right: 6.5rem;
     }
   }
