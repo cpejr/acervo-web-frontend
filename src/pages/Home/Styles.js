@@ -14,7 +14,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ffddad;
+  background-color: ${(props) => props.theme.colors.softOrange};
   padding-bottom: 7rem;
 `;
 export const FirstSection = styled.div`
@@ -480,7 +480,7 @@ export const SupportButtom = styled.button`
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  background-color: ${(props) => props.theme.colors.orangeButton};
+  background-color: ${(props) => props.theme.colors.strongOrange};
   box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.25);
   border-radius: 6.5rem;
   border: none;
