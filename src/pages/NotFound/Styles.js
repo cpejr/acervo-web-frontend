@@ -11,9 +11,6 @@ export const Container = styled.div`
   height: 100%;
   background-color: ${(props) => props.theme.colors.primary};
   overflow-y: hidden;
-  @media (max-width: ${mobileBreakPoint}) {
-    overflow-y: auto;
-  }
 `;
 export const Header = styled.div`
   width: 100%;
@@ -54,16 +51,30 @@ export const Collumn = styled.div`
   justify-content: start;
   > img {
     margin-top: 5rem;
-    width: 50%;
-    height: 60%;
+    width: 34rem;
+    height: 52rem;
     color: white;
   }
   @media (max-width: ${firstBreakPoint}) {
-    width: 60%;
+    > img {
+      width: 30rem;
+      height: 48rem;
+    }
+    width: 67rem;
   }
   @media (max-width: ${mobileBreakPoint}) {
     width: 100%;
     justify-content: center;
+    > img {
+      width: 26rem;
+      height: 36rem;
+    }
+  }
+  @media (max-width: ${miniBreakPoint}) {
+    > img {
+      width: 20rem;
+      height: 30rem;
+    }
   }
 `;
 export const Collumn2 = styled.div`
@@ -73,32 +84,37 @@ export const Collumn2 = styled.div`
   flex-direction: column;
   color: white;
   justify-content: end;
+  margin-right: 2rem;
   @media (max-width: ${firstBreakPoint}) {
-    width: 40%;
+    width: 45rem;
   }
   @media (max-width: ${mobileBreakPoint}) {
+    margin: 0;
     width: 100%;
     justify-content: center;
   }
 `;
-export const Text = styled.div`
+export const Text = styled.p`
   width: 100%;
   height: auto;
+  text-align: right;
   margin-bottom: 20rem;
-  font-family: 'Cabin Condensed';
+  font-family: ${(props) => props.theme.colors.primaryCondensed};
   font-size: 9.6rem;
   @media (max-width: ${firstBreakPoint}) {
     font-size: 7rem;
+    margin-top: 5rem;
   }
   @media (max-width: ${secondBreakPoint}) {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
   @media (max-width: ${mobileBreakPoint}) {
     align-self: center;
     text-align: center;
     width: 70%;
+    font-size: 5.5rem;
   }
   @media (max-width: ${miniBreakPoint}) {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
 `;
