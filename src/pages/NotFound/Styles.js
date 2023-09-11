@@ -20,7 +20,7 @@ export const Header = styled.div`
   align-items: center;
   text-align: center;
   font-size: 9.6rem;
-  font-family: 'Cabin Condensed';
+  font-family: ${(props) => props.theme.fonts.caramella};
   background-color: ${(props) => props.theme.colors.fontDialog};
   color: white;
   @media (max-width: ${firstBreakPoint}) {
@@ -99,7 +99,7 @@ export const Text = styled.p`
   height: auto;
   text-align: right;
   margin-bottom: 20rem;
-  font-family: ${(props) => props.theme.colors.primaryCondensed};
+  font-family: ${(props) => props.theme.fonts.caramella};
   font-size: 9.6rem;
   @media (max-width: ${firstBreakPoint}) {
     font-size: 7rem;

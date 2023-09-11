@@ -14,6 +14,7 @@ const theme = {
   fonts: {
     primary: 'Cabin, sans-serif',
     primaryCondensed: 'Cabin Condensed, sans-serif',
+    caramella: 'caramella',
   },
 };
 
