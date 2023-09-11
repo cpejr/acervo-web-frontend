@@ -11,6 +11,7 @@ export const Container = styled.div`
   height: 100%;
   flex-direction: column;
   gap: 2rem;
+  //overflow: hidden;
 `;
 
 export const Apresentation = styled.div`
@@ -123,7 +124,7 @@ export const Text = styled.text`
   }
   @media (max-width: 370px) {
     font-size: 1.2rem;
-    max-width: 35%;
+    //max-width: 35%;
     margin-left: 5rem;
   }
 `;
@@ -546,7 +547,7 @@ export const Whole3 = styled.div`
     left: 0rem;
   }
   @media (max-width: ${mobileBreakPoint}) {
-    margin-left: 5rem;
+    //margin-left: 5rem;
   }
   @media (max-width: 570px) {
     right: 5rem;
@@ -573,10 +574,22 @@ export const Column6 = styled.div`
   z-index: 1;
   @media (max-width: 1730px) {
     width: 45%;
+    left: 12rem;
   }
   @media (max-width: 1640px) {
-    width: 40%;
+    width: 45%;
+    //left: 1rem;
+    right: 1rem;
   }
+  @media (max-width: 1616px) {
+    left: 1rem;
+    top: 8rem;
+  }
+  @media (max-width: 1375px) {
+    left: 0rem;
+    top: 0rem;
+  }
+
   @media (max-width: 1190px) {
     width: 100%;
     align-items: center;
@@ -586,8 +599,16 @@ export const Column6 = styled.div`
     right: 5rem;
   }
   @media (max-width: 490px) {
-    width: 60%;
-    right: 5rem;
+    // width: 60%;
+    left: 2.7rem;
+  }
+  @media (max-width: 440px) {
+    // width: 60%;
+    left: 0rem;
+  }
+  @media (max-width: 370px) {
+    // width: 60%;
+    left: 1.7rem;
   }
 `;
 export const Column7 = styled.div`
@@ -602,6 +623,9 @@ export const Image5 = styled.div`
   > img {
     position: relative;
     z-index: 1;
+    @media (max-width: 1640px) {
+      width: 98%;
+    }
     @media (max-width: 1375px) {
       width: 85%;
     }
@@ -610,7 +634,7 @@ export const Image5 = styled.div`
       margin-right: 0rem;
     }
     @media (max-width: 820px) {
-      right: 3.5rem;
+      left: 1.5rem;
     }
     @media (max-width: 670px) {
       left: 19rem;
@@ -622,7 +646,7 @@ export const Image5 = styled.div`
       left: 11rem;
     }
     @media (max-width: 440px) {
-      width: 80%;
+      //width: 80%;
       left: 11rem;
     }
     @media (max-width: 370px) {
@@ -656,24 +680,20 @@ export const Name = styled.div`
     margin-left: 3rem;
   }
   @media (max-width: 650px) {
-    font-size: 4.5rem;
-  }
-  @media (max-width: 510px) {
-    font-size: 4.5rem;
-  }
-  @media (max-width: 490px) {
     font-size: 4rem;
-    width: 80%;
-    margin-left: 3rem;
+  }
+  @media (max-width: 560px) {
+    position: relative;
+    left: 1.5rem;
   }
 
-  @media (max-width: 440px) {
+  @media (max-width: 490px) {
+    font-size: 2.5rem;
+    left: 0rem;
     margin-left: 0rem;
+    right: 10rem;
   }
-  @media (max-width: 370px) {
-    font-size: 3.5rem;
-    position: relative;
-    right: 9rem;
+  @media (max-width: 290px) {
   }
 `;
 export const Text5 = styled.text`
@@ -684,11 +704,20 @@ export const Text5 = styled.text`
   font-size: 4rem;
   text-align: justify;
   margin-left: 3rem;
+  @media (max-width: 1730px) {
+    max-width: 90%;
+    left: 11rem;
+  }
   @media (max-width: 1617px) {
     max-width: 78%;
+    left: 0rem;
   }
+
   @media (max-width: 1590px) {
     max-width: 90%;
+  }
+  @media (max-width: 1410px) {
+    max-width: 75%;
   }
   @media (max-width: 1375px) {
     font-size: 2.6rem;
