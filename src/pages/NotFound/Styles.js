@@ -84,7 +84,7 @@ export const Collumn2 = styled.div`
   flex-direction: column;
   color: white;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 5rem;
   @media (max-width: ${firstBreakPoint}) {
     width: 45rem;
   }

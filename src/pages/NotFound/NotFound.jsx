@@ -1,4 +1,4 @@
-import LogoBranca from '../../assets/Home/LogoBranca.png';
+import { LogoBranca } from '../../assets/home/index';
 import { Container, Header, Collumn, Collumn2, Row, Text } from './Styles';
 
 export default function Home() {
