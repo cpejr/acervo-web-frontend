@@ -6,13 +6,15 @@ import {
 } from 'react-router-dom';
 
 import AppLayout from './layouts/AppLayout/AppLayout';
-import { Home, MyCart } from './pages';
+import { Home, MyCart, Profile } from './pages';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
       <Route path="/" element={<AppLayout />}>
         <Route index element={<Home />} />
+
+        <Route path="perfil" element={<Profile />} />
       </Route>
       <Route path="/meu-carrinho" element={<MyCart />} />
     </Route>
