@@ -23,6 +23,7 @@ import {
   Image5,
   Image6,
   Name,
+  Name2,
   Text,
   Text2,
   Text3,
@@ -103,6 +104,8 @@ export default function OurHistory() {
       <Name>Herberton Pinta</Name>
       <Whole3>
         <Column6>
+          <Name2>Herberton Pinta</Name2>
+
           <Image5>
             <img src={Herberton} alt="Herberton" />
           </Image5>
