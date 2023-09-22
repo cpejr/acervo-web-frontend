@@ -23,24 +23,9 @@ export const Apresentation = styled.div`
   border-radius: 5rem;
   align-items: center;
   color: #ffffff;
-  font-size: 7rem;
-  @media (max-width: 1375px) {
-    font-size: 6rem;
-  }
-  @media (max-width: 1275px) {
-    font-size: 5.5rem;
-  }
-  @media (max-width: 650px) {
-    font-size: 4.5rem;
-  }
-  @media (max-width: 510px) {
-    font-size: 4.5rem;
-  }
-  @media (max-width: 490px) {
-    font-size: 4rem;
-  }
-  @media (max-width: 290px) {
-    font-size: 3.5rem;
+  font-size: 6rem;
+  @media (max-width: ${mobileBreakPoint}) {
+    font-size: 5rem;
   }
 `;
 export const Whole = styled.div`
@@ -98,36 +83,10 @@ export const Text = styled.text`
   color: #ffffff;
   font-size: 3rem;
   text-align: justify;
-  @media (max-width: 1375px) {
-    font-size: 2.6rem;
-  }
-  @media (max-width: 1275px) {
-    font-size: 2.4rem;
-  }
-  @media (max-width: 1175px) {
-    font-size: 2.1rem;
-  }
+
   @media (max-width: ${mobileBreakPoint}) {
     margin: auto;
-  }
-  @media (max-width: 720px) {
-    max-width: 80%;
-    margin-left: 10rem;
-  }
-  @media (max-width: 650px) {
-    max-width: 60%;
-    margin-left: 12rem;
-  }
-  @media (max-width: 510px) {
-    font-size: 1.7rem;
-  }
-  @media (max-width: 490px) {
-    max-width: 60%;
-  }
-  @media (max-width: 370px) {
-    font-size: 1.2rem;
-    //max-width: 35%;
-    margin-left: 5rem;
+    font-size: 2rem;
   }
 `;
 // second text first column first section
@@ -262,7 +221,7 @@ export const Image3 = styled.div`
   align-items: center;
   color: #ffffff;
   p {
-    font-size: 4rem;
+    font-size: 3rem;
     @media (max-width: 1375px) {
       font-size: 2.6rem;
     }
@@ -377,7 +336,7 @@ export const Column4 = styled.div`
 export const Text3 = styled.text`
   width: 100%;
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: justify;
   margin-left: 3rem;
   position: relative;
@@ -414,6 +373,7 @@ export const Text3 = styled.text`
 export const Image4 = styled.div`
   margin-right: 3rem;
   > img {
+    dosplay: flex;
     position: relative;
     right: 37rem;
     @media (max-width: 1590px) {
@@ -440,7 +400,7 @@ export const Who = styled.div`
   text-decoration: underline #ffd599;
   align-items: center;
   color: #ffffff;
-  font-size: 7rem;
+  font-size: 6rem;
   @media (max-width: 1375px) {
     font-size: 6rem;
   }
@@ -479,7 +439,7 @@ export const Column5 = styled.div`
 export const Text4 = styled.text`
   width: 90%;
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: justify;
   margin-left: 3rem;
   @media (max-width: 1375px) {
@@ -657,7 +617,7 @@ export const Name = styled.div`
   text-align: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 7rem;
+  font-size: 6rem;
   @media (max-width: 1190px) {
     display: none;
   }
@@ -755,7 +715,7 @@ export const Text5 = styled.text`
   position: relative;
   top: 12%;
   color: #ffffff;
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: justify;
   margin-left: 3rem;
   @media (max-width: 1730px) {
@@ -836,7 +796,7 @@ export const Image6 = styled.div`
   align-items: center;
   color: #ffffff;
   p {
-    font-size: 4rem;
+    font-size: 3rem;
     @media (max-width: 1375px) {
       font-size: 2.6rem;
     }
