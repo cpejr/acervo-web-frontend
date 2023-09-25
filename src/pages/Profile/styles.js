@@ -1,10 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-import ProductOne from '../../assets/Profile/product1.png';
-import ProductTwo from '../../assets/Profile/product2.png';
-import ProfileBack from '../../assets/Profile/profile_back.jpg';
-import ProfileImg from '../../assets/Profile/profile_img.png';
+import { profileBack, profileImage } from '../../assets/Profile/index';
 
 const firstBreakPoint = '1130px';
 const secondBreakPoint = '800px';
@@ -15,7 +12,7 @@ export const ProfileImage = styled.div`
   background-color: white;
   width: 30rem;
   height: 36rem;
-  background-image: url(${ProfileImg});
+  background-image: url(${profileImage});
   background-size: 100% 100%;
   background-position: center;
   margin: 5%;
@@ -35,7 +32,7 @@ export const BackgroundDiv = styled.div`
   display: flex;
   width: 100%;
   height: 50rem;
-  background-image: url(${ProfileBack});
+  background-image: url(${profileBack});
   background-size: 100% 100%;
   background-position: center;
   text-align: left;
@@ -211,38 +208,11 @@ export const ProductButton = styled.button`
   border-radius: 3rem;
 `;
 
-export const ProductImage1 = styled.div`
+export const ProductImage = styled.div`
   background-color: white;
   width: 40rem;
   height: 48rem;
-  background-image: url(${ProductOne});
-  background-size: 100% 100%;
-  background-position: center;
-  margin: 3%;
-  border-radius: 3rem;
-  @media (max-width: ${firstBreakPoint}) {
-    width: 30rem;
-    height: 36rem;
-  }
-  @media (max-width: ${secondBreakPoint}) {
-    width: 25rem;
-    height: 30rem;
-  }
-  @media (max-width: ${mobileBreakPoint}) {
-    width: 20rem;
-    height: 24rem;
-  }
-  @media (max-width: ${miniBreakPoint}) {
-    width: 15rem;
-    height: 18rem;
-  }
-`;
-
-export const ProductImage2 = styled.div`
-  background-color: white;
-  width: 40rem;
-  height: 48rem;
-  background-image: url(${ProductTwo});
+  background-image: url(${(props) => props.imageUrl});
   background-size: 100% 100%;
   background-position: center;
   margin: 3%;
@@ -273,7 +243,7 @@ export const ButtonDiv = styled.div`
   margin-top: 2%;
 `;
 
-export const ChangeButton = styled.button`
+export const Button = styled.button`
   display: flex;
   width: fit-content;
   height: 5rem;
@@ -285,18 +255,5 @@ export const ChangeButton = styled.button`
   background-color: black;
   margin-left: 2%;
   padding: 2%;
-`;
-
-export const DeleteButton = styled.button`
-  display: flex;
-  width: fit-content;
-  height: 5rem;
-  text-align: center;
-  border-radius: 6rem;
-  align-items: center;
-  color: #ffffff;
-  font-size: 3rem;
-  background-color: black;
-  margin-left: 2%;
-  padding: 2%;
+  cursor: pointer;
 `;

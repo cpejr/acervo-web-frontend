@@ -1,3 +1,4 @@
+import { product1, product2 } from '../../assets/Profile/index';
 import {
   Container,
   BackgroundDiv,
@@ -5,12 +6,10 @@ import {
   Historic,
   ProfileImage,
   Info,
-  ChangeButton,
-  DeleteButton,
+  Button,
   ButtonDiv,
   ProductDiv,
-  ProductImage1,
-  ProductImage2,
+  ProductImage,
   ProductContainer,
   ProductButton,
   InfoText,
@@ -51,17 +50,17 @@ export default function Profile() {
       <Historic> Histórico de compras</Historic>
       <ProductDiv>
         <ProductContainer>
-          <ProductImage2 />
+          <ProductImage imageUrl={product1} />
           <ProductButton>Comprar novamente </ProductButton>
         </ProductContainer>
         <ProductContainer>
-          <ProductImage1 />
+          <ProductImage imageUrl={product2} />
           <ProductButton>Comprar novamente </ProductButton>
         </ProductContainer>
       </ProductDiv>
       <ButtonDiv>
-        <ChangeButton>Alterar Dados</ChangeButton>
-        <DeleteButton>Excluir minha conta</DeleteButton>
+        <Button>Alterar Dados</Button>
+        <Button>Excluir minha conta</Button>
       </ButtonDiv>
     </Container>
   );
