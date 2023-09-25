@@ -1,6 +1,6 @@
 import {
   Container,
-  Image3,
+  BackgroundDiv,
   Data,
   Historic,
   ProfileImage,
@@ -11,43 +11,53 @@ import {
   ProductDiv,
   ProductImage1,
   ProductImage2,
+  ProductContainer,
+  ProductButton,
+  InfoText,
 } from './styles';
 
 export default function Profile() {
   return (
     <Container>
-      <Image3>
+      <BackgroundDiv>
         <ProfileImage />
         <p>
           Ricardo Li
+          <br />
           <p1>
             <br /> Também faz parte
             <br /> da Nossa história!
           </p1>
         </p>
-      </Image3>
+      </BackgroundDiv>
       <Data> Dados Pessoais</Data>
       <Info>
         <p1>
-          Nome:<p> __________________________________________________</p>
+          Nome: <InfoText>Ricardo</InfoText>
         </p1>
         <p1>
-          E-mail:<p>__________________________________________________</p>
+          Email: <InfoText>ricardo@email.com</InfoText>
         </p1>
         <p1>
-          Telefone:<p>________________________________________________</p>
+          Telefone: <InfoText>123456789</InfoText>
         </p1>
         <p1>
-          CEP:<p> ___________________________________________________</p>
+          CEP: <InfoText>123456798</InfoText>
         </p1>
         <p1>
-          Endereço:<p>_______________________________________________</p>
+          Endereço: <InfoText>Rua Fulano de tal</InfoText>
         </p1>
       </Info>
       <Historic> Histórico de compras</Historic>
       <ProductDiv>
-        <ProductImage2 />
-        <ProductImage1 />
+        <ProductContainer>
+          <ProductImage2 />
+          <ProductButton>Comprar novamente </ProductButton>
+        </ProductContainer>
+        <ProductContainer>
+          <ProductImage1 />
+          <ProductButton>Comprar novamente </ProductButton>
+        </ProductContainer>
       </ProductDiv>
       <ButtonDiv>
         <ChangeButton>Alterar Dados</ChangeButton>

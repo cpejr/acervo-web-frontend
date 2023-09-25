@@ -6,6 +6,11 @@ import ProductTwo from '../../assets/Profile/product2.png';
 import ProfileBack from '../../assets/Profile/profile_back.jpg';
 import ProfileImg from '../../assets/Profile/profile_img.png';
 
+const firstBreakPoint = '1130px';
+const secondBreakPoint = '800px';
+const mobileBreakPoint = '700px';
+const miniBreakPoint = '440px';
+
 export const ProfileImage = styled.div`
   background-color: white;
   width: 30rem;
@@ -13,6 +18,7 @@ export const ProfileImage = styled.div`
   background-image: url(${ProfileImg});
   background-size: 100% 100%;
   background-position: center;
+  margin: 5%;
 `;
 
 export const Container = styled.div`
@@ -25,7 +31,7 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-export const Image3 = styled.div`
+export const BackgroundDiv = styled.div`
   display: flex;
   width: 100%;
   height: 50rem;
@@ -37,15 +43,51 @@ export const Image3 = styled.div`
   align-items: center;
   color: #ffffff;
   font-family: camila;
+
   p {
     margin-left: 3%;
     font-size: 8rem;
-    line-height: 3rem;
-    margin-bottom: 10%;
+    line-height: 2.5rem;
+    margin-bottom: 4%;
+
+    @media (max-width: ${firstBreakPoint}) {
+      margin-right: 3%;
+      font-size: 7rem;
+      line-height: 5rem;
+      margin-bottom: 1%;
+    }
+    @media (max-width: ${secondBreakPoint}) {
+      margin-right: 3%;
+      font-size: 7rem;
+      line-height: 5rem;
+      margin-bottom: 1%;
+    }
+    @media (max-width: ${miniBreakPoint}) {
+      margin-right: 3%;
+      font-size: 7rem;
+      line-height: 5rem;
+      margin-bottom: 1%;
+    }
   }
 
   p1 {
     font-size: 4rem;
+
+    @media (max-width: ${firstBreakPoint}) {
+      margin-right: 3%;
+      font-size: 4rem;
+      line-height: 3rem;
+    }
+    @media (max-width: ${secondBreakPoint}) {
+      margin-right: 3%;
+      font-size: 4rem;
+      line-height: 3rem;
+    }
+    @media (max-width: ${miniBreakPoint}) {
+      margin-right: 3%;
+      font-size: 4rem;
+      line-height: 3rem;
+    }
   }
 `;
 
@@ -62,6 +104,22 @@ export const Data = styled.div`
   padding: 2%;
   margin-left: 3%;
   margin-top: 2%;
+  @media (max-width: ${firstBreakPoint}) {
+    border-radius: 4rem;
+    font-size: 8rem;
+  }
+  @media (max-width: ${secondBreakPoint}) {
+    border-radius: 5rem;
+    font-size: 7rem;
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    border-radius: 6rem;
+    font-size: 6rem;
+  }
+  @media (max-width: ${miniBreakPoint}) {
+    border-radius: 7rem;
+    font-size: 5rem;
+  }
 `;
 
 export const Info = styled.div`
@@ -74,15 +132,21 @@ export const Info = styled.div`
   padding: 2%;
   margin-left: 3%;
   margin-top: 2%;
+  width: 90%;
 
   p1 {
     display: flex;
     color: #ffffff;
     margin-top: 2%;
+    gap: 1rem;
   }
-  p {
-    color: #f19709;
-  }
+`;
+
+export const InfoText = styled.div`
+  border-bottom: solid;
+
+  border-color: #f19709;
+  width: 100%;
 `;
 
 export const Historic = styled.div`
@@ -98,15 +162,53 @@ export const Historic = styled.div`
   padding: 2%;
   margin-left: 3%;
   margin-top: 2%;
+  @media (max-width: ${firstBreakPoint}) {
+    border-radius: 4rem;
+    font-size: 8rem;
+  }
+  @media (max-width: ${secondBreakPoint}) {
+    border-radius: 5rem;
+    font-size: 7rem;
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    border-radius: 6rem;
+    font-size: 6rem;
+  }
+  @media (max-width: ${miniBreakPoint}) {
+    border-radius: 7rem;
+    font-size: 5rem;
+  }
 `;
 
 export const ProductDiv = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-left: 3%;
+  margin-right: 3%;
   align-items: center;
   justify-content: center;
+`;
+
+export const ProductContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  margin: 3%;
+  border-radius: 3rem;
+`;
+
+export const ProductButton = styled.button`
+  background-color: white;
+  color: #7f260f;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 3rem;
+  border-radius: 3rem;
 `;
 
 export const ProductImage1 = styled.div`
@@ -114,10 +216,26 @@ export const ProductImage1 = styled.div`
   width: 40rem;
   height: 48rem;
   background-image: url(${ProductOne});
-  background-size: 90% 90%;
+  background-size: 100% 100%;
   background-position: center;
   margin: 3%;
   border-radius: 3rem;
+  @media (max-width: ${firstBreakPoint}) {
+    width: 30rem;
+    height: 36rem;
+  }
+  @media (max-width: ${secondBreakPoint}) {
+    width: 25rem;
+    height: 30rem;
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    width: 20rem;
+    height: 24rem;
+  }
+  @media (max-width: ${miniBreakPoint}) {
+    width: 15rem;
+    height: 18rem;
+  }
 `;
 
 export const ProductImage2 = styled.div`
@@ -125,10 +243,26 @@ export const ProductImage2 = styled.div`
   width: 40rem;
   height: 48rem;
   background-image: url(${ProductTwo});
-  background-size: 90% 90%;
+  background-size: 100% 100%;
   background-position: center;
   margin: 3%;
   border-radius: 3rem;
+  @media (max-width: ${firstBreakPoint}) {
+    width: 30rem;
+    height: 36rem;
+  }
+  @media (max-width: ${secondBreakPoint}) {
+    width: 25rem;
+    height: 30rem;
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    width: 20rem;
+    height: 24rem;
+  }
+  @media (max-width: ${miniBreakPoint}) {
+    width: 15rem;
+    height: 18rem;
+  }
 `;
 
 export const ButtonDiv = styled.div`
