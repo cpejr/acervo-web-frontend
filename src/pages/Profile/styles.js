@@ -9,7 +9,7 @@ const mobileBreakPoint = '700px';
 const miniBreakPoint = '440px';
 
 export const ProfileImage = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.fontHeader};
   width: 30rem;
   height: 36rem;
   background-image: url(${profileImage});
@@ -24,8 +24,9 @@ export const Container = styled.div`
   height: 100%;
   flex-direction: column;
   gap: 2rem;
-  background-color: #7f260f;
+  background-color: ${(props) => props.theme.colors.primary};
   overflow: hidden;
+  font-family: ${(props) => props.theme.fonts.primary};
 `;
 
 export const BackgroundDiv = styled.div`
@@ -38,8 +39,8 @@ export const BackgroundDiv = styled.div`
   text-align: left;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
-  font-family: camila;
+  color: ${(props) => props.theme.colors.fontHeader};
+  font-family: ${(props) => props.theme.fonts.primary};
 
   p {
     margin-left: 3%;
@@ -95,9 +96,9 @@ export const Data = styled.div`
   text-align: center;
   border-radius: 3rem;
   align-items: center;
-  color: #ffffff;
+  color: ${(props) => props.theme.colors.fontHeader};
   font-size: 7rem;
-  background-color: #f19709;
+  background-color: ${(props) => props.theme.colors.strongOrange};
   padding: 2%;
   margin-left: 3%;
   margin-top: 2%;
@@ -124,7 +125,7 @@ export const Info = styled.div`
   flex-direction: column;
   text-align: left;
   align-items: left;
-  color: #ffffff;
+  color: ${(props) => props.theme.colors.fontHeader};
   font-size: 4rem;
   padding: 2%;
   margin-left: 3%;
@@ -133,7 +134,7 @@ export const Info = styled.div`
 
   p1 {
     display: flex;
-    color: #ffffff;
+    color: ${(props) => props.theme.colors.fontHeader};
     margin-top: 2%;
     gap: 1rem;
   }
@@ -142,7 +143,7 @@ export const Info = styled.div`
 export const InfoText = styled.div`
   border-bottom: solid;
 
-  border-color: #f19709;
+  border-color: ${(props) => props.theme.colors.strongOrange};
   width: 100%;
 `;
 
@@ -153,9 +154,9 @@ export const Historic = styled.div`
   text-align: center;
   border-radius: 3rem;
   align-items: center;
-  color: #ffffff;
+  color: ${(props) => props.theme.colors.fontHeader};
   font-size: 7rem;
-  background-color: #f19709;
+  background-color: ${(props) => props.theme.colors.strongOrange};
   padding: 2%;
   margin-left: 3%;
   margin-top: 2%;
@@ -198,8 +199,8 @@ export const ProductContainer = styled.div`
 `;
 
 export const ProductButton = styled.button`
-  background-color: white;
-  color: #7f260f;
+  background-color: ${(props) => props.theme.colors.fontHeader};
+  color: ${(props) => props.theme.colors.primary};
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -209,7 +210,7 @@ export const ProductButton = styled.button`
 `;
 
 export const ProductImage = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.fontHeader};
   width: 40rem;
   height: 48rem;
   background-image: url(${(props) => props.imageUrl});
@@ -250,9 +251,9 @@ export const Button = styled.button`
   text-align: center;
   border-radius: 6rem;
   align-items: center;
-  color: #ffffff;
+  color: ${(props) => props.theme.colors.fontHeader};
   font-size: 3rem;
-  background-color: black;
+  background-color: ${(props) => props.theme.colors.fontDialog};
   margin-left: 2%;
   padding: 2%;
   cursor: pointer;
