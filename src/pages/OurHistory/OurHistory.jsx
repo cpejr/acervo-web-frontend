@@ -76,6 +76,7 @@ export default function OurHistory() {
             Despacho, registrando desde os povos originários que habitavam a
             região, até a atualidade.
           </Text3>
+
           <Text3>
             O Nossa História se propõe a ser sempre uma produção coletiva,
             portanto construído de forma interativa e colaborativa, tendo como

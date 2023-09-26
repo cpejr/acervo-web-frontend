@@ -123,8 +123,6 @@ export const Image = styled.div`
     }
     @media (max-width: 820px) {
       max-width: 53.5rem;
-
-      /* margin-left: 11.3rem; */
     }
     @media (max-width: 610px) {
       margin-left: 2rem;
@@ -225,6 +223,13 @@ export const Whole2 = styled.div`
     max-height: 35rem;
     padding-bottom: 10rem;
   }
+  @media (max-width: 700px) {
+    padding-right: 6.5rem;
+    flex-direction: column;
+    right: 0rem;
+
+    margin-bottom: 5rem;
+  }
 
   @media (max-width: 570px) {
     width: 100%;
@@ -276,7 +281,7 @@ export const Column3 = styled.div`
     top: 0rem;
     bottom: 30rem;
   }
-  @media (max-width: 670px) {
+  @media (max-width: 700px) {
     width: 100%;
   }
 `;
@@ -294,16 +299,6 @@ export const Column4 = styled.div`
   }
   @media (max-width: 1640px) {
     width: 40%;
-  }
-  @media (max-width: 670px) {
-    width: 100%;
-    right: 5rem;
-  }
-  @media (max-width: 510px) {
-    right: 1rem;
-  }
-  @media (max-width: 475px) {
-    right: 10rem;
   }
 `;
 export const Text3 = styled.text`
@@ -346,9 +341,11 @@ export const Image4 = styled.div`
     @media (max-width: 930px) {
       top: 10rem;
     }
-    @media (max-width: 670px) {
+    @media (max-width: 700px) {
       margin-right: 0rem;
       left: 5rem;
+      width: 0%;
+      display: none;
     }
     @media (max-width: 570px) {
       margin-right: 0rem;
@@ -363,6 +360,7 @@ export const Image4 = styled.div`
     }
   }
 `;
+
 export const Who = styled.div`
   display: flex;
   width: 100%;
@@ -500,19 +498,10 @@ export const Column6 = styled.div`
     margin-left: 0rem;
     right: 0rem;
   }
-  /* @media (max-width: 490px) {
-    // width: 60%;
-  } */
+
   @media (max-width: 440px) {
     margin-right: 10rem;
   }
-  /* @media (max-width: 370px) {
-    // width: 60%;
-    left: 1.7rem;
-  } */
-  /* @media (max-width: 385px) {
-    left: 1.2rem;
-  } */
 `;
 export const Column7 = styled.div`
   display: flex;
@@ -727,54 +716,6 @@ export const Text5 = styled.text`
     left: 2.5rem;
     margin-left: 0rem;
   }
-
-  /* 
-  }
-  @media (max-width: 1410px) {
-    max-width: 75%;
-  }
-  @media (max-width: 1375px) {
-    font-size: 2.6rem;
-    max-width: 78%;
-    margin-left: 0rem;
-  }
-  @media (max-width: 1190px) {
-    max-width: 90%;
-    color: #ffffff;
-    font-size: 4rem;
-    text-align: justify;
-    margin-left: 3rem;
-  }
-  @media (max-width: 1275px) {
-    font-size: 2.4rem;
-  }
-  @media (max-width: 1175px) {
-    font-size: 2.1rem;
-  }
-  @media (max-width: ${mobileBreakPoint}) {
-    right: 5rem;
-  }
-  @media (max-width: 650px) {
-    margin-left: 12rem;
-    max-width: 60%;
-    margin-bottom: 2rem;
-    right: 5rem;
-  }
-  @media (max-width: 510px) {
-    font-size: 1.7rem;
-  }
-
-  @media (max-width: 490px) {
-    max-width: 60%;
-  }
-  @media (max-width: 440px) {
-  }
-  @media (max-width: 370px) {
-    font-size: 1.2rem;
-    max-width: 60%;
-    margin-bottom: 0rem;
-    margin-left: 5rem;
-  } */
 `;
 export const Column8 = styled.div`
   display: flex;
