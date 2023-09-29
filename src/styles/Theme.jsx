@@ -16,6 +16,7 @@ const theme = {
     title: 'caramella',
 
     primaryCondensed: 'Cabin Condensed, sans-serif',
+    caramella: 'caramella',
   },
 };
 
