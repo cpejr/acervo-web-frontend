@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import caramella from './fonts/caramella.ttf';
+
 export default createGlobalStyle`
 
 * {
@@ -33,4 +35,11 @@ html {
 	  scroll-behavior:auto;
   }
 }
+
+@font-face {
+    font-family: 'caramella';
+    src: url(${caramella}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 `;
