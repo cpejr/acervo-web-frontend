@@ -13,6 +13,8 @@ const theme = {
   },
   fonts: {
     primary: 'Cabin, sans-serif',
+    title: 'caramella',
+
     primaryCondensed: 'Cabin Condensed, sans-serif',
     caramella: 'caramella',
   },
