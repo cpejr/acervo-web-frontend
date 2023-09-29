@@ -40,7 +40,7 @@ export const BackgroundDiv = styled.div`
   justify-content: center;
   align-items: center;
   color: ${(props) => props.theme.colors.fontHeader};
-  font-family: ${(props) => props.theme.fonts.primary};
+  font-family: ${(props) => props.theme.fonts.caramella};
 
   p {
     margin-left: 3%;
