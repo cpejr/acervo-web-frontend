@@ -1,10 +1,9 @@
-import BomDespacho from '../../img/BomDespacho.png';
-import Herberton from '../../img/Herberton.jpg';
-import Padres from '../../img/Padres.jpg';
-import Vila from '../../img/vila.jpg';
-
-import React, { useState, useEffect } from 'react';
-
+import {
+  bomDespacho,
+  herbertonImage,
+  priestsImage,
+  villageImage,
+} from '../../assets/ourHistory/index';
 import {
   Apresentation,
   Column,
@@ -48,12 +47,12 @@ export default function OurHistory() {
             documentos públicos ou privados.
           </Text>
           <Image>
-            <img src={Padres} alt="Padres" />
+            <img src={priestsImage} alt="Padres" />
           </Image>
         </Column>
         <Column2>
           <Image2>
-            <img src={Vila} alt="Vila" />
+            <img src={villageImage} alt="Vila" />
           </Image2>
           <Text2>
             Aqui, o acervo estará preservado e também poderá ser facilmente
@@ -85,7 +84,7 @@ export default function OurHistory() {
         </Column3>
         <Column4>
           <Image4>
-            <img src={BomDespacho} alt="BomDespacho" />
+            <img src={bomDespacho} alt="bomDespacho" />
           </Image4>
         </Column4>
       </Whole2>
@@ -108,7 +107,7 @@ export default function OurHistory() {
           <Name2>Herberton Pinta</Name2>
 
           <Image5>
-            <img src={Herberton} alt="Herberton" />
+            <img src={herbertonImage} alt="Herberton" />
           </Image5>
         </Column6>
         <Column7>

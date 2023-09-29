@@ -1,7 +1,6 @@
-/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 
-import acervo from '../../img/acervo.jpg';
+import acervo from '../../assets/ourHistory/acervo.jpg';
 
 const mobileBreakPoint = '820px';
 
@@ -93,8 +92,8 @@ export const Text = styled.text`
     font-size: 2rem;
   }
 `;
-// second text first column first section
 
+// second text first column first section
 export const Text2 = styled.text`
   margin-left: 3rem;
   width: 90%;
@@ -227,8 +226,6 @@ export const Whole2 = styled.div`
     padding-right: 6.5rem;
     flex-direction: column;
     right: 0rem;
-
-    margin-bottom: 5rem;
   }
 
   @media (max-width: 570px) {
@@ -239,16 +236,12 @@ export const Whole2 = styled.div`
   @media (max-width: 490px) {
     position: relative;
     right: 5rem;
-    margin-bottom: 15rem;
     padding-bottom: 15rem;
-  }
-  @media (max-width: 400px) {
-    margin-bottom: 25rem;
   }
 
   @media (max-width: 330px) {
     right: 6.5rem;
-    margin-bottom: 34rem;
+    margin-bottom: 10rem;
   }
   @media (max-width: 300px) {
     width: 100%;
@@ -444,9 +437,6 @@ export const Whole3 = styled.div`
     margin-left: 0rem;
     left: 0rem;
   }
-  @media (max-width: ${mobileBreakPoint}) {
-    //margin-left: 5rem;
-  }
   @media (max-width: 570px) {
     right: 5rem;
   }
@@ -476,7 +466,6 @@ export const Column6 = styled.div`
   }
   @media (max-width: 1640px) {
     width: 45%;
-    //left: 1rem;
     right: 1rem;
   }
   @media (max-width: 1616px) {
