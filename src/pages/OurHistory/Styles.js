@@ -432,7 +432,7 @@ export const Whole3 = styled.div`
     flex-direction: column;
   }
   @media (max-width: 1616px) {
-    left: 2rem;
+    left: 1rem;
   }
   @media (max-width: 1590px) {
     width: 90%;
@@ -669,7 +669,7 @@ export const Text5 = styled.text`
     left: 11rem;
   }
   @media (max-width: 1617px) {
-    max-width: 78%;
+    max-width: 80%;
     left: 0rem;
   }
   @media (max-width: 1590px) {
@@ -701,7 +701,6 @@ export const Text5 = styled.text`
     margin-bottom: 2rem;
   }
   @media (max-width: 650px) {
-    /* margin-left: 13.5rem; */
     max-width: 90%;
     right: 10rem;
   }
