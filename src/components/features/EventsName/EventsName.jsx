@@ -18,38 +18,50 @@ export default function EventsName() {
       <Row>
         <Control>
           <img src={ARQUITETURA} />
-        </Control>
-        <Control>
-          <img src={ARTES} />
+          <a>ARQUITETURA</a>
         </Control>
         <Control>
           <img src={ARTESANATO} />
+          <a>ARTESANATO</a>
         </Control>
         <Control>
-          <img src={CELEBRACOES} />
+          <img src={ARTES} />
+          <a>ARTES VISUAIS</a>
         </Control>
       </Row>
       <Row>
         <Control>
           <img src={DANCA} />
+          <a>DANÇA E TEATRO</a>
         </Control>
         <Control>
           <img src={ESPORTES} />
+          <a>ESPORTE</a>
         </Control>
         <Control>
           <img src={FESTAS} />
+          <a>FESTAS POPULARES</a>
+        </Control>
+      </Row>
+      <Row>
+        <Control>
+          <img src={CELEBRACOES} />
+          <a>CELEBRAÇÕES RELIGIOSAS</a>
         </Control>
         <Control>
-          <img src={GASTRONOMIA} />
+          <img src={LITERATURA} />
+          <a>LITERATURA E MEMÓRIA</a>
+        </Control>
+        <Control>
+          <img src={MUSICA} />
+          <a>MUSICA</a>
         </Control>
       </Row>
       <Row>
         <p>
           <Control>
-            <img src={LITERATURA} />
-          </Control>
-          <Control>
-            <img src={MUSICA} />
+            <img src={GASTRONOMIA} />
+            <a>GASTRONOMIA</a>
           </Control>
         </p>
       </Row>

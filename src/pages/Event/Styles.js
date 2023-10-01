@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Body = styled.div`
   align-items: center;
   text-align: center;
-  height: 300rem;
+  height: 330rem;
 `;
 
 export const Reception = styled.div`

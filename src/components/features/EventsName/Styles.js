@@ -12,10 +12,21 @@ export const Control = styled.div`
   background-repeat: no-repeat;
   background-size: contain; // Use 'contain' para evitar cortes na imagem
   border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   img {
     align-items: center;
     width: 60%;
-    height: 60%;
+    height: 40%;
+    margin-top: 15%;
+  }
+  a {
+    font-family: ${(props) => props.theme.fonts.primary};
+    color: ${(props) => props.theme.colors.fontHeader};
+    position: relative;
+    align-items: center;
+    font-size: 3.5rem;
   }
 `;
 export const Row = styled.div`
@@ -29,6 +40,6 @@ export const Row = styled.div`
     display: flex;
     gap: 5rem;
     flex-direction: row;
-    margin-left: 26%;
+    margin-left: 35%;
   }
 `;
