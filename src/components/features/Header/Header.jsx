@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { useNavigate, Link } from 'react-router-dom';
+
 import {
   Container,
   Menu,
@@ -11,6 +13,8 @@ import {
 } from './Styles';
 
 export default function Header() {
+  const navigate = useNavigate();
+
   const [dialogs, setDialogs] = useState({
     history: false,
     acervo: false,
@@ -36,18 +40,7 @@ export default function Header() {
   return (
     <Container>
       <Menu>
-        <MenuItem onClick={() => openDialog('history')}>
-          NOSSA HISTÓRIA
-          <Dialog
-            id="history"
-            open={dialogs.history}
-            onBlur={() => closeDialog('history')}
-          >
-            <DialogItem to="/">Apresentação</DialogItem>
-            <DialogItem to="/">Quem Somos</DialogItem>
-            <DialogItem to="/">Politica e privacidade</DialogItem>
-          </Dialog>
-        </MenuItem>
+        <MenuItem>E-commerce</MenuItem>
         <MenuItem onClick={() => openDialog('acervo')}>
           Acervo
           <Dialog
@@ -61,7 +54,7 @@ export default function Header() {
             <DialogItem to="/">Documentos Escritos</DialogItem>
           </Dialog>
         </MenuItem>
-        <MenuItem>Patrimônio e Eventos Culturais</MenuItem>
+        <MenuItem> Eventos Culturais</MenuItem>
         <MenuItem onClick={() => openDialog('school')}>
           Área escolar
           <Dialog
@@ -72,9 +65,27 @@ export default function Header() {
             <DialogItem>Acesso do estudante</DialogItem>
           </Dialog>
         </MenuItem>
-        <MenuItem>E-commerce</MenuItem>
-        <MenuItem>Seja Apoiador</MenuItem>
-        <MenuItem onClick={() => openDialog('profile')}>
+        {/* <MenuItem onClick={() => openDialog('history')}>
+          NOSSA HISTÓRIA
+          <Dialog
+            id="history"
+            open={dialogs.history}
+            onBlur={() => closeDialog('history')}
+          >
+            <DialogItem to="/">Apresentação</DialogItem>
+            <DialogItem to="/">Quem Somos</DialogItem>
+            <DialogItem to="/">Politica e privacidade</DialogItem>
+          </Dialog>
+        </MenuItem> */}
+
+        <MenuItem>Sobre o projeto</MenuItem>
+        <MenuItem
+          onClick={() => {
+            openDialog('profile');
+            navigate('/perfil');
+          }}
+        >
+          {' '}
           PERFIL
           <DialogProfile
             id="profile"
