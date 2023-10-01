@@ -40,8 +40,19 @@ export default function Header() {
   return (
     <Container>
       <Menu>
-        <MenuItem>E-commerce</MenuItem>
-        <MenuItem onClick={() => openDialog('acervo')}>
+        <MenuItem
+          onClick={() => {
+            navigate('/perfil'); //atualizar
+          }}
+        >
+          E-commerce
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            openDialog('acervo');
+            navigate('/perfil'); //atualizar
+          }}
+        >
           Acervo
           <Dialog
             id="acervo"
@@ -54,8 +65,20 @@ export default function Header() {
             <DialogItem to="/">Documentos Escritos</DialogItem>
           </Dialog>
         </MenuItem>
-        <MenuItem> Eventos Culturais</MenuItem>
-        <MenuItem onClick={() => openDialog('school')}>
+        <MenuItem
+          onClick={() => {
+            navigate('/perfil'); //atualizar
+          }}
+        >
+          {' '}
+          Eventos Culturais
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            openDialog('school');
+            navigate('/perfil'); //atualizar
+          }}
+        >
           Área escolar
           <Dialog
             id="school"
@@ -78,7 +101,13 @@ export default function Header() {
           </Dialog>
         </MenuItem> */}
 
-        <MenuItem>Sobre o projeto</MenuItem>
+        <MenuItem
+          onClick={() => {
+            navigate('/perfil'); //atualizar
+          }}
+        >
+          Sobre o projeto
+        </MenuItem>
         <MenuItem
           onClick={() => {
             openDialog('profile');
