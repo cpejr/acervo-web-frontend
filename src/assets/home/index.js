@@ -5,4 +5,4 @@ export { default as arrowRightCarousel } from './carouselEvents/arrowRightCarous
 export { default as arrowLeftCarousel } from './carouselEvents/arrowLeftCarousel.png';
 export { default as arrowRight } from './carouselProducts/arrowRight.png';
 export { default as arrowLeft } from './carouselProducts/arrowLeft.png';
-export { default as LogoBranca } from './LogoBranca.png';
+export { default as LogoBranca } from '../Home/LogoBranca.png';
