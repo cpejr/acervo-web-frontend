@@ -1,25 +1,53 @@
-import PropTypes from 'prop-types';
-import { FormProvider } from 'react-hook-form';
+import React from 'react';
 
-import ErrorMessage from './ErrorMessage/ErrorMessage';
-import Field from './Field/Field';
-import Input from './Input/Input';
-import Label from './Label/Label';
-import Container from './Styles';
+import {
+  Container,
+  InputContainer,
+  InputWrapper,
+  Label,
+  Input,
+} from './Styles';
 
-export default function Form({ provider, ...props }) {
+export default function Form() {
+  const [nome, setNome] = React.useState('');
+  const [email, setEmail] = React.useState('');
+
+  const handleNomeChange = (e) => {
+    setNome(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   return (
-    <FormProvider {...provider}>
-      <Container {...props} />
-    </FormProvider>
+    <Container>
+      <InputContainer>
+        <InputWrapper>
+          <Input
+            type="text"
+            id="nome"
+            name="nome"
+            value={nome}
+            onChange={handleNomeChange}
+            placeholder=" "
+          />
+          <Label htmlFor="nome">Nome:</Label>
+        </InputWrapper>
+      </InputContainer>
+      <InputContainer>
+        <InputWrapper>
+          <Input
+            type="email"
+            id="email"
+            name="email"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder=" "
+          />
+          <Label htmlFor="email">Email:</Label>
+        </InputWrapper>
+      </InputContainer>
+    </Container>
   );
 }
-
-Form.Field = Field;
-Form.Label = Label;
-Form.Input = Input;
-Form.ErrorMessage = ErrorMessage;
-
-Form.propTypes = {
-  provider: PropTypes.object.isRequired,
-};
