@@ -1,6 +1,5 @@
-import { useState } from 'react';
-
-import { useNavigate, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
   Container,
@@ -16,7 +15,6 @@ export default function Header() {
   const navigate = useNavigate();
 
   const [dialogs, setDialogs] = useState({
-    history: false,
     acervo: false,
     school: false,
     profile: false,
@@ -25,24 +23,23 @@ export default function Header() {
   const openDialog = (dialogName) => {
     setDialogs((prevState) => ({
       ...prevState,
-      [dialogName]: true,
+      [dialogName]: !prevState[dialogName], // Inverte o estado do diálogo
     }));
-    document.getElementById(dialogName).focus();
   };
 
-  const closeDialog = (dialogName) => {
-    setDialogs((prevState) => ({
-      ...prevState,
-      [dialogName]: false,
-    }));
-  };
+  // const closeDialog = (dialogName) => {
+  //   setDialogs((prevState) => ({
+  //     ...prevState,
+  //     [dialogName]: false,
+  //   }));
+  // };
 
   return (
     <Container>
       <Menu>
         <MenuItem
           onClick={() => {
-            navigate('/perfil'); //atualizar
+            navigate('/perfil');
           }}
         >
           E-commerce
@@ -50,15 +47,11 @@ export default function Header() {
         <MenuItem
           onClick={() => {
             openDialog('acervo');
-            navigate('/perfil'); //atualizar
+            navigate('/perfil');
           }}
         >
           Acervo
-          <Dialog
-            id="acervo"
-            open={dialogs.acervo}
-            onBlur={() => closeDialog('acervo')}
-          >
+          <Dialog id="acervo" open={dialogs.acervo}>
             <DialogItem to="/">Videos</DialogItem>
             <DialogItem to="/">Fotografias</DialogItem>
             <DialogItem to="/">Depoimentos</DialogItem>
@@ -67,43 +60,25 @@ export default function Header() {
         </MenuItem>
         <MenuItem
           onClick={() => {
-            navigate('/perfil'); //atualizar
+            navigate('/perfil');
           }}
         >
-          {' '}
           Eventos Culturais
         </MenuItem>
         <MenuItem
           onClick={() => {
             openDialog('school');
-            navigate('/perfil'); //atualizar
+            navigate('/perfil');
           }}
         >
           Área escolar
-          <Dialog
-            id="school"
-            open={dialogs.school}
-            onBlur={() => closeDialog('school')}
-          >
+          <Dialog id="school" open={dialogs.school}>
             <DialogItem>Acesso do estudante</DialogItem>
           </Dialog>
         </MenuItem>
-        {/* <MenuItem onClick={() => openDialog('history')}>
-          NOSSA HISTÓRIA
-          <Dialog
-            id="history"
-            open={dialogs.history}
-            onBlur={() => closeDialog('history')}
-          >
-            <DialogItem to="/">Apresentação</DialogItem>
-            <DialogItem to="/">Quem Somos</DialogItem>
-            <DialogItem to="/">Politica e privacidade</DialogItem>
-          </Dialog>
-        </MenuItem> */}
-
         <MenuItem
           onClick={() => {
-            navigate('/perfil'); //atualizar
+            navigate('/perfil');
           }}
         >
           Sobre o projeto
@@ -114,13 +89,8 @@ export default function Header() {
             navigate('/perfil');
           }}
         >
-          {' '}
           PERFIL
-          <DialogProfile
-            id="profile"
-            open={dialogs.profile}
-            onBlur={() => closeDialog('profile')}
-          >
+          <DialogProfile id="profile" open={dialogs.profile}>
             <DialogItem to="/">Login</DialogItem>
             <DivideLine />
             <DialogItem to="/">Cadastrar</DialogItem>
