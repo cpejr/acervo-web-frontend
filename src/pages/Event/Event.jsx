@@ -1,6 +1,7 @@
-import { Body, Carousel, Reception, Programation, Text } from './Styles';
+import { Body, Carousel, Reception, Programation, Text, Image } from './Styles';
 import { CarouselEvents } from '../../components/features';
 import { EventsName } from '../../components/features';
+import { ImageEvents, ImageEvents2 } from '../../assets/Events/Index';
 
 export default function Event() {
   return (
@@ -16,7 +17,9 @@ export default function Event() {
         <CarouselEvents />
       </Carousel>
       <Programation>
-        <EventsName></EventsName>
+        <Image>
+          <EventsName></EventsName>
+        </Image>
       </Programation>
     </Body>
   );
