@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import AppLayout from './layouts/AppLayout/AppLayout';
-import { Home, MyCart, NotFound, Profile, OurHistory } from './pages';
+import { Home, MyCart, NotFound, Profile, OurHistory, Register } from './pages';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +17,7 @@ const router = createBrowserRouter(
         <Route path="nossa-historia" element={<OurHistory />} />
       </Route>
       <Route path="/meu-carrinho" element={<MyCart />} />
+      <Route path="cadastro" element={<Register />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
