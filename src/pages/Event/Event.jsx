@@ -1,17 +1,16 @@
-import { Body, Carousel, Reception, Programation, Text, Image } from './Styles';
+import { Body, Carousel, Reception, Programation, Image } from './Styles';
 import { CarouselEvents } from '../../components/features';
 import { EventsName } from '../../components/features';
-import { ImageEvents, ImageEvents2 } from '../../assets/Events/Index';
 
 export default function Event() {
   return (
     <Body>
       <Reception>
-        <Text>
+        <text>
           {' '}
-          Conheça, frequente e valorize os Eventos Culturais e o Patrimônio
-          Histórico de Bom Despacho!
-        </Text>
+          Conheça, frequente e <a>valorize</a> os <a>Eventos Culturais </a> e o
+          <a>Patrimônio Histórico </a>de Bom Despacho!
+        </text>
       </Reception>
       <Carousel>
         <CarouselEvents />

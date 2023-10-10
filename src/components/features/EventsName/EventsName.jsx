@@ -58,12 +58,14 @@ export default function EventsName() {
         </Control>
       </Row>
       <Row>
-        <p>
-          <Control>
-            <img src={GASTRONOMIA} />
-            <a>GASTRONOMIA</a>
-          </Control>
-        </p>
+        <Control></Control>
+        {/* <p> */}
+        <Control>
+          <img src={GASTRONOMIA} />
+          <a>GASTRONOMIA</a>
+        </Control>
+        {/* </p> */}
+        <Control></Control>
       </Row>
     </Bubble>
   );
