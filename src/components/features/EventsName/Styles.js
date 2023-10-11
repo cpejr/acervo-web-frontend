@@ -6,11 +6,18 @@ export const Bubble = styled.div`
   align-items: center;
   margin-left: 12%;
   margin-right: 12%;
+  position: relative;
+  z-index: 1;
   margin-top: 15rem;
+  @media (max-width: 910px) {
+    margin-top: 12rem;
+  }
   @media (max-width: 890px) {
-    margin-top: 5rem;
+    margin-top: 0rem;
+    top: 6rem;
   }
   @media (max-width: 810px) {
+    top: 0rem;
     margin-top: 8rem;
   }
   @media (max-width: 700px) {
@@ -42,14 +49,15 @@ export const Control = styled.div`
     width: 40rem;
     height: 50rem;
   }
-  @media (max-width: 150px) {
+  @media (max-width: 1540px) {
     width: 40rem;
-    height: 50rem;
+    height: 40rem;
   }
-  @media (max-width: 1345px) {
-    width: 35rem;
-    height: 50rem;
+  @media (max-width: 1400px) {
+    width: 40rem;
+    height: 35rem;
   }
+
   @media (max-width: 1300px) {
     width: 30rem;
     height: 45rem;
@@ -84,6 +92,10 @@ export const Control = styled.div`
       width: 50%;
       height: 30%;
     }
+    @media (max-width: 1130px) {
+      width: 50%;
+      height: 20%;
+    }
 
     @media (max-width: 880px) {
       width: 40%;
@@ -96,23 +108,23 @@ export const Control = styled.div`
     position: relative;
     align-items: center;
     font-size: 3rem;
+    max-width: 50%;
+
     @media (max-width: 1670px) {
       font-size: 2.5rem;
       max-width: 60%;
     }
     @media (max-width: 1420px) {
-      font-size: 2.3rem;
+      font-size: 2rem;
     }
-    @media (max-width: 1148px) {
-      max-width: 70%;
+    @media (max-width: 1150px) {
+      max-width: 80%;
     }
     @media (max-width: 880px) {
       max-width: 100%;
-    }
-
-    @media (max-width: 780px) {
       font-size: 1.8rem;
     }
+
     @media (max-width: 720px) {
       font-size: 1.4rem;
     }
@@ -142,6 +154,13 @@ export const Row = styled.div`
   @media (max-width: 1170px) {
     gap: 8rem;
     max-height: 25rem;
+  }
+  @media (max-width: 1170px) {
+    gap: 12rem;
+    max-height: 25rem;
+  }
+  @media (max-width: 920px) {
+    gap: 8rem;
   }
   @media (max-width: 820px) {
     max-height: 20rem;
