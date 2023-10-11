@@ -23,16 +23,16 @@ export default function Header() {
   const openDialog = (dialogName) => {
     setDialogs((prevState) => ({
       ...prevState,
-      [dialogName]: !prevState[dialogName], // Inverte o estado do diálogo
+      [dialogName]: true,
     }));
   };
 
-  // const closeDialog = (dialogName) => {
-  //   setDialogs((prevState) => ({
-  //     ...prevState,
-  //     [dialogName]: false,
-  //   }));
-  // };
+  const closeDialog = (dialogName) => {
+    setDialogs((prevState) => ({
+      ...prevState,
+      [dialogName]: false,
+    }));
+  };
 
   return (
     <Container>
@@ -45,18 +45,21 @@ export default function Header() {
           E-commerce
         </MenuItem>
         <MenuItem
+          onMouseEnter={() => openDialog('acervo')}
+          onMouseLeave={() => closeDialog('acervo')}
           onClick={() => {
-            openDialog('acervo');
             navigate('/perfil');
           }}
         >
           Acervo
-          <Dialog id="acervo" open={dialogs.acervo}>
-            <DialogItem to="/">Videos</DialogItem>
-            <DialogItem to="/">Fotografias</DialogItem>
-            <DialogItem to="/">Depoimentos</DialogItem>
-            <DialogItem to="/">Documentos Escritos</DialogItem>
-          </Dialog>
+          {dialogs.acervo && (
+            <Dialog id="acervo" open={dialogs.acervo}>
+              <DialogItem to="/">Videos</DialogItem>
+              <DialogItem to="/">Fotografias</DialogItem>
+              <DialogItem to="/">Depoimentos</DialogItem>
+              <DialogItem to="/">Documentos Escritos</DialogItem>
+            </Dialog>
+          )}
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -66,15 +69,18 @@ export default function Header() {
           Eventos Culturais
         </MenuItem>
         <MenuItem
+          onMouseEnter={() => openDialog('school')}
+          onMouseLeave={() => closeDialog('school')}
           onClick={() => {
-            openDialog('school');
             navigate('/perfil');
           }}
         >
           Área escolar
-          <Dialog id="school" open={dialogs.school}>
-            <DialogItem>Acesso do estudante</DialogItem>
-          </Dialog>
+          {dialogs.school && (
+            <Dialog id="school" open={dialogs.school}>
+              <DialogItem>Acesso do estudante</DialogItem>
+            </Dialog>
+          )}
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -84,17 +90,20 @@ export default function Header() {
           Sobre o projeto
         </MenuItem>
         <MenuItem
+          onMouseEnter={() => openDialog('profile')}
+          onMouseLeave={() => closeDialog('profile')}
           onClick={() => {
-            openDialog('profile');
             navigate('/perfil');
           }}
         >
           PERFIL
-          <DialogProfile id="profile" open={dialogs.profile}>
-            <DialogItem to="/">Login</DialogItem>
-            <DivideLine />
-            <DialogItem to="/">Cadastrar</DialogItem>
-          </DialogProfile>
+          {dialogs.profile && (
+            <DialogProfile id="profile" open={dialogs.profile}>
+              <DialogItem to="/">Login</DialogItem>
+              <DivideLine />
+              <DialogItem to="/">Cadastrar</DialogItem>
+            </DialogProfile>
+          )}
         </MenuItem>
       </Menu>
     </Container>
