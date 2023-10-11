@@ -1,16 +1,15 @@
 import React from 'react'; // Importe o React, se ainda não o fez
-import { Image } from './'; // Importe a imagem do módulo "index.js"
 import { Bubble, Row, Control } from './Styles';
-import { ARQUITETURA } from './';
-import { ARTES } from './';
-import { ARTESANATO } from './';
-import { CELEBRACOES } from './';
-import { DANCA } from './';
-import { ESPORTES } from './';
-import { FESTAS } from './';
-import { GASTRONOMIA } from './';
-import { LITERATURA } from './';
-import { MUSICA } from './';
+import { ARQUITETURA } from '../../../assets/Events/index';
+import { ARTES } from '../../../assets/Events/index';
+import { ARTESANATO } from '../../../assets/Events/index';
+import { CELEBRACOES } from '../../../assets/Events/index';
+import { DANCA } from '../../../assets/Events/index';
+import { ESPORTES } from '../../../assets/Events/index';
+import { FESTAS } from '../../../assets/Events/index';
+import { GASTRONOMIA } from '../../../assets/Events/index';
+import { LITERATURA } from '../../../assets/Events/index';
+import { MUSICA } from '../../../assets/Events/index';
 
 export default function EventsName() {
   return (
@@ -58,14 +57,12 @@ export default function EventsName() {
         </Control>
       </Row>
       <Row>
-        <Control></Control>
-        {/* <p> */}
+        <Control className="opacity" />{' '}
         <Control>
           <img src={GASTRONOMIA} />
           <a>GASTRONOMIA</a>
         </Control>
-        {/* </p> */}
-        <Control></Control>
+        <Control className="opacity" />{' '}
       </Row>
     </Bubble>
   );

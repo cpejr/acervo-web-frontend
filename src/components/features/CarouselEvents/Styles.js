@@ -16,13 +16,16 @@ export const Container = styled.div`
     padding-right: 12%;
   }
   @media (max-width: 460px) {
-    padding-right: 28%;
+    padding-right: 20%;
+  }
+  @media (max-width: 415px) {
+    padding-right: 25%;
   }
   @media (max-width: 380px) {
-    padding-right: 43%;
+    padding-right: 36%;
   }
-  @media (max-width: 300px) {
-    padding-right: 55%;
+  @media (max-width: 350px) {
+    padding-right: 53%;
   }
 `;
 
@@ -92,18 +95,18 @@ export const CarouselDiv = styled.div`
       width: 45rem;
       height: 40rem;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 770px) {
       width: 35rem;
       height: 30rem;
-      margin-left: 0rem;
-      margin-right: 0rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
     }
 
     @media (max-width: 520px) {
       width: 25rem;
       height: 30rem;
-      margin-left: 0rem;
-      margin-right: 0rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
     @media (max-width: 445px) {
       width: 20rem;
@@ -130,13 +133,13 @@ export const CarouselDiv = styled.div`
       width: 10rem;
       height: 15rem;
     }
-    @media (max-width: 570px) {
-      width: 8rem;
-      height: 13rem;
-    }
     @media (max-width: 670px) {
       width: 5rem;
       height: 10rem;
+    }
+    @media (max-width: 570px) {
+      width: 5rem;
+      height: 7rem;
     }
   }
 

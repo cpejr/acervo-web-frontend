@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { Image } from '.';
+import { Image } from '../../../assets/Events/index';
 
 export const Bubble = styled.div`
   align-items: center;
@@ -28,7 +28,7 @@ export const Bubble = styled.div`
     max-height: 75rem;
   }
 
-  @media (max-width: 300px) {
+  @media (max-width: 350px) {
     margin-left: 3%;
     margin-right: 4%;
   }
@@ -40,11 +40,15 @@ export const Control = styled.div`
   height: 50rem;
   background-image: url(${Image});
   background-repeat: no-repeat;
-  background-size: contain; // Use 'contain' para evitar cortes na imagem
+  background-size: contain;
   border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  &.opacity {
+    opacity: 0.1;
+  }
+
   @media (max-width: 1170px) {
     width: 40rem;
     height: 50rem;

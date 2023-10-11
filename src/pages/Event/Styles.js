@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { ImageEvents2 } from '../../assets/Events/Index';
+import { ImageEvents2 } from '../../assets/Events/index';
 
 export const Body = styled.div`
   align-items: center;
@@ -38,11 +38,11 @@ export const Reception = styled.div`
     }
     @media (max-width: 880px) {
       max-width: 100%;
+      font-size: 3rem;
     }
 
     @media (max-width: 730px) {
       font-size: 2.8rem;
-      /* margin-right: 11%; */
     }
     @media (max-width: 570px) {
       margin-right: 14%;
@@ -54,11 +54,11 @@ export const Reception = styled.div`
       width: 50%;
     }
     @media (max-width: 380px) {
-      margin-right: 45%;
+      margin-right: 35%;
       width: 40%;
       font-size: 2rem;
     }
-    @media (max-width: 300px) {
+    @media (max-width: 345px) {
       margin-right: 59%;
     }
   }
@@ -66,12 +66,19 @@ export const Reception = styled.div`
 
 export const Carousel = styled.div`
   margin-top: 8rem;
+
+  @media (max-width: 640px) {
+    max-height: 20rem;
+  }
+  @media (max-width: 445px) {
+    max-height: 2rem;
+  }
 `;
 export const Programation = styled.div`
   display: flex;
 
   flex-direction: column;
-  height: 80%; //sempre que eu aumento o height de progrmation a imagem fica cortada dos lados, porque isso ocorre?
+  height: 80%;
   align-items: center;
   width: 100%;
   margin-top: 20rem;
@@ -83,8 +90,8 @@ export const Programation = styled.div`
 export const Image = styled.div`
   background-image: url(${ImageEvents2});
   background-repeat: no-repeat;
-  background-size: contain; /* Altere isso para "contain" */
-  height: 100%; //sempre que eu aumento o height de progrmation a imagem fica cortada dos lados, porque isso ocorre?
+  background-size: contain;
+  height: 100%;
   align-items: center;
   width: 100%;
 `;
