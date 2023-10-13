@@ -19,7 +19,7 @@ export const MenuItem = styled.div`
   border: none;
   background-color: transparent;
   font-family: ${(props) => props.theme.fonts.primary};
-  color: ${(props) => props.theme.colors.fontHeader};
+  color: ${(props) => props.theme.colors.strongOrange};
   font-size: 2rem;
   display: flex;
   flex-direction: column;

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
 
 import {
@@ -34,23 +35,23 @@ export default function Header() {
     }));
   };
 
+  function isDialogOpen(dialogId) {
+    return dialogs[dialogId];
+  }
+
+  function handleMenuClick(dialogName) {
+    if (isDialogOpen(dialogName)) {
+      closeDialog(dialogName);
+    } else {
+      openDialog(dialogName);
+    }
+  }
+
   return (
     <Container>
       <Menu>
-        <MenuItem
-          onClick={() => {
-            navigate('/perfil');
-          }}
-        >
-          E-commerce
-        </MenuItem>
-        <MenuItem
-          onMouseEnter={() => openDialog('acervo')}
-          onMouseLeave={() => closeDialog('acervo')}
-          onClick={() => {
-            navigate('/perfil');
-          }}
-        >
+        <MenuItem>E-commerce</MenuItem>
+        <MenuItem onClick={() => handleMenuClick('acervo')}>
           Acervo
           {dialogs.acervo && (
             <Dialog id="acervo" open={dialogs.acervo}>
@@ -61,47 +62,41 @@ export default function Header() {
             </Dialog>
           )}
         </MenuItem>
-        <MenuItem
-          onClick={() => {
-            navigate('/perfil');
-          }}
-        >
-          Eventos Culturais
-        </MenuItem>
-        <MenuItem
-          onMouseEnter={() => openDialog('school')}
-          onMouseLeave={() => closeDialog('school')}
-          onClick={() => {
-            navigate('/perfil');
-          }}
-        >
+        <MenuItem>Eventos Culturais</MenuItem>
+        <MenuItem onClick={() => handleMenuClick('school')}>
           Área escolar
           {dialogs.school && (
             <Dialog id="school" open={dialogs.school}>
-              <DialogItem>Acesso do estudante</DialogItem>
+              <DialogItem
+                onClick={() => {
+                  navigate('/area-escolar');
+                }}
+              >
+                Acesso do estudante
+              </DialogItem>
             </Dialog>
           )}
         </MenuItem>
         <MenuItem
           onClick={() => {
-            navigate('/perfil');
+            navigate('/nossa-historia');
           }}
         >
           Sobre o projeto
         </MenuItem>
-        <MenuItem
-          onMouseEnter={() => openDialog('profile')}
-          onMouseLeave={() => closeDialog('profile')}
-          onClick={() => {
-            navigate('/perfil');
-          }}
-        >
+        <MenuItem onClick={() => handleMenuClick('profile')}>
           PERFIL
           {dialogs.profile && (
             <DialogProfile id="profile" open={dialogs.profile}>
-              <DialogItem to="/">Login</DialogItem>
+              <DialogItem>Login</DialogItem>
               <DivideLine />
-              <DialogItem to="/">Cadastrar</DialogItem>
+              <DialogItem
+                onClick={() => {
+                  navigate('/cadastro');
+                }}
+              >
+                Cadastrar
+              </DialogItem>
             </DialogProfile>
           )}
         </MenuItem>
