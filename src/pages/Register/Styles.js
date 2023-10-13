@@ -22,7 +22,7 @@ export const Container = styled.div`
 `;
 export const Line = styled.div`
   display: flex;
-  width: 60%;
+  width: 85%;
   margin-left: 2rem;
   margin-top: 2rem;
   height: auto;
@@ -53,6 +53,7 @@ export const Text = styled.h1`
   align-self: center;
   text-align: center;
   width: 100%;
+  font-weight: 100;
   justify-content: center;
   font-size: 9rem;
   font-family: ${(props) => props.theme.fonts.caramella};
@@ -76,10 +77,6 @@ export const Text2 = styled.h1`
   color: ${(props) => props.theme.colors.fontHeader};
   @media (max-width: ${firstBreakPoint}) {
     font-size: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-  @media (max-width: ${miniBreakPoint}) {
     margin-bottom: 3rem;
   }
 `;
@@ -191,9 +188,21 @@ export const Lines = styled.div`
   height: auto;
   justify-content: space-around;
   align-items: center;
+`;
+
+export const SquareText = styled.p`
+  text-align: center;
+  font-family: ${(props) => props.theme.fonts.caramella};
+  color: ${(props) => props.theme.colors.fontHeader};
+  font-size: 3rem;
+`;
+export const Text3 = styled.p`
+  font-family: ${(props) => props.theme.fonts.caramella};
+  color: ${(props) => props.theme.colors.fontHeader};
   text-align: center;
   color: ${(props) => props.theme.colors.fontHeader};
   font-size: 2.6rem;
+  max-width: 39rem;
   @media (max-width: ${secondBreakPoint}) {
     font-size: 2rem;
   }
@@ -203,11 +212,4 @@ export const Lines = styled.div`
   @media (max-width: ${miniBreakPoint}) {
     font-size: 1.5rem;
   }
-`;
-
-export const SquareText = styled.p`
-  text-align: center;
-  font-family: ${(props) => props.theme.fonts.caramella};
-  color: ${(props) => props.theme.colors.fontHeader};
-  font-size: 3rem;
 `;

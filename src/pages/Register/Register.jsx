@@ -10,6 +10,7 @@ import {
   Header,
   Text,
   Text2,
+  Text3,
   Row,
   Square,
   TextTransition,
@@ -62,15 +63,15 @@ export default function Register() {
           <Row>
             <Lines>
               <Square>Cadastro de aluno na área escolar</Square>
-              Quero estudar a História de Bom Despacho!
+              <Text3>Quero estudar a História de Bom Despacho!</Text3>
             </Lines>
             <Lines>
               <Square>Cadastro de pessoa física</Square>
-              Quero ser parceiro/apoiador do projeto!
+              <Text3>Quero ser parceiro/apoiador do projeto!</Text3>
             </Lines>
             <Lines>
               <Square>Cadastro de pessoa jurídica</Square>
-              Quero ser parceiro/apoiador do projeto!
+              <Text3>Quero ser parceiro/apoiador do projeto!</Text3>
             </Lines>
           </Row>
         </>
