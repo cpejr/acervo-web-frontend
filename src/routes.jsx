@@ -29,8 +29,8 @@ const router = createBrowserRouter(
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
         </Route>
-        <Route path="cadastro" element={<Register />} />
       </Route>
+      <Route path="cadastro" element={<Register />} />
       <Route path="/meu-carrinho" element={<MyCart />} />
       <Route path="*" element={<NotFound />} />
     </Route>
