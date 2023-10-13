@@ -7,8 +7,16 @@ import {
 } from 'react-router-dom';
 
 import { Footer } from './components/features';
-import AppLayout from './layouts/AppLayout/AppLayout';
-import { Home, MyCart, NotFound, Profile, OurHistory, Register } from './pages';
+import { AppLayout, SchoolLayout } from './layouts/index';
+import {
+  Home,
+  MyCart,
+  NotFound,
+  Profile,
+  OurHistory,
+  Register,
+  SchoolSection,
+} from './pages';
 
 // For the routes that need footer
 function HasFooterRoutes() {
@@ -28,8 +36,15 @@ const router = createBrowserRouter(
           <Route index element={<Home />} />
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
+          <Route path="nossa-historia" element={<OurHistory />} />
         </Route>
       </Route>
+
+      <Route path="/" element={<SchoolLayout />}>
+        <Route index element={<Home />} />
+        <Route path="area-escolar" element={<SchoolSection />} />
+      </Route>
+
       <Route path="cadastro" element={<Register />} />
       <Route path="/meu-carrinho" element={<MyCart />} />
       <Route path="*" element={<NotFound />} />

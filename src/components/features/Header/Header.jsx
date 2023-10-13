@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { useNavigate } from 'react-router-dom';
+
 import {
   Container,
   Menu,
@@ -11,8 +13,9 @@ import {
 } from './Styles';
 
 export default function Header() {
+  const navigate = useNavigate();
+
   const [dialogs, setDialogs] = useState({
-    history: false,
     acervo: false,
     school: false,
     profile: false,
@@ -23,7 +26,6 @@ export default function Header() {
       ...prevState,
       [dialogName]: true,
     }));
-    document.getElementById(dialogName).focus();
   };
 
   const closeDialog = (dialogName) => {
@@ -33,58 +35,70 @@ export default function Header() {
     }));
   };
 
+  function isDialogOpen(dialogId) {
+    return dialogs[dialogId];
+  }
+
+  function handleMenuClick(dialogName) {
+    if (isDialogOpen(dialogName)) {
+      closeDialog(dialogName);
+    } else {
+      openDialog(dialogName);
+    }
+  }
+
   return (
     <Container>
       <Menu>
-        <MenuItem onClick={() => openDialog('history')}>
-          NOSSA HISTÓRIA
-          <Dialog
-            id="history"
-            open={dialogs.history}
-            onBlur={() => closeDialog('history')}
-          >
-            <DialogItem to="/">Apresentação</DialogItem>
-            <DialogItem to="/">Quem Somos</DialogItem>
-            <DialogItem to="/">Politica e privacidade</DialogItem>
-          </Dialog>
-        </MenuItem>
-        <MenuItem onClick={() => openDialog('acervo')}>
-          Acervo
-          <Dialog
-            id="acervo"
-            open={dialogs.acervo}
-            onBlur={() => closeDialog('acervo')}
-          >
-            <DialogItem to="/">Videos</DialogItem>
-            <DialogItem to="/">Fotografias</DialogItem>
-            <DialogItem to="/">Depoimentos</DialogItem>
-            <DialogItem to="/">Documentos Escritos</DialogItem>
-          </Dialog>
-        </MenuItem>
-        <MenuItem>Patrimônio e Eventos Culturais</MenuItem>
-        <MenuItem onClick={() => openDialog('school')}>
-          Área escolar
-          <Dialog
-            id="school"
-            open={dialogs.school}
-            onBlur={() => closeDialog('school')}
-          >
-            <DialogItem>Acesso do estudante</DialogItem>
-          </Dialog>
-        </MenuItem>
         <MenuItem>E-commerce</MenuItem>
-        <MenuItem>Seja Apoiador</MenuItem>
-        <MenuItem onClick={() => openDialog('profile')}>
+        <MenuItem onClick={() => handleMenuClick('acervo')}>
+          Acervo
+          {dialogs.acervo && (
+            <Dialog id="acervo" open={dialogs.acervo}>
+              <DialogItem to="/">Videos</DialogItem>
+              <DialogItem to="/">Fotografias</DialogItem>
+              <DialogItem to="/">Depoimentos</DialogItem>
+              <DialogItem to="/">Documentos Escritos</DialogItem>
+            </Dialog>
+          )}
+        </MenuItem>
+        <MenuItem>Eventos Culturais</MenuItem>
+        <MenuItem onClick={() => handleMenuClick('school')}>
+          Área escolar
+          {dialogs.school && (
+            <Dialog id="school" open={dialogs.school}>
+              <DialogItem
+                onClick={() => {
+                  navigate('/area-escolar');
+                }}
+              >
+                Acesso do estudante
+              </DialogItem>
+            </Dialog>
+          )}
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            navigate('/nossa-historia');
+          }}
+        >
+          Sobre o projeto
+        </MenuItem>
+        <MenuItem onClick={() => handleMenuClick('profile')}>
           PERFIL
-          <DialogProfile
-            id="profile"
-            open={dialogs.profile}
-            onBlur={() => closeDialog('profile')}
-          >
-            <DialogItem to="/">Login</DialogItem>
-            <DivideLine />
-            <DialogItem to="/">Cadastrar</DialogItem>
-          </DialogProfile>
+          {dialogs.profile && (
+            <DialogProfile id="profile" open={dialogs.profile}>
+              <DialogItem>Login</DialogItem>
+              <DivideLine />
+              <DialogItem
+                onClick={() => {
+                  navigate('/cadastro');
+                }}
+              >
+                Cadastrar
+              </DialogItem>
+            </DialogProfile>
+          )}
         </MenuItem>
       </Menu>
     </Container>
