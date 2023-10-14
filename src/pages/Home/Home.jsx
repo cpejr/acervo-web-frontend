@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { AiOutlineSearch, AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import { BsSquare } from 'react-icons/bs';
+// import { CarouselEvents } from 'src/components/features/CarouselEvents/CarouselEvents.jsx';
 
-import { CarouselEvents, CarouselProducts } from '../../components/features';
+import { CarouselProducts, CarouselEvents } from '../../components/features';
 import {
   Container,
   FilterSection,
@@ -53,7 +54,7 @@ export default function Home() {
 
   return (
     <Container>
-      <FilterSection>
+      {/* <FilterSection>
         <h2>
           O que você quer descobrir sobre <b>Bom Despacho</b> hoje?
         </h2>
@@ -123,13 +124,13 @@ export default function Home() {
               alt="Logo Bom Despacho"
             />
             <img
-              src="src/assets/Home/Secretaria.png"
+              src="src/assets/Home/ministerio.png"
               alt="SecretariaMinisterio"
             />
-            <img src="src/assets/Home/Brasil.png" alt="Brasil" />
+            <img src="src/assets/Home/Governo.png" alt="Brasil" />
           </Logos>
         </LogosandSocial>
-      </FilterSection>
+      </FilterSection> */}
       <LastEvents>
         <LastEventsLine>
           <h1>ÚLTIMOS EVENTOS</h1>
@@ -142,7 +143,7 @@ export default function Home() {
         </ProductLine>
         <CarouselProducts />
       </Products>
-      <Support>
+      {/* <Support>
         <SupportLine>
           <h1>Você pode nos apoiar! </h1>
         </SupportLine>
@@ -173,7 +174,7 @@ export default function Home() {
         <SupportButtom>
           <h1>APOIAR</h1>
         </SupportButtom>
-      </Support>
+      </Support> */}
     </Container>
   );
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { arrowLeft, arrowRight } from '../../../assets/home';
+import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/Home';
 
 export const Container = styled.div`
   display: flex;
@@ -50,18 +50,47 @@ export const CarouselDiv = styled.div`
     display: block;
     overflow: hidden;
 
-    width: 170rem;
-    height: 62.8rem;
+    margin-left: 17rem;
+    margin-right: 17rem;
 
-    @media (max-width: 1400px) {
+    width: 130rem;
+    height: 50rem;
+
+    @media (max-width: 1600px) {
+      width: 115rem;
+    }
+
+    @media (max-width: 1500px) {
       width: 100rem;
     }
-    @media (max-width: 1000px) {
-      height: 50rem;
+
+    @media (max-width: 1350px) {
+      margin-left: 15rem;
+      margin-right: 15rem;
+    }
+
+    @media (max-width: 1200px) {
+      height: 45rem;
       width: 80rem;
     }
     @media (max-width: 800px) {
       width: 65rem;
+    }
+    @media (max-width: 700px) {
+      width: 50rem;
+      height: 40rem;
+    }
+    @media (max-width: 500px) {
+      width: 38rem;
+      height: 35rem;
+    }
+    @media (max-width: 400px) {
+      width: 30rem;
+      height: 30rem;
+    }
+    @media (max-width: 280px) {
+      width: 25rem;
+      height: 25rem;
     }
   }
 
@@ -72,21 +101,30 @@ export const CarouselDiv = styled.div`
 
     background-size: 100% 100%;
 
-    width: 8rem;
-    height: 8rem;
+    width: 11rem;
+    height: 17rem;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1350px) {
+      width: 9rem;
+      height: 14rem;
+    }
+    @media (max-width: 1100px) {
       width: 6rem;
-      height: 6rem;
+      height: 10rem;
+    }
+
+    @media (max-width: 960px) {
+      width: 0rem;
+      height: 0rem;
     }
   }
 
   .slick-prev:before {
-    background-image: url(${arrowLeft});
+    background-image: url(${arrowLeftCarousel});
   }
 
   .slick-next:before {
-    background-image: url(${arrowRight});
+    background-image: url(${arrowRightCarousel});
   }
 
   .slick-prev,
@@ -108,18 +146,24 @@ export const CarouselDiv = styled.div`
 `;
 
 export const ImageCarousel = styled.img`
-  height: 62.8rem;
-  width: 100%;
-  object-fit: cover;
+  height: 50rem;
+  object-fit: fill;
 
-  @media (max-width: 1400px) {
-    width: 100rem;
+  @media (max-width: 1200px) {
+    height: 45rem;
   }
-  @media (max-width: 1000px) {
-    height: 50rem;
-    width: 80rem;
+  @media (max-width: 700px) {
+    height: 40rem;
   }
-  @media (max-width: 800px) {
-    width: 65rem;
+  @media (max-width: 500px) {
+    height: 35rem;
+  }
+  @media (max-width: 400px) {
+    width: 30rem;
+    height: 30rem;
+  }
+  @media (max-width: 280px) {
+    width: 25rem;
+    height: 25rem;
   }
 `;

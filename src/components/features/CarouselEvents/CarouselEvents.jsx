@@ -1,11 +1,6 @@
 import Slider from 'react-slick';
 
-import {
-  carouselEvents1,
-  carouselEvents2,
-  carouselEvents3,
-} from '../../../assets/home';
-import { Container, CarouselDiv, ImageCarousel } from './Styles';
+import { Container, CarouselDiv, ImageCarousel, BordaBranca } from './Styles';
 
 export default function CarouselEvents() {
   const settings = {
@@ -14,16 +9,20 @@ export default function CarouselEvents() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
   };
   return (
     <Container>
-      <CarouselDiv>
-        <Slider {...settings}>
-          <ImageCarousel src={carouselEvents1} />
-          <ImageCarousel src={carouselEvents2} />
-          <ImageCarousel src={carouselEvents3} />
-        </Slider>
-      </CarouselDiv>
+      <BordaBranca>
+        <CarouselDiv>
+          <Slider {...settings}>
+            <ImageCarousel src="src/assets/Home/carouselEvents/carouselEvents1.png" />
+            <ImageCarousel src="src/assets/Home/carouselEvents/carouselEvents2.png" />
+            <ImageCarousel src="src/assets/Home/carouselEvents/carouselEvents3.png" />
+          </Slider>
+        </CarouselDiv>
+      </BordaBranca>
     </Container>
   );
 }

@@ -1,9 +1,9 @@
 import {
-  AiOutlineInstagram,
-  AiFillFacebook,
-  AiOutlineTwitter,
-  AiOutlineWhatsApp,
-  AiFillYoutube,
+  // AiOutlineInstagram,
+  // AiFillFacebook,
+  // AiOutlineTwitter,
+  // AiOutlineWhatsApp,
+  // AiFillYoutube,
   AiOutlineSearch,
 } from 'react-icons/ai';
 import { RiArrowRightSLine } from 'react-icons/ri';
@@ -36,7 +36,20 @@ export const FilterSection = styled.div`
     font-weight: 300;
     font-size: 5rem;
   }
+  @media (max-width: 1200px) {
+    h2 {
+      font-size: 4rem;
+    }
+    @media (max-width: 900px) {
+      h2 {
+        font-size: 3rem;
+        font-weight: 400;
+        text-align: center;
+      }
+    }
+  }
 `;
+
 export const Dialog = styled.div`
   display: ${(props) => (props.open ? 'flex' : 'none')};
   position: absolute;
@@ -182,11 +195,6 @@ export const SearchonSite = styled.div`
 
     color: rgba(30, 30, 30, 0.74);
   }
-  @media (max-width: 1080px) {
-    h1 {
-      font-size: 4rem;
-    }
-  }
 `;
 export const Filter = styled.div`
   display: flex;
@@ -252,80 +260,89 @@ export const Logos = styled.div`
   display: flex;
   background: #ffffff;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 2rem;
 
   img {
-    height: 15rem;
+    height: 18rem;
     width: auto;
   }
-  @media (max-width: 1060px) {
+  @media (max-width: 1200px) {
     width: 100%;
     height: 15rem;
     img {
-      height: 12rem;
+      height: 14rem;
       width: auto;
+      align-self: center;
     }
   }
-  @media (max-width: 1030px) {
+  @media (max-width: 900px) {
     width: 100%;
-    height: 15rem;
+    height: 13rem;
     img {
-      height: 10rem;
+      height: 9rem;
+      width: auto;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 10rem;
+    img {
+      height: 5rem;
       width: auto;
     }
   }
 `;
 
-export const InstagramIcon = styled(AiOutlineInstagram)`
-  font-size: 6rem;
-  color: ${(props) => props.theme.colors.primary};
+// export const InstagramIcon = styled(AiOutlineInstagram)`
+//   font-size: 6rem;
+//   color: ${(props) => props.theme.colors.primary};
 
-  @media (max-width: 980px) {
-    font-size: 4rem;
-  }
-`;
+//   @media (max-width: 980px) {
+//     font-size: 4rem;
+//   }
+// `;
 
-export const FacebookIcon = styled(AiFillFacebook)`
-  font-size: 6rem;
-  color: ${(props) => props.theme.colors.primary};
+// export const FacebookIcon = styled(AiFillFacebook)`
+//   font-size: 6rem;
+//   color: ${(props) => props.theme.colors.primary};
 
-  @media (max-width: 980px) {
-    font-size: 4rem;
-  }
-`;
+//   @media (max-width: 980px) {
+//     font-size: 4rem;
+//   }
+// `;
 
-export const TwitterIcon = styled(AiOutlineTwitter)`
-  font-size: 6rem;
-  color: ${(props) => props.theme.colors.primary};
+// export const TwitterIcon = styled(AiOutlineTwitter)`
+//   font-size: 6rem;
+//   color: ${(props) => props.theme.colors.primary};
 
-  @media (max-width: 980px) {
-    font-size: 4rem;
-  }
-`;
+//   @media (max-width: 980px) {
+//     font-size: 4rem;
+//   }
+// `;
 
-export const WhatsAppIcon = styled(AiOutlineWhatsApp)`
-  font-size: 6rem;
-  color: ${(props) => props.theme.colors.primary};
+// export const WhatsAppIcon = styled(AiOutlineWhatsApp)`
+//   font-size: 6rem;
+//   color: ${(props) => props.theme.colors.primary};
 
-  @media (max-width: 980px) {
-    font-size: 4rem;
-  }
-`;
+//   @media (max-width: 980px) {
+//     font-size: 4rem;
+//   }
+// `;
 
-export const YoutubeIcon = styled(AiFillYoutube)`
-  font-size: 6rem;
-  color: ${(props) => props.theme.colors.primary};
+// export const YoutubeIcon = styled(AiFillYoutube)`
+//   font-size: 6rem;
+//   color: ${(props) => props.theme.colors.primary};
 
-  @media (max-width: 980px) {
-    font-size: 4rem;
-  }
-`;
+//   @media (max-width: 980px) {
+//     font-size: 4rem;
+//   }
+// `;
+
 export const LastEvents = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 6rem;
 
   background-color: #7f260f;
 `;
@@ -337,6 +354,7 @@ export const LastEventsLine = styled.div`
   width: 100%;
   height: 11.4rem;
   background: black;
+  margin-bottom: 6rem;
   h1 {
     font-family: 'Cabin Condensed';
     font-style: normal;
@@ -392,7 +410,7 @@ export const SupportLine = styled.div`
   width: 100%;
   height: 15rem;
   margin-top: 6rem;
-  padding-left: 3rem;
+  padding-left: 6rem;
 
   background: #7f260f;
   h1 {
@@ -400,7 +418,6 @@ export const SupportLine = styled.div`
     font-style: normal;
     font-weight: 50;
     font-size: 6rem;
-    text-align: center;
 
     color: #ffffff;
   }
@@ -410,8 +427,8 @@ export const SupportText = styled.div`
   flex-direction: column;
   text-align: justify;
   gap: 2rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 
   h2 {
     font-family: 'Cabin Condensed';
@@ -476,11 +493,20 @@ export const SupportButtom = styled.button`
 
     color: #7f260f;
   }
+  @media (max-width: 1400px) {
+    width: 60%;
+  }
   @media (max-width: 1060px) {
-    width: 60rem;
     height: 13rem;
     h1 {
       font-size: 5rem;
+    }
+  }
+  @media (max-width: 700px) {
+    width: 60%;
+    height: 9rem;
+    h1 {
+      font-size: 4.5;
     }
   }
 `;

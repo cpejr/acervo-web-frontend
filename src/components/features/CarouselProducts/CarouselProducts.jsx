@@ -1,10 +1,5 @@
 import Slider from 'react-slick';
 
-import {
-  carouselEvents1,
-  carouselEvents2,
-  carouselEvents3,
-} from '../../../assets/home';
 import { Container, CarouselDiv, ImageCarousel } from './Styles';
 
 export default function CarouselProducts() {
@@ -12,16 +7,28 @@ export default function CarouselProducts() {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
+    adaptativeHeigth: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
   return (
     <Container>
       <CarouselDiv>
         <Slider {...settings}>
-          <ImageCarousel src={carouselEvents1} />
-          <ImageCarousel src={carouselEvents2} />
-          <ImageCarousel src={carouselEvents3} />
+          <ImageCarousel src="src/assets/Home/carouselEvents/carouselEvents1.png" />
+          <ImageCarousel src="src/assets/Home/carouselEvents/carouselEvents2.png" />
+          <ImageCarousel src="src/assets/Home/carouselEvents/carouselEvents3.png" />
         </Slider>
       </CarouselDiv>
     </Container>

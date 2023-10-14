@@ -1,23 +1,26 @@
 import styled from 'styled-components';
 
-import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/home';
+import { arrowRightCarousel, arrowLeftCarousel } from '../../../assets/Home';
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: auto;
+  //height: auto;
+
+  justify-content: center;
+  align-items: center;
 `;
 
 export const CarouselDiv = styled.div`
   display: flex;
   flex-direction: row;
 
-  width: 100%;
-  height: auto;
+  width: auto;
+  //height: 100%;
 
   justify-content: center;
-  align-items: center;
+  align-items: start;
 
   .slick-track {
     display: flex;
@@ -41,37 +44,32 @@ export const CarouselDiv = styled.div`
   }
 
   .slick-list {
-    border: 2rem solid white;
-    border-bottom: 9rem solid white;
     position: relative;
-
-    margin-left: 10rem;
-    margin-right: 10rem;
+    border: 2rem solid blue;
+    //padding: 5rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
 
     display: block;
     overflow: hidden;
 
-    width: 100rem;
-    height: 60rem;
+    width: 90rem;
+    //height: 100rem;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1300px) {
       width: 65rem;
       height: 55rem;
-      margin-left: 7rem;
-      margin-right: 7rem;
-      border: 2.5rem solid white;
-      border-bottom: 12rem solid white;
-    }
-    @media (max-width: 1000px) {
-      height: 50rem;
       margin-left: 5rem;
       margin-right: 5rem;
-      border: 2rem solid white;
-      border-bottom: 8rem solid white;
     }
+
     @media (max-width: 950px) {
-      width: 45rem;
-      height: 40rem;
+      width: 60rem;
+      height: 55rem;
+    }
+    @media (max-width: 700px) {
+      width: 50rem;
+      height: 35rem;
     }
   }
 
@@ -82,36 +80,60 @@ export const CarouselDiv = styled.div`
 
     background-size: 100% 100%;
 
-    width: 13.1rem;
-    height: 19.7rem;
+    width: 11rem;
+    height: 17rem;
 
-    @media (max-width: 1000px) {
-      width: 10rem;
-      height: 15rem;
+    @media (max-width: 1350px) {
+      width: 9rem;
+      height: 14rem;
+    }
+
+    @media (max-width: 1100px) {
+      width: 6rem;
+      height: 10rem;
+    }
+    @media (max-width: 700px) {
+      width: 0;
+      height: 0;
     }
   }
 
   .slick-prev:before {
-    background-image: url(${arrowRightCarousel});
-    background-size: 100% 100%;
+    background-image: url(${arrowLeftCarousel});
   }
 
   .slick-next:before {
-    background-image: url(${arrowLeftCarousel});
+    background-image: url(${arrowRightCarousel});
   }
 `;
 
 export const ImageCarousel = styled.img`
-  height: 50rem;
-  object-fit: cover;
+  height: 60rem;
+  //padding: 3rem 3rem 7rem 3rem;
 
-  @media (max-width: 1200px) {
-    height: 53rem;
+  object-fit: fill;
+`;
+
+export const BordaBranca = styled.div`
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  width: 90rem;
+  height: 62rem;
+  z-index: 30;
+  @media (max-width: 1300px) {
+    width: 64rem;
+    height: 61rem;
   }
   @media (max-width: 1000px) {
-    height: 50rem;
+    //height: 50rem;
   }
   @media (max-width: 950px) {
-    height: 30rem;
+    width: 58rem;
+    height: 56rem;
+  }
+  @media (max-width: 700px) {
+    width: 50rem;
+    height: 35rem;
   }
 `;
