@@ -6,15 +6,18 @@ import {
   Input,
   Forgot,
   ContainerIn,
+  Containerp,
 } from './Styles';
 
 export default function Login() {
   return (
     <Body>
-      <Title>Entrar</Title>
+      <Title>Login</Title>
       <Container>
-        <Input placeholder="Login" />
-        <Input placeholder="Senha" />
+        <Containerp>
+          <Input placeholder="  Login:" />
+          <Input type="password" placeholder="  Senha:" />
+        </Containerp>
         <ContainerIn>
           <In>Entrar</In>
         </ContainerIn>
