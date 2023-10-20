@@ -26,24 +26,23 @@ export const Container = styled.div`
   background-color: ${(props) => props.theme.colors.fontHeader};
   border-radius: 3rem;
   padding-top: 5rem;
-  position: relative;
-  z-index: -1;
+  padding-bottom: 5rem;
 `;
 
 export const Containerp = styled.div`
-  gap: 6rem;
+  gap: 0rem;
   display: flex;
   width: 100%;
   height: 60%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  z-index: 2;
+  background-color: yellow;
 `;
 export const Input = styled.input`
   border-radius: 3rem;
   width: 90%;
+  max-height: 50%;
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: 2rem;
   color: ${(props) => props.theme.colors.fontDialog};
@@ -86,7 +85,22 @@ export const MyConst = styled(AiOutlineEye)`
   margin-right: 5px;
   display: flex;
   align-items: center;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  z-index: 3;
   right: 8rem;
+  font-size: 3rem;
+`;
+
+export const Control = styled.div`
+  width: 100%;
+  gap: 6rem;
+  display: flex;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
 `;

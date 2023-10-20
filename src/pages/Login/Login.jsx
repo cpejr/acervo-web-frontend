@@ -6,18 +6,25 @@ import {
   Input,
   Forgot,
   ContainerIn,
-  Containerp,
+  MyConst,
+  Control,
 } from './Styles';
 
 export default function Login() {
   return (
     <Body>
-      <Title>Login</Title>
+      <Title>Entrar</Title>
       <Container>
-        <Containerp>
+        <Control>
           <Input placeholder="  Login:" />
-          <Input type="password" placeholder="  Senha:" />
-        </Containerp>
+        </Control>
+
+        <Control>
+          <Input placeholder="  Senha:" />
+          <MyConst />
+
+        </Control>
+
         <ContainerIn>
           <In>Entrar</In>
         </ContainerIn>
