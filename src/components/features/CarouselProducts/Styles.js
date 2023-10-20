@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { arrowLeft, arrowRight } from '../../../assets/home';
+import { ArrowLeft, ArrowRight } from '../../../assets/home';
 
 export const Container = styled.div`
   display: flex;
@@ -82,11 +82,11 @@ export const CarouselDiv = styled.div`
   }
 
   .slick-prev:before {
-    background-image: url(${arrowLeft});
+    background-image: url(${ArrowLeft});
   }
 
   .slick-next:before {
-    background-image: url(${arrowRight});
+    background-image: url(${ArrowRight});
   }
 
   .slick-prev,

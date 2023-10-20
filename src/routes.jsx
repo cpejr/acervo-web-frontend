@@ -16,6 +16,7 @@ import {
   OurHistory,
   Register,
   SchoolSection,
+  Login,
 } from './pages';
 
 // For the routes that need footer
@@ -37,6 +38,7 @@ const router = createBrowserRouter(
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="nossa-historia" element={<OurHistory />} />
+          <Route path="Entrar" element={<Login />} />
         </Route>
       </Route>
 

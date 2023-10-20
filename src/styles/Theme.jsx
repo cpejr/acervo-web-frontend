@@ -10,6 +10,7 @@ const theme = {
     dialogBG: 'rgba(255, 255, 255, 0.66)',
     fontHeader: 'white',
     fontDialog: 'black',
+    inputcolor: '#D9D9D9',
   },
   fonts: {
     primary: 'Cabin, sans-serif',
