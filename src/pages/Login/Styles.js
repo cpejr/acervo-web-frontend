@@ -20,7 +20,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   height: 70%;
   gap: 5rem;
   background-color: ${(props) => props.theme.colors.fontHeader};
@@ -49,6 +49,7 @@ export const Input = styled.input`
   height: 50%;
   background-color: ${(props) => props.theme.colors.inputcolor};
   border: none;
+
   &::placeholder {
     /* Estilos para o placeholder */
     color: #888; /* Cor de exemplo */
@@ -59,7 +60,7 @@ export const ContainerIn = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 20%;
+  height: 40%;
 `;
 export const In = styled.button`
   background-color: ${(props) => props.theme.colors.fontDialog};
@@ -74,7 +75,7 @@ export const In = styled.button`
 export const Forgot = styled.button`
   background-color: ${(props) => props.theme.colors.fontHeader};
   border-radius: 3rem;
-  width: 60%;
+  width: 50%;
   height: 7%;
   font-family: ${(props) => props.theme.fonts.primary};
   border: none;
@@ -96,7 +97,7 @@ export const Control = styled.div`
   gap: 6rem;
   display: flex;
   width: 100%;
-  height: 60%;
+  height: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;

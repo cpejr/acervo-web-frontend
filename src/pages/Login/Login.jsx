@@ -9,8 +9,34 @@ import {
   MyConst,
   Control,
 } from './Styles';
+import { useState, useRef } from 'react';
 
 export default function Login() {
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const passwordInputRef = useRef(null);
+  const [password, setPassword] = useState('');
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+
+    // Obtém a posição atual do cursor
+    const cursorPosition = passwordInputRef.current.selectionStart;
+
+    if (passwordInputRef.current) {
+      passwordInputRef.current.focus(); // Define o foco no input de senha
+
+      // Define a posição do cursor novamente
+      if (cursorPosition !== null) {
+        passwordInputRef.current.setSelectionRange(
+          cursorPosition,
+          cursorPosition
+        );
+      }
+    }
+  };
+  const handlePasswordChage = (event) => {
+    setPassword(event.target.value);
+  };
+
   return (
     <Body>
       <Title>Entrar</Title>
@@ -20,9 +46,14 @@ export default function Login() {
         </Control>
 
         <Control>
-          <Input placeholder="  Senha:" />
-          <MyConst />
-
+          <Input
+            type={passwordVisible ? 'text' : 'password'}
+            placeholder="  Senha:"
+            value={password}
+            onChange={handlePasswordChage}
+            ref={passwordInputRef}
+          />
+          <MyConst onClick={togglePasswordVisibility} />
         </Control>
 
         <ContainerIn>

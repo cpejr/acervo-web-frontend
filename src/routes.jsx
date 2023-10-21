@@ -17,6 +17,7 @@ import {
   Register,
   SchoolSection,
   Login,
+  ForgotPassword,
 } from './pages';
 
 // For the routes that need footer
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="Entrar" element={<Login />} />
+          <Route path="Esqueci-minha-senha" element={<ForgotPassword />} />
         </Route>
       </Route>
 
