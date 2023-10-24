@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.fontDialog};
   padding: 2rem 5%;
 `;
 
@@ -19,7 +19,7 @@ export const MenuItem = styled.div`
   border: none;
   background-color: transparent;
   font-family: ${(props) => props.theme.fonts.primary};
-  color: ${(props) => props.theme.colors.fontHeader};
+  color: ${(props) => props.theme.colors.strongOrange};
   font-size: 2rem;
   display: flex;
   flex-direction: column;
