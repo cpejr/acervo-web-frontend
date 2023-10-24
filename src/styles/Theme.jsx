@@ -12,6 +12,7 @@ const theme = {
     fontDialog: 'black',
     sendButtonFont: 'white',
     sendButton: 'black',
+    yellow: '#F19709',
   },
   fonts: {
     primary: 'Cabin, sans-serif',
