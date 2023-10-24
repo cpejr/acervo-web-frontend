@@ -16,6 +16,9 @@ import {
   OurHistory,
   Register,
   SchoolSection,
+  RegisterLegalPerson,
+  RegisterPhysicalPerson,
+  RegisterStudent,
 } from './pages';
 
 // For the routes that need footer
@@ -46,6 +49,15 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="cadastro" element={<Register />} />
+      <Route path="cadastro-aluno" element={<RegisterStudent />} />
+      <Route
+        path="cadastro-pessoa-juridica"
+        element={<RegisterLegalPerson />}
+      />
+      <Route
+        path="cadastro-pessoa-fisica"
+        element={<RegisterPhysicalPerson />}
+      />
       <Route path="/meu-carrinho" element={<MyCart />} />
       <Route path="*" element={<NotFound />} />
     </Route>
