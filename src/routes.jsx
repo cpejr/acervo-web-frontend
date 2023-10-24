@@ -16,6 +16,7 @@ import {
   OurHistory,
   Register,
   SchoolSection,
+  Ecommerce,
 } from './pages';
 
 // For the routes that need footer
@@ -47,6 +48,7 @@ const router = createBrowserRouter(
 
       <Route path="cadastro" element={<Register />} />
       <Route path="/meu-carrinho" element={<MyCart />} />
+      <Route path="e-commerce" element={<Ecommerce />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
