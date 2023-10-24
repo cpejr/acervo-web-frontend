@@ -41,13 +41,13 @@ const router = createBrowserRouter(
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="nossa-historia" element={<OurHistory />} />
+          <Route path="eventos" element={<Event />} />
         </Route>
       </Route>
 
       <Route path="/" element={<SchoolLayout />}>
         <Route index element={<Home />} />
         <Route path="area-escolar" element={<SchoolSection />} />
-        <Route path="eventos" element={<Event />} />
       </Route>
 
       <Route path="/" element={<RegisterLayout />}>

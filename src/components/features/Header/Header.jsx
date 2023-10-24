@@ -62,7 +62,13 @@ export default function Header() {
             </Dialog>
           )}
         </MenuItem>
-        <MenuItem>Eventos Culturais</MenuItem>
+        <MenuItem
+          onClick={() => {
+            navigate('/eventos');
+          }}
+        >
+          Eventos Culturais
+        </MenuItem>
         <MenuItem onClick={() => handleMenuClick('school')}>
           Área escolar
           {dialogs.school && (
