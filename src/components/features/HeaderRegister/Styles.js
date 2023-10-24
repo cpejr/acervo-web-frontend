@@ -42,6 +42,9 @@ export const Image = styled.div`
   display: flex;
   height: 20rem;
   width: 25rem;
+
+  cursor: pointer;
+
   @media (max-width: ${firstBreakPoint}) {
     height: 18rem;
     width: 22rem;
