@@ -25,6 +25,7 @@ export const Button = styled.button`
   height: fit-content;
   text-align: center;
   border-radius: 10rem;
+  border: none;
   align-items: center;
   color: ${(props) => props.theme.colors.fontHeader};
   font-size: 3rem;
@@ -77,12 +78,13 @@ export const SendButton = styled.button`
   width: fit-content;
   height: fit-content;
   text-align: center;
+  border: none;
   border-radius: 10rem;
   align-items: center;
-  color: ${(props) => props.theme.colors.sendButton};
+  color: ${(props) => props.theme.colors.sendButtonFont};
   font-size: 5rem;
   border-color: ${(props) => props.theme.colors.fontHeader};
-  background-color: ${(props) => props.theme.colors.fontHeader};
+  background-color: ${(props) => props.theme.colors.sendButton};
   margin-right: 12%;
   margin-top: 1%;
   padding: 2%;

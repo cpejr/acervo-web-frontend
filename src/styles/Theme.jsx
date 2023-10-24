@@ -10,7 +10,8 @@ const theme = {
     dialogBG: 'rgba(255, 255, 255, 0.66)',
     fontHeader: 'white',
     fontDialog: 'black',
-    sendButton: '#3EC000',
+    sendButtonFont: 'white',
+    sendButton: 'black',
   },
   fonts: {
     primary: 'Cabin, sans-serif',
