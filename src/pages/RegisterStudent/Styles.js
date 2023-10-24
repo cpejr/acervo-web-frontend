@@ -24,8 +24,8 @@ export const Button = styled.button`
   width: fit-content;
   height: fit-content;
   text-align: center;
-  border-radius: 10rem;
   border: none;
+  border-radius: 10rem;
   align-items: center;
   color: ${(props) => props.theme.colors.fontHeader};
   font-size: 3rem;
@@ -78,8 +78,8 @@ export const SendButton = styled.button`
   width: fit-content;
   height: fit-content;
   text-align: center;
-  border: none;
   border-radius: 10rem;
+  border: none;
   align-items: center;
   color: ${(props) => props.theme.colors.sendButtonFont};
   font-size: 5rem;
@@ -143,11 +143,11 @@ export const Text = styled.h1`
   width: 100%;
   font-weight: 100;
   justify-content: center;
-  font-size: 9rem;
+  font-size: 8rem;
   font-family: ${(props) => props.theme.fonts.caramella};
   color: ${(props) => props.theme.colors.fontHeader};
   @media (max-width: ${firstBreakPoint}) {
-    font-size: 6.5rem;
+    font-size: 6rem;
   }
   @media (max-width: ${secondBreakPoint}) {
     font-size: 3.5rem;
@@ -175,5 +175,18 @@ export const Image = styled.div`
   @media (max-width: ${fifthBreakPoint}) {
     height: 9rem;
     width: 11rem;
+  }
+`;
+export const Text2 = styled.h1`
+  text-align: left;
+  font-size: 4rem;
+  margin-top: 3%;
+  padding: 1%;
+  margin-left: 10%;
+  font-family: ${(props) => props.theme.fonts.caramella};
+  color: ${(props) => props.theme.colors.fontHeader};
+  @media (max-width: ${firstBreakPoint}) {
+    font-size: 3rem;
+    margin-bottom: 3rem;
   }
 `;

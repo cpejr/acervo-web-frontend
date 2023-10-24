@@ -3,18 +3,13 @@ import React, { useState } from 'react';
 
 import { useMediaQuery } from 'react-responsive';
 
-import { LogoDespacho } from '../../assets/home';
 import {
-  Image,
   Container,
-  Header,
-  Text,
   Text2,
   Text3,
   Row,
   Square,
   TextTransition,
-  Line,
   Lines,
 } from './Styles';
 
@@ -49,14 +44,6 @@ export default function Register() {
 
   return (
     <Container>
-      <Header>
-        <Line>
-          <Image>
-            <img src={LogoDespacho} alt="logo branca" />
-          </Image>
-          <Text>Cadastre-se</Text>
-        </Line>
-      </Header>
       {isSmallScreen ? (
         <>
           <Text2>Qual o meu tipo de cadastro?</Text2>

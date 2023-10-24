@@ -1,13 +1,8 @@
-// import { useNavigate } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io';
+import { useNavigate } from 'react-router';
 
-import { LogoDespacho } from '../../assets/home';
 import {
-  Image,
   Container,
-  Header,
-  Text,
-  Line,
   Info,
   Input,
   Button,
@@ -16,17 +11,15 @@ import {
 } from './Styles';
 
 export default function RegisterStudent() {
+  const navigate = useNavigate();
+
   return (
     <Container>
-      <Header>
-        <Line>
-          <Image>
-            <img src={LogoDespacho} alt="logo branca" />
-          </Image>
-          <Text>Cadastro de Aluno</Text>
-        </Line>
-      </Header>
-      <Button>
+      <Button
+        onClick={() => {
+          navigate('/cadastro');
+        }}
+      >
         <IoIosArrowBack />
       </Button>
       <Info>

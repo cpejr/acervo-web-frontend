@@ -79,6 +79,7 @@ export const SendButton = styled.button`
   height: fit-content;
   text-align: center;
   border-radius: 10rem;
+  border: none;
   align-items: center;
   color: ${(props) => props.theme.colors.sendButtonFont};
   font-size: 5rem;
