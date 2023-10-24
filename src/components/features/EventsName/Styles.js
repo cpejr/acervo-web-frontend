@@ -35,7 +35,7 @@ export const Bubble = styled.div`
 `;
 
 export const Control = styled.div`
-  width: 45rem;
+  width: 30rem;
   opacity: 1;
   height: 50rem;
   background-image: url(${Image});
@@ -50,34 +50,28 @@ export const Control = styled.div`
   }
 
   @media (max-width: 1170px) {
-    width: 40rem;
     height: 50rem;
   }
   @media (max-width: 1540px) {
-    width: 40rem;
     height: 40rem;
   }
   @media (max-width: 1400px) {
-    width: 40rem;
     height: 35rem;
   }
 
   @media (max-width: 1300px) {
-    width: 30rem;
+    width: 20rem;
     height: 45rem;
   }
   @media (max-width: 880px) {
-    width: 25rem;
+    width: 15rem;
     height: 35rem;
   }
-  @media (max-width: 780px) {
-    width: 15rem;
+  @media (max-width: 650px) {
+    width: 12rem;
     height: 25rem;
   }
-  @media (max-width: 720px) {
-    width: 12rem;
-    height: 20rem;
-  }
+
   @media (max-width: 460px) {
     width: 10rem;
     height: 16rem;
@@ -106,11 +100,12 @@ export const Control = styled.div`
       height: 25%;
     }
   }
-  a {
+  p {
     font-family: ${(props) => props.theme.fonts.primary};
     color: ${(props) => props.theme.colors.fontHeader};
     position: relative;
     align-items: center;
+    justify-content: center;
     font-size: 3rem;
     max-width: 50%;
 
@@ -141,6 +136,7 @@ export const Row = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 20rem;
   @media (max-width: 1790px) {
@@ -189,6 +185,5 @@ export const Row = styled.div`
     display: flex;
     gap: 5rem;
     flex-direction: row;
-    margin-left: 35%;
   }
 `;

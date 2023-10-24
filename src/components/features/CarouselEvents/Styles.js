@@ -8,25 +8,7 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
   align-items: center;
-
-  @media (max-width: 720px) {
-    padding-right: 5%;
-  }
-  @media (max-width: 570px) {
-    padding-right: 12%;
-  }
-  @media (max-width: 460px) {
-    padding-right: 20%;
-  }
-  @media (max-width: 415px) {
-    padding-right: 25%;
-  }
-  @media (max-width: 380px) {
-    padding-right: 36%;
-  }
-  @media (max-width: 350px) {
-    padding-right: 53%;
-  }
+  justify-content: center;
 `;
 
 export const CarouselDiv = styled.div`
