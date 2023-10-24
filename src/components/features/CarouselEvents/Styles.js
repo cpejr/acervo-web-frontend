@@ -7,6 +7,8 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const CarouselDiv = styled.div`
@@ -41,6 +43,7 @@ export const CarouselDiv = styled.div`
   }
 
   .slick-list {
+    // distancia das setas
     border: 2rem solid white;
     border-bottom: 9rem solid white;
     position: relative;
@@ -54,7 +57,8 @@ export const CarouselDiv = styled.div`
     width: 100rem;
     height: 60rem;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1470px) {
+      //controla tamanho doc carousel
       width: 65rem;
       height: 55rem;
       margin-left: 7rem;
@@ -73,10 +77,32 @@ export const CarouselDiv = styled.div`
       width: 45rem;
       height: 40rem;
     }
+    @media (max-width: 770px) {
+      width: 35rem;
+      height: 30rem;
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 520px) {
+      width: 25rem;
+      height: 30rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    @media (max-width: 445px) {
+      width: 20rem;
+      height: 20rem;
+    }
+    @media (max-width: 400px) {
+      width: 15rem;
+      height: 15rem;
+    }
   }
 
   .slick-prev:before,
   .slick-next:before {
+    //setas carousel
     display: flex;
     content: ' ';
 
@@ -88,6 +114,14 @@ export const CarouselDiv = styled.div`
     @media (max-width: 1000px) {
       width: 10rem;
       height: 15rem;
+    }
+    @media (max-width: 670px) {
+      width: 5rem;
+      height: 10rem;
+    }
+    @media (max-width: 570px) {
+      width: 5rem;
+      height: 7rem;
     }
   }
 
@@ -113,5 +147,8 @@ export const ImageCarousel = styled.img`
   }
   @media (max-width: 950px) {
     height: 30rem;
+  }
+  @media (max-width: 730px) {
+    width: 20rem;
   }
 `;
