@@ -9,6 +9,9 @@ export const Body = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  @media (max-width: 520px) {
+    width: 90%;
+  }
 `;
 
 export const Title = styled.div`
