@@ -18,6 +18,20 @@ export const Title = styled.div`
   font-family: ${(props) => props.theme.fonts.Title};
   font-size: 5rem;
   color: white;
+  @media (max-width: 520px) {
+    margin-right: 10rem;
+  }
+  @media (max-width: 440px) {
+    margin-right: 10rem;
+    font-size: 3rem;
+    margin-right: 15rem;
+  }
+  @media (max-width: 370px) {
+    margin-right: 25rem;
+  }
+  @media (max-width: 290px) {
+    margin-right: 28rem;
+  }
 `;
 export const Container = styled.div`
   display: flex;
@@ -30,18 +44,25 @@ export const Container = styled.div`
   border-radius: 3rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  @media (max-width: 520px) {
+    margin-right: 10rem;
+  }
+  @media (max-width: 440px) {
+    width: 40%;
+    height: 60%;
+    margin-right: 15rem;
+  }
+  @media (max-width: 370px) {
+    margin-right: 25rem;
+  }
+  @media (max-width: 290px) {
+    width: 30%;
+    height: 50%;
+    margin-right: 28rem;
+    gap: 2rem;
+  }
 `;
 
-export const Containerp = styled.div`
-  gap: 0rem;
-  display: flex;
-  width: 100%;
-  height: 60%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: yellow;
-`;
 export const Input = styled.input`
   border-radius: 3rem;
   width: 90%;
@@ -57,7 +78,25 @@ export const Input = styled.input`
     /* Estilos para o placeholder */
     color: #888; /* Cor de exemplo */
   }
+  @media (max-width: 290px) {
+    width: 90%;
+    height: 100%;
+  }
 `;
+export const Control = styled.div`
+  width: 100%;
+  gap: 6rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+`;
+
 export const ContainerIn = styled.div`
   display: flex;
   flex-direction: column;
@@ -74,6 +113,9 @@ export const In = styled.button`
   height: 100%;
   font-family: ${(props) => props.theme.fonts.primary};
   border: none;
+  @media (max-width: 290px) {
+    width: 50%;
+  }
 `;
 export const Forgot = styled.button`
   background-color: ${(props) => props.theme.colors.fontHeader};
@@ -83,6 +125,21 @@ export const Forgot = styled.button`
   font-family: ${(props) => props.theme.fonts.primary};
   border: none;
   font-size: 2rem;
+  @media (max-width: 520px) {
+    margin-right: 10rem;
+  }
+  @media (max-width: 440px) {
+    margin-right: 15rem;
+    width: 40%;
+  }
+  @media (max-width: 370px) {
+    margin-right: 25rem;
+  }
+  @media (max-width: 290px) {
+    width: 30%;
+    margin-right: 28rem;
+    font-size: 1.5rem;
+  }
 `;
 
 export const MyConst = styled(AiOutlineEye)`
@@ -91,20 +148,16 @@ export const MyConst = styled(AiOutlineEye)`
   align-items: center;
   position: absolute;
   z-index: 3;
-  right: 8rem;
+  right: 5rem; /* Aumente o valor para mover mais para a direita */
   font-size: 3rem;
-`;
+  @media (max-width: 520px) {
+    left: 22rem;
+  }
+  @media (max-width: 440px) {
+    left: 17rem;
+  }
 
-export const Control = styled.div`
-  width: 100%;
-  gap: 6rem;
-  display: flex;
-  width: 100%;
-  height: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 2;
+  @media (max-width: 290px) {
+    left: 12rem;
+  }
 `;
