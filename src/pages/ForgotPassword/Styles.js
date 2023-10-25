@@ -7,52 +7,35 @@ export const Body = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 2rem;
-  @media (max-width: 560px) {
-    padding-right: 15rem;
-  }
-  @media (max-width: 400px) {
-    padding-right: 28rem;
-  }
-  @media (max-width: 320px) {
-    padding-right: 32rem;
-  }
+  gap: 5rem;
 `;
 
 export const Title = styled.div`
   font-family: ${(props) => props.theme.fonts.Title};
   font-size: 5rem;
   color: white;
+  text-align: center;
   @media (max-width: 1290px) {
     font-size: 4rem;
   }
-  @media (max-width: 760px) {
-    font-size: 3rem;
-  }
-  @media (max-width: 560px) {
-    text-align: center;
-    max-width: 70%;
-  }
-  @media (max-width: 400px) {
+  @media (max-width: 800px) {
     font-size: 2rem;
   }
 `;
 export const Container = styled.button`
   display: flex;
   align-items: center;
-  flex-direction: column;
+  justify-content: center;
   width: 50%;
   height: 70%;
   background-color: ${(props) => props.theme.colors.fontHeader};
   border-radius: 3rem;
   text-align: center;
-  justify-content: center;
   font-size: 8rem;
   @media (max-width: 1290px) {
-    font-size: 6rem;
+    font-size: 4rem;
   }
   @media (max-width: 760px) {
-    font-size: 4rem;
     width: 45%;
     height: 55%;
   }

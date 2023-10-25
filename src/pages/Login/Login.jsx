@@ -39,6 +39,7 @@ export default function Login() {
 
   return (
     <Body>
+      {/* <Containerall> */}
       <Title>Entrar</Title>
       <Container>
         <Control>
@@ -61,6 +62,7 @@ export default function Login() {
         </ContainerIn>
       </Container>
       <Forgot>Esqueci minha senha</Forgot>
+      {/* </Containerall> */}
     </Body>
   );
 }
