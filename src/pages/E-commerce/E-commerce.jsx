@@ -50,10 +50,25 @@ const data = [
 
 export default function Ecommerce() {
   const isSmallScreen = useMediaQuery({ maxWidth: 1140 });
+  const isMobileScreen = useMediaQuery({ maxWidth: 700 });
   const groupedData = [];
-  for (let i = 0; i < data.length; i += 3) {
-    groupedData.push(data.slice(i, i + 3));
+
+  if (isMobileScreen) {
+    for (let i = 0; i < data.length; i += 2) {
+      groupedData.push(data.slice(i, i + 2));
+    }
+  } else {
+    for (let i = 0; i < data.length; i += 3) {
+      groupedData.push(data.slice(i, i + 3));
+    }
   }
+
+  // } else {
+  //   for (let i = 0; i < data.length; i += 3) {
+  //     groupedData.push(data.slice(i, i + 3));
+  //   }
+  // }
+
   return (
     <Container>
       <Text>
@@ -64,25 +79,25 @@ export default function Ecommerce() {
         <Text2>Acima de X produtos, o FRETE É GRÁTIS!</Text2>
       </ContainerText>
       <BackgroundDiv>
-        {isSmallScreen ? (
-          <Row>
-            <Lines>
-              {data?.map((content) => {
-                return <EcommerceProduct key={data.name} data={content} />;
-              })}
-            </Lines>
-          </Row>
-        ) : (
-          groupedData.map((group) => (
-            <Row key={group.name}>
-              {group.map((content) => (
-                <Lines key={content}>
-                  <EcommerceProduct key={content.name} data={content} />
-                </Lines>
-              ))}
-            </Row>
-          ))
-        )}
+        {isSmallScreen
+          ? groupedData.map((group) => (
+              <Row key={group.name}>
+                {group.map((content) => (
+                  <Lines key={content}>
+                    <EcommerceProduct key={content.name} data={content} />
+                  </Lines>
+                ))}
+              </Row>
+            ))
+          : groupedData.map((group) => (
+              <Row key={group.name}>
+                {group.map((content) => (
+                  <Lines key={content}>
+                    <EcommerceProduct key={content.name} data={content} />
+                  </Lines>
+                ))}
+              </Row>
+            ))}
       </BackgroundDiv>
     </Container>
   );

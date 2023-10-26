@@ -22,31 +22,59 @@ export const Square = styled.div`
   cursor: pointer;
   border: none;
   margin-top: 10%;
-  padding: 15%;
+  padding: 10%;
+  transition: 1s;
+  &:hover {
+    opacity: 1;
+  }
   @media (max-width: ${firstBreakPoint}) {
     width: 50%;
     height: 100%;
-    padding: 20%;
+    //padding: 20%;
     font-size: 3rem;
   }
   @media (max-width: ${secondBreakPoint}) {
     width: 70%;
     height: 100%;
-    padding: 15%;
+    //padding: 15%;
     font-size: 2rem;
   }
   @media (max-width: ${mobileBreakPoint}) {
     width: 70%;
     height: 100%;
-    padding: 20%;
+    //padding: 20%;
     font-size: 1.8rem;
   }
   @media (max-width: ${miniBreakPoint}) {
     width: 70%;
     height: 100%;
-    padding: 25%;
+    //padding: 25%;
     font-size: 1.5rem;
   }
 `;
 
-export const Image = styled.img``;
+export const Image = styled.img`
+  background-color: transparent;
+  width: 20rem;
+  height: 24rem;
+  background-image: url(${(props) => props.imageUrl});
+  background-size: 100% 100%;
+  background-position: center;
+  margin: 10%;
+  @media (max-width: ${firstBreakPoint}) {
+    width: 17.5rem;
+    height: 21rem;
+  }
+  @media (max-width: ${secondBreakPoint}) {
+    width: 15rem;
+    height: 18rem;
+  }
+  @media (max-width: ${mobileBreakPoint}) {
+    width: 12.5rem;
+    height: 15rem;
+  }
+  @media (max-width: ${miniBreakPoint}) {
+    width: 10rem;
+    height: 12rem;
+  }
+`;
