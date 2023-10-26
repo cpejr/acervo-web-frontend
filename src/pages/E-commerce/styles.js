@@ -109,6 +109,7 @@ export const Row = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 5rem;
+  margin-left: 10rem;
   align-items: center;
   @media (max-width: ${firstBreakPoint}) {
     //flex-direction: column;

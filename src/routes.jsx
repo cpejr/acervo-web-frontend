@@ -37,7 +37,7 @@ const router = createBrowserRouter(
           <Route index element={<Home />} />
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
-          <Route path="nossa-historia" element={<OurHistory />} />
+          <Route path="e-commerce" element={<Ecommerce />} />
         </Route>
       </Route>
 
@@ -48,7 +48,7 @@ const router = createBrowserRouter(
 
       <Route path="cadastro" element={<Register />} />
       <Route path="/meu-carrinho" element={<MyCart />} />
-      <Route path="e-commerce" element={<Ecommerce />} />
+
       <Route path="*" element={<NotFound />} />
     </Route>
   )

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useMediaQuery } from 'react-responsive';
 
 import {
@@ -7,6 +8,7 @@ import {
   ticket,
   localProducts,
 } from '../../assets/ecommerce';
+import { EcommerceProduct } from '../../components/features';
 import {
   Container,
   Text,
@@ -19,8 +21,39 @@ import {
   ProductImage,
 } from './styles';
 
+const data = [
+  {
+    name: 'Camisas',
+    image: shirts,
+  },
+  {
+    name: 'Canecas',
+    image: mugs,
+  },
+  {
+    name: 'Livros',
+    image: books,
+  },
+  {
+    name: 'Ingressos',
+    image: ticket,
+  },
+  {
+    name: 'Produtos Locais',
+    image: localProducts,
+  },
+  {
+    name: 'Produtos Locais',
+    image: localProducts,
+  },
+];
+
 export default function Ecommerce() {
   const isSmallScreen = useMediaQuery({ maxWidth: 1140 });
+  const groupedData = [];
+  for (let i = 0; i < data.length; i += 3) {
+    groupedData.push(data.slice(i, i + 3));
+  }
   return (
     <Container>
       <Text>
@@ -32,114 +65,23 @@ export default function Ecommerce() {
       </ContainerText>
       <BackgroundDiv>
         {isSmallScreen ? (
-          <>
-            <Row>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={shirts} />
-                  Camisas
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={mugs} />
-                  Canecas
-                </Square>
-              </Lines>
-            </Row>
-            <Row>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={books} />
-                  Livros
-                </Square>
-              </Lines>
-
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={ticket} />
-                  Ingressos
-                </Square>
-              </Lines>
-            </Row>
-            <Row>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={localProducts} />
-                  Produtos Locais
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={shirts} />
-                  Produto
-                </Square>
-              </Lines>
-            </Row>
-          </>
+          <Row>
+            <Lines>
+              {data?.map((content) => {
+                return <EcommerceProduct key={data.name} data={content} />;
+              })}
+            </Lines>
+          </Row>
         ) : (
-          <>
-            <Row>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={shirts} />
-                  Camisas
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={mugs} />
-                  Canecas
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={books} />
-                  Livros
-                </Square>
-              </Lines>
+          groupedData.map((group) => (
+            <Row key={group.name}>
+              {group.map((content) => (
+                <Lines key={content}>
+                  <EcommerceProduct key={content.name} data={content} />
+                </Lines>
+              ))}
             </Row>
-            <Row>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={ticket} />
-                  Ingressos
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={localProducts} />
-                  Produtos Locais
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={shirts} />
-                  Produto
-                </Square>
-              </Lines>
-            </Row>
-            <Row>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={shirts} />
-                  Produto
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={shirts} />
-                  Produto
-                </Square>
-              </Lines>
-              <Lines>
-                <Square>
-                  <ProductImage imageUrl={shirts} />
-                  Produto
-                </Square>
-              </Lines>
-            </Row>
-          </>
+          ))
         )}
       </BackgroundDiv>
     </Container>
