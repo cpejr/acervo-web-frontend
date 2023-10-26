@@ -25,7 +25,7 @@ function HasFooterRoutes() {
   return (
     <>
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

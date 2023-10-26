@@ -1,5 +1,4 @@
 import { Body, Container, Title } from './Styles';
-import { useState, useRef } from 'react';
 
 export default function ForgotPassword() {
   return (

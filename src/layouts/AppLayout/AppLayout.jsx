@@ -29,7 +29,7 @@ export default function AppLayout() {
     <SystemLoading />
   ) : (
     <Container>
-      <Header />
+      {/* <Header /> */}
       <Outlet />
     </Container>
   );
