@@ -18,6 +18,7 @@ import {
   SchoolSection,
   Login,
   ForgotPassword,
+  Event,
 } from './pages';
 
 // For the routes that need footer
@@ -47,6 +48,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<SchoolLayout />}>
         <Route index element={<Home />} />
         <Route path="area-escolar" element={<SchoolSection />} />
+        <Route path="eventos" element={<Event />} />
       </Route>
 
       <Route path="cadastro" element={<Register />} />

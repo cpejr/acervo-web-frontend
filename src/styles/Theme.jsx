@@ -11,6 +11,7 @@ const theme = {
     fontHeader: 'white',
     fontDialog: 'black',
     inputcolor: '#D9D9D9',
+    yellow: '#F19709',
   },
   fonts: {
     primary: 'Cabin, sans-serif',
