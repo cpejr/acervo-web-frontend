@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useMediaQuery } from 'react-responsive';
 
 import {
@@ -17,8 +16,6 @@ import {
   BackgroundDiv,
   Row,
   Lines,
-  Square,
-  ProductImage,
 } from './styles';
 
 const data = [
@@ -62,12 +59,6 @@ export default function Ecommerce() {
       groupedData.push(data.slice(i, i + 3));
     }
   }
-
-  // } else {
-  //   for (let i = 0; i < data.length; i += 3) {
-  //     groupedData.push(data.slice(i, i + 3));
-  //   }
-  // }
 
   return (
     <Container>
