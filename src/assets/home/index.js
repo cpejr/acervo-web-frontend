@@ -5,3 +5,5 @@ export { default as arrowRightCarousel } from './carouselEvents/arrowRightCarous
 export { default as arrowLeftCarousel } from './carouselEvents/arrowLeftCarousel.png';
 export { default as arrowRight } from './carouselProducts/arrowRight.png';
 export { default as arrowLeft } from './carouselProducts/arrowLeft.png';
+export { default as LogoDespacho } from './sponsorLogos/LogoDespacho.png';
+export { default as LogoBranca } from './sponsorLogos/LogoBranca.png';
