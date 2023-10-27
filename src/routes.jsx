@@ -18,6 +18,7 @@ import {
   SchoolSection,
   Login,
   ForgotPassword,
+  Ecommerce,
   RegisterLegalPerson,
   RegisterPhysicalPerson,
   RegisterStudent,
@@ -42,6 +43,7 @@ const router = createBrowserRouter(
           <Route index element={<Home />} />
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
+          <Route path="e-commerce" element={<Ecommerce />} />
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="eventos" element={<Event />} />
         </Route>
@@ -68,6 +70,7 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="/meu-carrinho" element={<MyCart />} />
+
       <Route path="*" element={<NotFound />} />
     </Route>
   )
