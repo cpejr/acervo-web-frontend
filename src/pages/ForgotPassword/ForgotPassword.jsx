@@ -1,14 +1,12 @@
 import { IoIosArrowBack } from 'react-icons/io';
 import { Body, Button, Container, Control, Title } from './Styles';
-import { useNavigate } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 export default function ForgotPassword() {
-  const navigate = useNavigate();
-
   return (
     <Body>
       <Button
         onClick={() => {
-          navigate('/');
+          window.history.back();
         }}
       >
         <IoIosArrowBack />
