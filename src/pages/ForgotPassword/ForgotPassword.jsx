@@ -1,12 +1,24 @@
-import { Body, Container, Title } from './Styles';
-
+import { IoIosArrowBack } from 'react-icons/io';
+import { Body, Button, Container, Control, Title } from './Styles';
+import { useNavigate } from 'react-router-dom';
 export default function ForgotPassword() {
+  const navigate = useNavigate();
+
   return (
     <Body>
-      <Title>Como você deseja recuperar sua senha?</Title>
-      <Container>
-        <b> Recuperar senha pelo e-mail</b>
-      </Container>
+      <Button
+        onClick={() => {
+          navigate('/');
+        }}
+      >
+        <IoIosArrowBack />
+      </Button>
+      <Control>
+        <Title>Como você deseja recuperar sua senha?</Title>
+        <Container>
+          <strong> Recuperar senha pelo e-mail</strong>
+        </Container>
+      </Control>
     </Body>
   );
 }

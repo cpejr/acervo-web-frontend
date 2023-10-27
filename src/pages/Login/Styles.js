@@ -107,7 +107,6 @@ export const In = styled.button`
 export const Forgot = styled.button`
   background-color: ${(props) => props.theme.colors.fontHeader};
   border-radius: 3rem;
-  border: none;
   width: 100rem;
   height: 50px;
   font-family: ${(props) => props.theme.fonts.primary};
@@ -116,6 +115,12 @@ export const Forgot = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border: none;
+  transition: background-color 1s ease, color 1s ease;
+  &:hover {
+    background-color: ${(props) => props.theme.colors.strongOrange};
+    color: ${(props) => props.theme.colors.fontHeader};
+  }
 
   @media (max-width: 1050px) {
     width: 70rem;
