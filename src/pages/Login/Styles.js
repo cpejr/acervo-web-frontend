@@ -1,4 +1,4 @@
-import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import styled from 'styled-components';
 
 export const Body = styled.div`
@@ -132,6 +132,29 @@ export const Forgot = styled.button`
 `;
 
 export const MyConst = styled(AiOutlineEye)`
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  right: 7rem;
+  font-size: 3rem;
+  cursor: pointer;
+
+  @media (max-width: 1050px) {
+    right: 23rem;
+  }
+  @media (max-width: 740px) {
+    right: 35rem;
+  }
+  @media (max-width: 500px) {
+    right: 40rem;
+  }
+  @media (max-width: 330px) {
+    right: 45rem;
+  }
+`;
+
+export const MyConstwo = styled(AiOutlineEyeInvisible)`
   display: flex;
   align-items: center;
   position: absolute;

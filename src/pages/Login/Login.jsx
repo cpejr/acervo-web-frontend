@@ -11,6 +11,7 @@ import {
   ContainerIn,
   MyConst,
   Control,
+  MyConstwo,
 } from './Styles';
 
 export default function Login() {
@@ -55,6 +56,10 @@ export default function Login() {
             ref={passwordInputRef}
           />
           <MyConst onClick={togglePasswordVisibility} />
+          <MyConstwo
+            onClick={togglePasswordVisibility}
+            style={{ display: passwordVisible ? 'none' : 'block' }}
+          />
         </Control>
 
         <ContainerIn>
