@@ -1,25 +1,20 @@
 import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
 
 import { useMediaQuery } from 'react-responsive';
+import { useNavigate } from 'react-router';
 
-import { LogoDespacho } from '../../assets/home';
 import {
-  Image,
   Container,
-  Header,
-  Text,
   Text2,
   Text3,
   Row,
   Square,
   TextTransition,
-  Line,
   Lines,
 } from './Styles';
 
 export default function Register() {
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
   const [showOriginalText, setShowOriginalText] = useState(true);
   const [showOriginalText2, setShowOriginalText2] = useState(true);
   const [showOriginalText3, setShowOriginalText3] = useState(true);
@@ -49,14 +44,6 @@ export default function Register() {
 
   return (
     <Container>
-      <Header>
-        <Line>
-          <Image>
-            <img src={LogoDespacho} alt="logo branca" />
-          </Image>
-          <Text>Cadastre-se</Text>
-        </Line>
-      </Header>
       {isSmallScreen ? (
         <>
           <Text2>Qual o meu tipo de cadastro?</Text2>
@@ -77,7 +64,13 @@ export default function Register() {
         </>
       ) : (
         <Row>
-          <Square onMouseEnter={handleHover} onMouseLeave={handleMouseLeave}>
+          <Square
+            onMouseEnter={handleHover}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => {
+              navigate('/cadastro-aluno');
+            }}
+          >
             <TextTransition visible={showOriginalText}>
               Cadastro de aluno na área escolar
             </TextTransition>
@@ -85,7 +78,13 @@ export default function Register() {
               Quero estudar a História de Bom Despacho!
             </TextTransition>
           </Square>
-          <Square onMouseEnter={handleHover2} onMouseLeave={handleMouseLeave2}>
+          <Square
+            onMouseEnter={handleHover2}
+            onMouseLeave={handleMouseLeave2}
+            onClick={() => {
+              navigate('/cadastro-pessoa-fisica');
+            }}
+          >
             <TextTransition visible={showOriginalText2}>
               Cadastro de pessoa física
             </TextTransition>
@@ -93,7 +92,13 @@ export default function Register() {
               Quero ser parceiro/apoiador do projeto!
             </TextTransition>
           </Square>
-          <Square onMouseEnter={handleHover3} onMouseLeave={handleMouseLeave3}>
+          <Square
+            onMouseEnter={handleHover3}
+            onMouseLeave={handleMouseLeave3}
+            onClick={() => {
+              navigate('/cadastro-pessoa-juridica');
+            }}
+          >
             <TextTransition visible={showOriginalText3}>
               Cadastro de pessoa jurídica
             </TextTransition>
