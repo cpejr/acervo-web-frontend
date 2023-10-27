@@ -8,3 +8,6 @@ export { default as Register } from './Register/Register';
 export { default as SchoolSection } from './SchoolSection/SchoolSection';
 export { default as Login } from './Login/Login';
 export { default as ForgotPassword } from './ForgotPassword/ForgotPassword';
+export { default as RegisterLegalPerson } from './RegisterLegalPerson/RegisterLegalPerson';
+export { default as RegisterPhysicalPerson } from './RegisterPhysicalPerson/RegisterPhysicalPerson';
+export { default as RegisterStudent } from './RegisterStudent/RegisterStudent';

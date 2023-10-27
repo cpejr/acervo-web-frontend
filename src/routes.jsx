@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { Footer } from './components/features';
-import { AppLayout, SchoolLayout } from './layouts/index';
+import { AppLayout, RegisterLayout, SchoolLayout } from './layouts/index';
 import {
   Home,
   MyCart,
@@ -18,6 +18,9 @@ import {
   SchoolSection,
   Login,
   ForgotPassword,
+  RegisterLegalPerson,
+  RegisterPhysicalPerson,
+  RegisterStudent,
   Event,
 } from './pages';
 
@@ -42,16 +45,28 @@ const router = createBrowserRouter(
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="entrar" element={<Login />} />
           <Route path="esqueci-minha-senha" element={<ForgotPassword />} />
+          <Route path="eventos" element={<Event />} />
         </Route>
       </Route>
 
       <Route path="/" element={<SchoolLayout />}>
         <Route index element={<Home />} />
         <Route path="area-escolar" element={<SchoolSection />} />
-        <Route path="eventos" element={<Event />} />
       </Route>
 
-      <Route path="cadastro" element={<Register />} />
+      <Route path="/" element={<RegisterLayout />}>
+        <Route path="cadastro" element={<Register />} />
+        <Route path="cadastro-aluno" element={<RegisterStudent />} />
+        <Route
+          path="cadastro-pessoa-juridica"
+          element={<RegisterLegalPerson />}
+        />
+        <Route
+          path="cadastro-pessoa-fisica"
+          element={<RegisterPhysicalPerson />}
+        />
+      </Route>
+
       <Route path="/meu-carrinho" element={<MyCart />} />
       <Route path="*" element={<NotFound />} />
     </Route>

@@ -11,6 +11,8 @@ const theme = {
     fontHeader: 'white',
     fontDialog: 'black',
     inputcolor: '#D9D9D9',
+    sendButtonFont: 'white',
+    sendButton: 'black',
     yellow: '#F19709',
   },
   fonts: {
