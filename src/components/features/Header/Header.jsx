@@ -50,7 +50,13 @@ export default function Header() {
   return (
     <Container>
       <Menu>
-        <MenuItem>E-commerce</MenuItem>
+        <MenuItem
+          onClick={() => {
+            navigate('/e-commerce');
+          }}
+        >
+          E-commerce
+        </MenuItem>
         <MenuItem onClick={() => handleMenuClick('acervo')}>
           Acervo
           {dialogs.acervo && (
