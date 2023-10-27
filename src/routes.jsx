@@ -25,7 +25,7 @@ function HasFooterRoutes() {
   return (
     <>
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
@@ -39,8 +39,8 @@ const router = createBrowserRouter(
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="nossa-historia" element={<OurHistory />} />
-          <Route path="Entrar" element={<Login />} />
-          <Route path="Esqueci-minha-senha" element={<ForgotPassword />} />
+          <Route path="entrar" element={<Login />} />
+          <Route path="esqueci-minha-senha" element={<ForgotPassword />} />
         </Route>
       </Route>
 
