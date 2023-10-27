@@ -2,32 +2,23 @@ import { AiOutlineEye } from 'react-icons/ai';
 import styled from 'styled-components';
 
 export const Body = styled.div`
+  display: flex;
   width: 100%;
-  height: 600px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 5rem;
   margin-top: 1rem;
 `;
 
-export const Title = styled.div`
-  font-family: ${(props) => props.theme.fonts.Title};
-  font-size: 5rem;
-  color: white;
-  @media (max-width: 740px) {
-    font-size: rem;
-  }
-`;
 export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100rem;
-  height: 500px;
   gap: 2rem;
   background-color: ${(props) => props.theme.colors.fontHeader};
   border-radius: 3rem;
@@ -54,6 +45,7 @@ export const Input = styled.input`
   border-radius: 3rem;
   width: 90rem;
   max-height: 50rem;
+  padding-left: 2.5rem;
   height: 60px;
   font-family: ${(props) => props.theme.fonts.primary};
   font-size: 2rem;
@@ -90,7 +82,6 @@ export const ContainerIn = styled.div`
   align-items: center;
   width: 100rem;
   height: 50px;
-  margin-top: 4rem;
   @media (max-width: 330px) {
     margin-top: 0rem;
   }
@@ -100,9 +91,12 @@ export const In = styled.button`
   font-size: 2rem;
   color: white;
   border-radius: 3rem;
+  border: none;
   width: 25rem;
   height: 80px;
   font-family: ${(props) => props.theme.fonts.primary};
+  cursor: pointer;
+
   @media (max-width: 1050px) {
     width: 20rem;
   }
@@ -113,6 +107,7 @@ export const In = styled.button`
 export const Forgot = styled.button`
   background-color: ${(props) => props.theme.colors.fontHeader};
   border-radius: 3rem;
+  border: none;
   width: 100rem;
   height: 50px;
   font-family: ${(props) => props.theme.fonts.primary};
@@ -120,6 +115,7 @@ export const Forgot = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   @media (max-width: 1050px) {
     width: 70rem;
@@ -142,6 +138,8 @@ export const MyConst = styled(AiOutlineEye)`
   z-index: 3;
   right: 7rem;
   font-size: 3rem;
+  cursor: pointer;
+
   @media (max-width: 1050px) {
     right: 23rem;
   }

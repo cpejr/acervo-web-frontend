@@ -1,30 +1,32 @@
+import { useState, useRef } from 'react';
+
+import { useNavigate } from 'react-router-dom';
+
 import {
   Body,
   Container,
   In,
-  Title,
   Input,
   Forgot,
   ContainerIn,
   MyConst,
   Control,
 } from './Styles';
-import { useState, useRef } from 'react';
 
 export default function Login() {
   const [passwordVisible, setPasswordVisible] = useState(false);
   const passwordInputRef = useRef(null);
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
 
-    // Obtém a posição atual do cursor
     const cursorPosition = passwordInputRef.current.selectionStart;
 
     if (passwordInputRef.current) {
-      passwordInputRef.current.focus(); // Define o foco no input de senha
+      passwordInputRef.current.focus();
 
-      // Define a posição do cursor novamente
       if (cursorPosition !== null) {
         passwordInputRef.current.setSelectionRange(
           cursorPosition,
@@ -39,7 +41,6 @@ export default function Login() {
 
   return (
     <Body>
-      <Title>Entrar</Title>
       <Container>
         <Control>
           <Input placeholder="  Login:" />
@@ -60,7 +61,13 @@ export default function Login() {
           <In>Entrar</In>
         </ContainerIn>
       </Container>
-      <Forgot>Esqueci minha senha</Forgot>
+      <Forgot
+        onClick={() => {
+          navigate('/esqueci-minha-senha');
+        }}
+      >
+        Esqueci minha senha
+      </Forgot>
     </Body>
   );
 }
