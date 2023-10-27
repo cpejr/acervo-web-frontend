@@ -100,7 +100,13 @@ export default function Header() {
           PERFIL
           {dialogs.profile && (
             <DialogProfile id="profile" open={dialogs.profile}>
-              <DialogItem>Login</DialogItem>
+              <DialogItem
+                onClick={() => {
+                  navigate('/entrar');
+                }}
+              >
+                Login
+              </DialogItem>
               <DivideLine />
               <DialogItem
                 onClick={() => {

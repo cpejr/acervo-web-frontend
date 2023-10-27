@@ -16,6 +16,8 @@ import {
   OurHistory,
   Register,
   SchoolSection,
+  Login,
+  ForgotPassword,
   Ecommerce,
   RegisterLegalPerson,
   RegisterPhysicalPerson,
@@ -63,6 +65,8 @@ const router = createBrowserRouter(
           path="cadastro-pessoa-fisica"
           element={<RegisterPhysicalPerson />}
         />
+        <Route path="entrar" element={<Login />} />
+        <Route path="esqueci-minha-senha" element={<ForgotPassword />} />
       </Route>
 
       <Route path="/meu-carrinho" element={<MyCart />} />

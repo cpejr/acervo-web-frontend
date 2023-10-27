@@ -15,6 +15,10 @@ export default function HeaderRegister() {
     textButton = 'Cadastro de Pessoa Jurídica';
   } else if (location.pathname.includes('cadastro-aluno')) {
     textButton = 'Cadastro de Aluno';
+  } else if (location.pathname.includes('entrar')) {
+    textButton = 'Login';
+  } else if (location.pathname.includes('esqueci-minha-senha')) {
+    textButton = 'Esqueci minha senha';
   } else {
     textButton = 'Cadastro';
   }
