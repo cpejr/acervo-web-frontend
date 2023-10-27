@@ -29,7 +29,7 @@ function HasFooterRoutes() {
   return (
     <>
       <Outlet />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
@@ -43,8 +43,6 @@ const router = createBrowserRouter(
           <Route path="perfil" element={<Profile />} />
           <Route path="nossa-historia" element={<OurHistory />} />
           <Route path="nossa-historia" element={<OurHistory />} />
-          <Route path="entrar" element={<Login />} />
-          <Route path="esqueci-minha-senha" element={<ForgotPassword />} />
           <Route path="eventos" element={<Event />} />
         </Route>
       </Route>
@@ -65,6 +63,8 @@ const router = createBrowserRouter(
           path="cadastro-pessoa-fisica"
           element={<RegisterPhysicalPerson />}
         />
+        <Route path="entrar" element={<Login />} />
+        <Route path="esqueci-minha-senha" element={<ForgotPassword />} />
       </Route>
 
       <Route path="/meu-carrinho" element={<MyCart />} />
