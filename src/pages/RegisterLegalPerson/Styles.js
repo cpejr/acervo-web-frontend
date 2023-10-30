@@ -35,44 +35,6 @@ export const Button = styled.button`
   padding: 2%;
   cursor: pointer;
 `;
-export const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  align-items: left;
-  color: ${(props) => props.theme.colors.fontHeader};
-  font-size: 4rem;
-  padding: 2%;
-  margin-left: 10%;
-  margin-top: 2%;
-  width: 80%;
-  @media (max-width: ${firstBreakPoint}) {
-    font-size: 3rem;
-  }
-  @media (max-width: ${secondBreakPoint}) {
-    font-size: 2.5rem;
-  }
-  @media (max-width: ${miniBreakPoint}) {
-    font-size: 2rem;
-  }
-
-  p1 {
-    display: flex;
-    background-color: white;
-    border-radius: 10rem;
-    color: ${(props) => props.theme.colors.primary};
-    padding: 2%;
-    margin-top: 2%;
-    gap: 2rem;
-  }
-`;
-export const Input = styled.input`
-  color: ${(props) => props.theme.colors.primary};
-  width: 100%;
-  border-color: transparent;
-  background-color: transparent;
-  font-size: 4rem;
-`;
 export const SendButton = styled.button`
   display: flex;
   width: fit-content;
@@ -175,18 +137,5 @@ export const Image = styled.div`
   @media (max-width: ${fifthBreakPoint}) {
     height: 9rem;
     width: 11rem;
-  }
-`;
-export const Text2 = styled.h1`
-  text-align: left;
-  font-size: 4rem;
-  margin-top: 3%;
-  padding: 1%;
-  margin-left: 10%;
-  font-family: ${(props) => props.theme.fonts.caramella};
-  color: ${(props) => props.theme.colors.fontHeader};
-  @media (max-width: ${firstBreakPoint}) {
-    font-size: 3rem;
-    margin-bottom: 3rem;
   }
 `;
