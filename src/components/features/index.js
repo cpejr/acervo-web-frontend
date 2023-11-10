@@ -7,3 +7,6 @@ export { default as ProductCartItem } from './ProductCartItem/ProductCartItem';
 export { default as EcommerceProduct } from './EcommerceProduct/EcommerceProduct';
 export { default as EventsName } from './EventsName/EventsName';
 export { default as HeaderRegister } from './HeaderRegister/HeaderRegister';
+export { default as StudentRegisterInput } from './StudentRegisterInput/StudentRegisterInput';
+export { default as LegalRegisterInput } from './LegalRegisterInput/LegalRegisterInput';
+export { default as PhysicalRegisterInput } from './PhysicalRegisterInput/PhysicalRegisterInput';
